@@ -8,7 +8,7 @@ const footerNav = [
   { href: '#story', label: 'Our Story', index: '01' },
   { href: '#cuisines', label: 'Cuisines', index: '02' },
   { href: '#catering', label: 'Catering', index: '03' },
-  { href: '#locations', label: 'Locations', index: '04' },
+  { href: '#locations', label: 'Our Location', index: '04' },
   { href: '#contact', label: 'Contact', index: '05' },
 ];
 
@@ -18,10 +18,10 @@ export default function Footer() {
   };
 
   const dispatchDestinations = [
-    { href: siteConfig.ordering.swiggy, label: 'Order on Swiggy' },
-    { href: siteConfig.ordering.zomato, label: 'Order on Zomato' },
     { href: siteConfig.ordering.ownly, label: 'Order on Ownly' },
     { href: getWhatsAppUrl('Hi Hunger Stories, I would like to order fresh food from your kitchen'), label: 'Order on WhatsApp' },
+    { href: siteConfig.ordering.zomato, label: 'Order on Zomato' },
+    { href: siteConfig.ordering.swiggy, label: 'Order on Swiggy' },
   ];
 
   return (
@@ -137,13 +137,13 @@ export default function Footer() {
 
           {/* Locations & Contact Details */}
           <div className="lg:col-span-2">
-            <h4 className="font-display text-lg text-white mb-6">Our Locations</h4>
+            <h4 className="font-display text-lg text-white mb-6">Our Location</h4>
             <ul className="space-y-4 text-xs">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#F69522] shrink-0 mt-0.5" />
                 <div className="text-white/60">
-                  <p className="text-white/90 font-bold">Manikonda Restaurant</p>
-                  <p>Tellapur Cloud Kitchen</p>
+                  <p className="text-white/90 font-bold">{siteConfig.locations.tellapur.name}</p>
+                  <p>{siteConfig.locations.tellapur.address}</p>
                 </div>
               </li>
               <li className="flex items-center gap-2.5">

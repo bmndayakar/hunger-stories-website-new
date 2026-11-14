@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { StoryReveal } from '@/components/ui/StoryMotion';
 
 const experiences = [
-  { number: '01', title: 'Dine in Manikonda', href: '#locations' },
+  { number: '01', title: 'Explore our cuisines', href: '#cuisines' },
   { number: '02', title: 'Order from Tellapur', href: '#order' },
   { number: '03', title: 'Gather over good food', href: '#catering' },
 ];
@@ -20,8 +20,8 @@ export default function HungerStoriesExperience() {
         <div className="grid items-center gap-10 pt-12 sm:gap-16 sm:pt-16 lg:grid-cols-12 lg:pt-20">
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-[#35363A] lg:col-span-6 lg:aspect-[4/5]">
             <Image
-              src="/images/food/location-manikonda.jpg"
-              alt="The Hunger Stories dining room in Manikonda"
+              src="/images/food/signature-biryani.jpg"
+              alt="Hunger Stories biryani prepared for sharing"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover"
@@ -36,7 +36,7 @@ export default function HungerStoriesExperience() {
               <span className="font-editorial-italic text-[#FFF8EF]/80">shared.</span>
             </h2>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-[#FFF8EF]/75 sm:text-lg">
-              From a meal with family and friends to food shared at home or a celebration, there is a place for every story.
+              Freshly prepared flavours, warm hospitality, convenient delivery and catering bring people together, from everyday meals to celebrations.
             </p>
             <div className="mt-10 border-t border-white/15">
               {experiences.map((experience) => (

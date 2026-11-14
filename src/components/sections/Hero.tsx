@@ -146,9 +146,7 @@ export default function Hero() {
                   {/* Luxury Gradients */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#30231F] via-[#30231F]/30 to-transparent" />
                   
-                  {/* Crosshair markers in corners */}
-                  <div className="absolute top-4 left-4 text-white/40 font-mono text-[9px] tracking-widest">+ 17° 24&apos; N</div>
-                  <div className="absolute top-4 right-4 text-white/40 font-mono text-[9px] tracking-widest">+ 78° 28&apos; E</div>
+                  <div className="absolute top-4 left-4 text-white/40 font-mono text-[9px] tracking-widest">TELLAPUR</div>
 
                   {/* Overlaid Bottom Title */}
                   <div className="absolute bottom-5 sm:bottom-6 left-5 sm:left-6 right-5 sm:right-6 text-white text-shadow-food">
@@ -186,7 +184,7 @@ export default function Hero() {
                       Served Steaming Hot
                     </h4>
                     <p className="text-[11px] text-[#35363A]/70 mt-1 leading-normal">
-                      Piping-hot delivery and authentic dine-in hospitality across Hyderabad.
+                      Freshly prepared food for delivery and celebrations.
                     </p>
                   </div>
                 </div>

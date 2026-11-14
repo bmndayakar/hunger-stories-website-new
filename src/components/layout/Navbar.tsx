@@ -10,7 +10,7 @@ const navLinks = [
   { href: '#story', label: 'Our Story', index: '01' },
   { href: '#cuisines', label: 'Cuisines', index: '02' },
   { href: '#catering', label: 'Catering', index: '03' },
-  { href: '#locations', label: 'Locations', index: '04' },
+  { href: '#locations', label: 'Our Location', index: '04' },
   { href: '#contact', label: 'Contact', index: '05' },
 ];
 
@@ -76,7 +76,7 @@ export default function Navbar() {
                 Hyderabad • Est. 2024
               </p>
               <p className="text-[9px] uppercase tracking-[0.18em] opacity-80">
-                17.4065° N, 78.4772° E
+                Tellapur Kitchen
               </p>
             </div>
           </div>

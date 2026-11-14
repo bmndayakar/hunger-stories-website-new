@@ -114,7 +114,7 @@ export default function Catering() {
                 </a>
 
                 <a
-                  href={siteConfig.contact.phoneHref}
+                  href={siteConfig.contact.cateringPhoneHref}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full border border-white/20 text-white text-xs font-semibold uppercase tracking-[0.16em] hover:bg-white/10 transition-colors min-h-[48px]"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#F69522]" />

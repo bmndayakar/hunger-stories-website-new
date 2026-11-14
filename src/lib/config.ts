@@ -13,31 +13,33 @@ export const siteConfig = {
     foundingYear: 2024,
     cuisineType: 'Premium Multi-Cuisine Restaurant & Catering',
     city: 'Hyderabad, Telangana, India',
-    coordinates: '17.4065° N, 78.4772° E',
     domain: 'https://about.hungerstories.com',
   },
 
   // Direct Communication Hotlines
   contact: {
-    phoneDisplay: '+91 88867 62323',
-    phoneHref: 'tel:+918886762323',
+    phoneDisplay: '+91 99593 33931',
+    phoneHref: 'tel:+919959333931',
+    cateringPhoneDisplay: '+91 88867 62323',
+    cateringPhoneHref: 'tel:+918886762323',
     email: 'hello@hungerstories.in',
     emailHref: 'mailto:hello@hungerstories.in',
-    whatsappPhone: '918886762323',
-    hours: '11:30 AM – 11:30 PM Daily',
+    whatsappPhone: '919959333931',
+    cateringWhatsappPhone: '918886762323',
+    hours: '12:00 PM – 3:30 PM & 6:30 PM – 1:00 AM',
   },
 
   // Configurable External Ordering & Delivery URLs
   ordering: {
     swiggy:
       process.env.NEXT_PUBLIC_SWIGGY_URL ||
-      'https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad',
+      'https://www.swiggy.com/city/hyderabad/hunger-stories-tellapur-road-lingampally-and-nallagandla-rest783323',
     zomato:
       process.env.NEXT_PUBLIC_ZOMATO_URL ||
-      'https://www.zomato.com/hyderabad/hunger-stories-tellapur',
+      'https://www.zomato.com/hyderabad/hunger-stories-1-lingampally',
     ownly:
       process.env.NEXT_PUBLIC_OWNLY_URL ||
-      'https://order.hungerstories.com',
+      'https://ownly.food/app/brand/BR444866',
     whatsappDefaultMessage:
       'Hi Hunger Stories, I would like to order fresh food from your kitchen',
     whatsappCateringMessage:
@@ -54,29 +56,15 @@ export const siteConfig = {
       'https://facebook.com/hungerstories.hyd',
   },
 
-  // Our Locations (Manikonda & Tellapur)
+  // Our Location
   locations: {
-    manikonda: {
-      name: 'Manikonda Restaurant',
-      type: 'Dine-In Restaurant & Takeaway',
-      badge: 'Dine-In • Takeaway',
-      address: 'Puppalaguda - Manikonda Main Road, Hyderabad, Telangana 500089',
-      hours: '12:00 PM – 11:30 PM Daily',
-      phone: '+91 88867 62323',
-      phoneHref: 'tel:+918886762323',
-      coverage: 'Manikonda, Shaikpet, Jubilee Hills, Puppalaguda, Tolichowki',
-      mapQuery: 'Hunger+Stories+Manikonda+Hyderabad',
-    },
     tellapur: {
-      name: 'Tellapur Cloud Kitchen',
-      type: 'Cloud Kitchen & Express Delivery',
-      badge: 'Express Delivery Hub',
-      address: 'Survey No. 42, Near ORR Junction, Tellapur Road, Hyderabad, Telangana 502032',
-      hours: '11:30 AM – 11:30 PM Daily',
-      phone: '+91 88867 62323',
-      phoneHref: 'tel:+918886762323',
-      coverage: 'Tellapur, Kollur, Financial District, Kokapet, Gachibowli, Nallagandla',
-      mapQuery: 'Hunger+Stories+Tellapur+Hyderabad',
+      name: 'Hunger Stories Tellapur',
+      address: 'Hunger Stories, 18-52, Komaram Bheem Colony, Indira Nagar, Tellapur, 500089',
+      streetAddress: '18-52, Komaram Bheem Colony, Indira Nagar',
+      locality: 'Tellapur',
+      postalCode: '500089',
+      mapHref: 'https://maps.app.goo.gl/MdTnYai85ysyPVv37',
     },
   },
 } as const;
@@ -84,8 +72,10 @@ export const siteConfig = {
 /**
  * Generates an authorized WhatsApp deep link with URL-encoded greeting
  */
-export function getWhatsAppUrl(customMessage?: string): string {
-  const phone = siteConfig.contact.whatsappPhone;
+export function getWhatsAppUrl(customMessage?: string, purpose: 'order' | 'catering' = 'order'): string {
+  const phone = purpose === 'catering'
+    ? siteConfig.contact.cateringWhatsappPhone
+    : siteConfig.contact.whatsappPhone;
   const text = encodeURIComponent(
     customMessage || siteConfig.ordering.whatsappDefaultMessage
   );

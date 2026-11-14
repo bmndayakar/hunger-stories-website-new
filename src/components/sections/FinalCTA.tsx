@@ -23,19 +23,9 @@ export default function FinalCTA() {
 
   const channels = [
     {
-      name: 'Swiggy',
-      platform: 'Doorstep Delivery',
-      tag: 'Tellapur Hub',
-      badgeClass: 'bg-[#FC8019] text-white',
-      description: 'Order your favourite dum biryanis, clay oven tandoori grills, and rich curries delivered fast via Swiggy.',
-      href: siteConfig.ordering.swiggy,
-      actionText: 'Order on Swiggy',
-      borderClass: 'hover:border-[#FC8019]',
-    },
-    {
       name: 'Zomato',
-      platform: 'Delivery & Dining',
-      tag: 'Top Rated Hyderabad',
+      platform: 'Doorstep Delivery',
+      tag: 'Tellapur Kitchen',
       badgeClass: 'bg-[#E23744] text-white',
       description: 'Browse authentic food photography, verified reviews, and order freshly prepared meals directly on Zomato.',
       href: siteConfig.ordering.zomato,
@@ -45,7 +35,7 @@ export default function FinalCTA() {
     {
       name: 'Ownly',
       platform: 'Direct Kitchen Portal',
-      tag: 'Active Direct Dispatch',
+      tag: 'Direct Ordering',
       badgeClass: 'bg-[#F69522] text-white',
       description: 'Order directly from our kitchen portal for freshly prepared food dispatched straight to your doorstep.',
       href: siteConfig.ordering.ownly,
@@ -57,7 +47,7 @@ export default function FinalCTA() {
       platform: 'Direct Kitchen Chat',
       tag: 'Instant Order Desk',
       badgeClass: 'bg-[#25D366] text-white',
-      description: 'Chat directly with our kitchen team for express orders, party boxes, and customized catering menus.',
+      description: 'Chat directly with our kitchen team about your food order.',
       href: getWhatsAppUrl(siteConfig.ordering.whatsappDefaultMessage),
       actionText: 'Order on WhatsApp',
       borderClass: 'hover:border-[#25D366]',
@@ -80,7 +70,7 @@ export default function FinalCTA() {
             </span>
           </div>
           <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-[#35363A]/50">
-            Tellapur Hub & Manikonda Restaurant
+            Tellapur Kitchen
           </span>
         </div>
 
@@ -94,12 +84,11 @@ export default function FinalCTA() {
           </h2>
 
           <p className="font-body text-sm sm:text-lg text-[#35363A]/75 leading-relaxed font-normal max-w-xl mx-auto">
-            Choose your preferred ordering platform below. Every dish is freshly prepared upon confirmation and dispatched steaming hot across Hyderabad.
+            Choose your preferred ordering platform below for freshly prepared food from our Tellapur kitchen.
           </p>
         </StoryReveal>
 
-        {/* 4 Prominent External Channel Options */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-16 sm:mb-20 lg:mb-28">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {channels.map((ch, idx) => (
             <motion.a
               key={ch.name}
@@ -119,6 +108,12 @@ export default function FinalCTA() {
                   </span>
                   <ExternalLink className="w-4 h-4 text-[#35363A]/30 group-hover:text-[#F69522] transition-colors" />
                 </div>
+                <p className="mt-5 mb-16 sm:mb-20 lg:mb-28 text-center text-xs text-[#35363A]/65">
+                  Also available on{' '}
+                  <a href={siteConfig.ordering.swiggy} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-4 hover:text-[#F69522]">
+                    Swiggy
+                  </a>.
+                </p>
 
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#35363A]/50">
                   {ch.platform}
@@ -163,7 +158,7 @@ export default function FinalCTA() {
               {/* Direct Touch Channels */}
               <div className="space-y-3 pt-2">
                 <a
-                  href={siteConfig.contact.phoneHref}
+                  href={siteConfig.contact.cateringPhoneHref}
                   className="flex items-center gap-3.5 p-3.5 rounded-xl bg-[#FFF8EF] border border-[#F3E8D9] hover:border-[#F69522] transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-white border border-[#F69522]/20 flex items-center justify-center text-[#F69522] group-hover:bg-[#F69522] group-hover:text-white transition-colors shrink-0">
@@ -172,13 +167,13 @@ export default function FinalCTA() {
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#35363A]/50 block">Direct Hotline</span>
                     <p className="text-sm font-bold text-[#35363A] group-hover:text-[#F69522] transition-colors">
-                      {siteConfig.contact.phoneDisplay}
+                      {siteConfig.contact.cateringPhoneDisplay}
                     </p>
                   </div>
                 </a>
 
                 <a
-                  href={getWhatsAppUrl(siteConfig.ordering.whatsappCateringMessage)}
+                  href={getWhatsAppUrl(siteConfig.ordering.whatsappCateringMessage, 'catering')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3.5 p-3.5 rounded-xl bg-[#FFF8EF] border border-[#F3E8D9] hover:border-[#25D366] transition-colors group"
@@ -213,11 +208,11 @@ export default function FinalCTA() {
               <div className="pt-2 border-t border-[#35363A]/10 text-xs text-[#35363A]/70 space-y-1.5 font-mono">
                 <div className="flex items-center gap-2">
                   <Clock className="w-3.5 h-3.5 text-[#F69522]" />
-                  <span>Daily: {siteConfig.contact.hours}</span>
+                  <span>{siteConfig.contact.hours}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-3.5 h-3.5 text-[#F69522]" />
-                  <span>Manikonda (Dine-In) & Tellapur (Kitchen Hub)</span>
+                  <span>Tellapur Kitchen</span>
                 </div>
               </div>
             </div>
@@ -297,7 +292,6 @@ export default function FinalCTA() {
                         <option>Corporate Lunch Boxes & Buffets</option>
                         <option>Weddings & Family Receptions</option>
                         <option>Private Birthday Parties</option>
-                        <option>Manikonda Table Reservation</option>
                       </select>
                     </div>
 
@@ -314,7 +308,6 @@ export default function FinalCTA() {
                         <option>50 — 100 Guests</option>
                         <option>100 — 300 Guests</option>
                         <option>300+ Guests</option>
-                        <option>Table Reservation (2 to 10 Guests)</option>
                       </select>
                     </div>
                   </div>
@@ -349,7 +342,7 @@ export default function FinalCTA() {
         {/* Brand Awareness Notice */}
         <div className="mt-10 sm:mt-12 text-center text-xs text-[#35363A]/55 max-w-xl mx-auto leading-relaxed">
           <p>
-            Hunger Stories is a dedicated multi-cuisine restaurant and catering brand. Deliveries are fulfilled through Swiggy, Zomato, Ownly, and direct WhatsApp concierge. No direct payments or food checkouts are processed on this site.
+            Hunger Stories is a multi-cuisine kitchen and catering brand. Order through Ownly, WhatsApp, Zomato, or Swiggy. No direct payments or food checkouts are processed on this site.
           </p>
         </div>
 

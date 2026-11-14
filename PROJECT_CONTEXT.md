@@ -11,26 +11,18 @@
 - **Tagline:** *"Every Flavour Has A Story."*
 - **Founded:** 2024
 - **Headquarters:** Hyderabad, Telangana, India
-- **Coordinates:** `17.4065° N, 78.4772° E`
 - **Domain:** `https://about.hungerstories.com`
 - **Repository:** `https://github.com/bmndayakar/hunger-stories-website-new`
-- **Type of Business:** Artisanal multi-cuisine hospitality brand, dine-in restaurant, express delivery kitchen, and celebration catering services.
+- **Type of Business:** Multi-cuisine kitchen, delivery, and celebration catering.
 
-### Our Two Locations:
-1. **Manikonda Dining Room (House 01):**
-   - **Role:** Flagship Sit-Down Restaurant & Table Service
-   - **Location:** Puppalaguda - Manikonda Main Road, Hyderabad 500089
-   - **Ambiance:** Warm amber lighting, teak dining tables, private family booths, open aroma counter.
-   - **Hours:** 12:00 PM – 11:30 PM Daily
-2. **Tellapur Craft Hub (House 02):**
-   - **Role:** High-Heat Cloud Kitchen & Express Dispatch Hub
-   - **Location:** Survey No. 42, Near ORR Junction, Tellapur Road, Hyderabad 502032
-   - **Focus:** Engineered for speed, heat retention, and tamper-evident sealed packaging serving Western Hyderabad's IT corridors (Financial District, Kokapet, Gachibowli, Tellapur).
-   - **Hours:** 11:30 AM – 11:30 PM Daily
+### Our Location:
+- **Hunger Stories Tellapur:** 18-52, Komaram Bheem Colony, Indira Nagar, Tellapur, 500089.
+- **Hours supplied by owner:** 12:00 PM – 3:30 PM and 6:30 PM – 1:00 AM. Days of operation need confirmation.
+- **Directions:** https://maps.app.goo.gl/MdTnYai85ysyPVv37
 
 ### Official Contact Channels:
-- **Hotline / Banquet Desk:** `+91 88867 62323`
-- **WhatsApp Concierge:** `+91 88867 62323` (`918886762323`)
+- **Regular / small orders:** `+91 99593 33931`
+- **Catering orders:** `+91 88867 62323`
 - **Executive Email:** `hello@hungerstories.in`
 
 ---
@@ -49,10 +41,10 @@ Under **NO CIRCUMSTANCES** should any agent implement:
 
 ### Authorized External Ordering Channels:
 All ordering actions must point exclusively to:
-- **Swiggy:** `https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad` (Active HTTP 200)
-- **Zomato:** `https://www.zomato.com/hyderabad/hunger-stories-tellapur` (Verify exact listing URL with client)
-- **Ownly:** Direct brand kitchen ordering at `https://order.hungerstories.com` (Configurable via `NEXT_PUBLIC_OWNLY_URL`)
-- **WhatsApp Concierge:** Pre-formatted message to `https://wa.me/918886762323?text=...`
+- **Ownly:** `https://ownly.food/app/brand/BR444866`
+- **WhatsApp:** Regular orders use `919959333931`; catering enquiries use `918886762323`.
+- **Zomato:** `https://www.zomato.com/hyderabad/hunger-stories-1-lingampally`
+- **Swiggy:** `https://www.swiggy.com/city/hyderabad/hunger-stories-tellapur-road-lingampally-and-nallagandla-rest783323` (keep less prominent).
 
 ---
 
@@ -100,7 +92,6 @@ hunger-stories-website-new/
 │   │       ├── cuisine-south.jpg     # Ghee roast cone dosa on banana leaf
 │   │       ├── cuisine-chinese.jpg   # High-flame wok toss with scallions & chili
 │   │       ├── catering-feast.jpg    # Grand royal banquet table setup
-│   │       ├── location-manikonda.jpg# Manikonda dining room luxury interior
 │   │       └── location-tellapur.jpg # Tellapur craft kitchen & glowing tandoor
 ├── src/
 │   ├── app/
@@ -117,7 +108,7 @@ hunger-stories-website-new/
 │   │   │   ├── CuisineDiscovery.tsx  # Chapter 02: A World of Flavours (#cuisines)
 │   │   │   ├── FoodExperiences.tsx   # Chapter 03: Signature Dishes (#experiences)
 │   │   │   ├── Catering.tsx          # Chapter 04: The Art of Catering (#catering)
-│   │   │   ├── Locations.tsx         # Chapter 05: Our Locations (#locations)
+│   │   │   ├── Locations.tsx         # Chapter 05: Our Location (#locations)
 │   │   │   ├── HungerStoriesExperience.tsx # Chapter 06: The Hunger Stories Experience
 │   │   │   └── FinalCTA.tsx          # 07: Order Online (4 channels) & Catering Enquiry (#order, #contact)
 │   │   └── ui/
@@ -186,13 +177,11 @@ hunger-stories-website-new/
   4. *Family Gatherings & House Parties* (20–80 guests)
   5. *Bulk Orders & Box Meals* (50+ boxes)
 
-### Chapter 05: Our Locations (`Locations.tsx`)
+### Chapter 05: Our Location (`Locations.tsx`)
 - **Anchor ID:** `#locations`
-- **Headline:** *"Visit Us or Order In."*
-- **Two Profiles:**
-  - *Manikonda Restaurant* (Dine-In • Takeaway) with `location-manikonda.jpg`
-  - *Tellapur Cloud Kitchen* (Express Delivery Hub) with `location-tellapur.jpg`
-- **Actions:** High-contrast touch buttons: Direct Call (`tel:+918886762323`), Online Order (`#order`), and Google Maps Navigation (`Get Directions`).
+- **Headline:** *"From Our Kitchen To You."*
+- **Profile:** Tellapur kitchen with `location-tellapur.jpg`.
+- **Actions:** Regular orders call (`tel:+919959333931`), Online Order (`#order`), and Google Maps Navigation (`Get Directions`).
 - **Data Source:** Wired directly to `siteConfig.locations` in `src/lib/config.ts`.
 
 ### Chapter 06: The Hunger Stories Experience (`HungerStoriesExperience.tsx`)
@@ -203,18 +192,14 @@ hunger-stories-website-new/
 - **Anchor ID:** `#order` (with alias `#contact`)
 - **Headline:** *"Your Next Food Story Starts Here."*
 - **Strict Brand Awareness Directive:** Pure external dispatch links, NO checkout, NO shopping cart, NO prices.
-- **4 Prominent External Channels:**
-  1. **Swiggy:** Direct order link for Tellapur & Western Hyderabad delivery (`siteConfig.ordering.swiggy`).
-  2. **Zomato:** Direct order link for Tellapur delivery & Manikonda dine-in (`siteConfig.ordering.zomato`).
-  3. **Ownly:** Direct brand kitchen ordering (`https://order.hungerstories.com`).
-  4. **WhatsApp:** Instant concierge chat with kitchen team (`https://wa.me/918886762323...`).
-- **Integrated Catering Enquiry & Contact Desk:** Includes direct hotline (`+91 88867 62323`), WhatsApp concierge link, email inquiries, and an interactive Catering Enquiry Form (name, phone, event type, guest count, notes) for tailored event quotes.
+- **External Channels:** Ownly, WhatsApp, Zomato, and a less prominent Swiggy link.
+- **Catering Contact Desk:** Uses the catering hotline and WhatsApp number (`+91 88867 62323`). The enquiry form currently only changes local UI state and does not transmit submissions; do not treat it as an operational enquiry channel.
 
 ### Testimonials Note
 - Previously contained placeholder customer reviews. Removed completely from codebase per client directive: *"Use real customer testimonials only. If verified testimonials are unavailable, remove the section rather than displaying fabricated placeholder reviews."* Can be restored to `page.tsx` once verified reviews are provided.
 
 ### Navigation & Header (`Navbar.tsx`)
-- 5 clean navigation links: `Our Story` (`#story`), `Cuisines` (`#cuisines`), `Catering` (`#catering`), `Locations` (`#locations`), and `Contact` (`#contact`).
+- 5 clean navigation links: `Our Story` (`#story`), `Cuisines` (`#cuisines`), `Catering` (`#catering`), `Our Location` (`#locations`), and `Contact` (`#contact`).
 - Prominent `Order Online` CTA button pointing directly to `#order`.
 - Dual-mode header:
   - **Top of page:** Transparent with dark gradient scrim, using `logo-light.png`.
@@ -228,40 +213,7 @@ hunger-stories-website-new/
 
 All URLs, contact details, and location data are centralized in `src/lib/config.ts`. **Never hardcode external links in individual components.**
 
-```typescript
-export const siteConfig = {
-  brand: {
-    name: 'Hunger Stories',
-    tagline: 'Every Flavour Has A Story.',
-    foundingYear: 2024,
-    cuisineType: 'Premium Multi-Cuisine & Artisanal Banquets',
-    city: 'Hyderabad, Telangana, India',
-    coordinates: '17.4065° N, 78.4772° E',
-    domain: 'https://about.hungerstories.com',
-  },
-  contact: {
-    phoneDisplay: '+91 88867 62323',
-    phoneHref: 'tel:+918886762323',
-    email: 'hello@hungerstories.in',
-    emailHref: 'mailto:hello@hungerstories.in',
-    whatsappPhone: '918886762323',
-    hours: '11:30 AM – 11:30 PM Daily',
-  },
-  ordering: {
-    swiggy: process.env.NEXT_PUBLIC_SWIGGY_URL || 'https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad',
-    zomato: process.env.NEXT_PUBLIC_ZOMATO_URL || 'https://www.zomato.com/hyderabad/hunger-stories-tellapur',
-    ownly: process.env.NEXT_PUBLIC_OWNLY_URL || 'https://order.hungerstories.com',
-    whatsappDefaultMessage: 'Hi Hunger Stories, I would like to order fresh food from your kitchen',
-    whatsappCateringMessage: 'Hi Hunger Stories, I would like to enquire about your catering and event food services',
-  },
-  locations: {
-    manikonda: { ... },
-    tellapur: { ... }
-  }
-};
-
-export function getWhatsAppUrl(customMessage?: string): string;
-```
+The config contains the Tellapur address, directions, opening hours, distinct regular-order and catering contacts, and external channel URLs. `getWhatsAppUrl` selects the appropriate number for regular orders or catering. Ordering URLs may be overridden with the corresponding `NEXT_PUBLIC_*` environment variables at build time.
 
 ---
 
@@ -277,7 +229,7 @@ export function getWhatsAppUrl(customMessage?: string): string;
 1. **React 19 SSR Prerender:** Avoid calling `new Date().getFullYear()` directly during render in client components. A static range `2024–2026` is used to prevent hydration mismatches.
 2. **Swiper CSS Resolution on Windows:** Swiper core CSS has been integrated directly into `src/app/globals.css`. Do not import `swiper/css/pagination` or `swiper/css` directly inside components to prevent Windows loader pathing issues.
 3. **Google Fonts in Offline/Sandbox Environments:** Fonts are preconnected and linked via HTML `<head>` tags in `layout.tsx` with CSS fallback variables, ensuring builds succeed even in restricted network environments.
-4. **Structured Data:** Comprehensive Schema.org `Restaurant` and `CateringService` JSON-LD is embedded in `layout.tsx`.
+4. **Structured Data:** A single Tellapur `Restaurant` JSON-LD entity is embedded in `layout.tsx`. Opening hours are omitted until the days of operation are confirmed.
 
 ---
 
@@ -323,15 +275,15 @@ export function getWhatsAppUrl(customMessage?: string): string;
 
 | Channel | URL Configured in `src/lib/config.ts` | Verification Status | Owner Action Required |
 |---|---|---|---|
-| **Swiggy** | `https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad` | **Verified (HTTP 200)** | None. Active store listing. |
-| **WhatsApp** | `https://wa.me/918886762323?text=...` | **Verified (Active)** | None. Direct concierge line operational. |
-| **Zomato** | `https://www.zomato.com/hyderabad/hunger-stories-tellapur` | **HTTP 404 Returned** | Client must verify exact restaurant slug from their Zomato Merchant Dashboard. |
-| **Ownly** | `https://order.hungerstories.com` | **DNS Not Resolving** | Client must add a CNAME record in Hostinger DNS: `order` -> `hungerstories.dotpe.in`. |
+| **Swiggy** | Owner-supplied listing in config | WAF challenge prevented independent verification | Confirm listing availability. |
+| **WhatsApp** | Order and catering numbers in config | Links open WhatsApp; account ownership not independently verified | Confirm both numbers receive WhatsApp messages. |
+| **Zomato** | Owner-supplied listing in config | Request timed out | Confirm listing availability. |
+| **Ownly** | Owner-supplied brand URL in config | Redirected to a generic Hyderabad landing page during testing | Confirm the direct brand storefront works. |
 
 ---
 
 ## 11. Scroll-Driven Brand Storytelling
 
-The hero introduces seven chapters: Our Food Philosophy → A World of Flavours → Signature Dishes → The Art of Catering → Our Locations → The Hunger Stories Experience → Your Next Food Story Starts Here.
+The hero introduces seven chapters: Our Food Philosophy → A World of Flavours → Signature Dishes → The Art of Catering → Our Location → The Hunger Stories Experience → Your Next Food Story Starts Here.
 
-`StoryStack.tsx` wraps the seven chapters in sticky panels on desktop and mobile, with later panels layered above earlier ones. It measures each panel so that long chapters scroll fully before sticking; mobile panels have a short scroll cushion before the next panel overlaps. Avoid overflow-clipping or transformed ancestors around the stack. The desktop chapter navigation links to markers in normal document flow. Reduced-motion preferences use natural scrolling; keyboard focus within a chapter temporarily returns panels to normal flow so focused controls are not obscured. Existing external ordering links remain unchanged.
+`StoryStack.tsx` wraps the seven chapters in sticky panels on desktop and mobile, with later panels layered above earlier ones. It measures each panel so that long chapters scroll fully before sticking; mobile panels have a short scroll cushion before the next panel overlaps. Avoid overflow-clipping or transformed ancestors around the stack. The desktop chapter navigation links to markers in normal document flow. Reduced-motion preferences use natural scrolling; keyboard focus within a chapter temporarily returns panels to normal flow so focused controls are not obscured.

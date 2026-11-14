@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://about.hungerstories.com"),
-  title: "Hunger Stories — Every Flavour Has A Story | Premium Multi-Cuisine Restaurant & Catering, Hyderabad",
+  metadataBase: new URL(siteConfig.brand.domain),
+  title: "Hunger Stories — Every Flavour Has A Story | Tellapur Kitchen & Catering",
   description:
-    "Hunger Stories is a craft multi-cuisine restaurant and catering kitchen in Hyderabad, India. Experience authentic slow-dum Hyderabadi biryani, rich North Indian curries, tandoori grills, and bespoke celebration catering.",
+    "Hunger Stories is a multi-cuisine kitchen in Tellapur, Hyderabad, offering biryani, curries, tandoori grills, delivery and celebration catering.",
   keywords: [
     "Hunger Stories",
     "Hunger Stories Hyderabad",
     "Hyderabadi biryani",
     "multi-cuisine restaurant",
     "Tellapur cloud kitchen",
-    "Manikonda restaurant",
     "catering Hyderabad",
     "wedding catering Hyderabad",
     "corporate catering Hyderabad",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hunger Stories — Every Flavour Has A Story",
     description:
-      "Craft multi-cuisine kitchen engineered for taste, heat retention, and slow-dum heritage in Hyderabad, India.",
+      "Discover freshly prepared multi-cuisine food and celebration catering from our Tellapur kitchen.",
     type: "website",
     locale: "en_IN",
     siteName: "Hunger Stories",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hunger Stories — Every Flavour Has A Story",
     description:
-      "Premium multi-cuisine restaurant and bespoke catering brand based in Hyderabad, India.",
+      "Multi-cuisine food, delivery and catering from Hunger Stories in Tellapur, Hyderabad.",
     images: ["/images/food/hero-biryani.jpg"],
   },
   robots: {
@@ -74,11 +74,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Restaurant",
-              name: "Hunger Stories",
-              image: "https://about.hungerstories.com/images/food/hero-biryani.jpg",
-              url: "https://about.hungerstories.com",
-              telephone: "+91-88867-62323",
-              email: "hello@hungerstories.in",
+              name: siteConfig.locations.tellapur.name,
+              image: `${siteConfig.brand.domain}/images/food/hero-biryani.jpg`,
+              url: siteConfig.brand.domain,
+              telephone: siteConfig.contact.phoneDisplay,
+              email: siteConfig.contact.email,
+              hasMap: siteConfig.locations.tellapur.mapHref,
               servesCuisine: [
                 "Hyderabadi Dum Biryani",
                 "North Indian",
@@ -86,53 +87,17 @@ export default function RootLayout({
                 "Tandoori",
                 "Indo-Chinese",
               ],
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday",
-                  ],
-                  opens: "11:30",
-                  closes: "23:30",
-                },
-              ],
-              department: [
-                {
-                  "@type": "Restaurant",
-                  name: "Hunger Stories Manikonda Dining Room",
-                  address: {
-                    "@type": "PostalAddress",
-                    streetAddress: "Puppalaguda - Manikonda Main Road",
-                    addressLocality: "Hyderabad",
-                    addressRegion: "Telangana",
-                    postalCode: "500089",
-                    addressCountry: "IN",
-                  },
-                  telephone: "+91-88867-62323",
-                },
-                {
-                  "@type": "FoodEstablishment",
-                  name: "Hunger Stories Tellapur Craft Hub",
-                  address: {
-                    "@type": "PostalAddress",
-                    streetAddress: "Survey No. 42, Near ORR Junction, Tellapur Road",
-                    addressLocality: "Hyderabad",
-                    addressRegion: "Telangana",
-                    postalCode: "502032",
-                    addressCountry: "IN",
-                  },
-                  telephone: "+91-88867-62323",
-                },
-              ],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: siteConfig.locations.tellapur.streetAddress,
+                addressLocality: siteConfig.locations.tellapur.locality,
+                addressRegion: "Telangana",
+                postalCode: siteConfig.locations.tellapur.postalCode,
+                addressCountry: "IN",
+              },
               sameAs: [
-                "https://instagram.com/hungerstories.hyd",
-                "https://facebook.com/hungerstories.hyd",
+                siteConfig.social.instagram,
+                siteConfig.social.facebook,
               ],
             }),
           }}

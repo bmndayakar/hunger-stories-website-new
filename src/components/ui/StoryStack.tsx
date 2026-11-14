@@ -8,7 +8,7 @@ const chapters = [
   { id: 'cuisines', title: 'A World of Flavours' },
   { id: 'experiences', title: 'Signature Dishes' },
   { id: 'catering', title: 'The Art of Catering' },
-  { id: 'locations', title: 'Our Locations' },
+  { id: 'locations', title: 'Our Location' },
   { id: 'hunger-stories-experience', title: 'The Hunger Stories Experience' },
   { id: 'order', title: 'Your Next Food Story Starts Here' },
 ];

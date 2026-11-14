@@ -66,7 +66,7 @@ export default function BrandStory() {
                 Founded in Hyderabad in 2024, <strong className="text-[#35363A] font-semibold">Hunger Stories</strong> was born from a simple belief: everyday dining and grand celebrations alike deserve exceptional flavour, honest ingredients, and genuine hospitality.
               </p>
               <p>
-                From the aroma of our slow-dum biryanis unsealed fresh at your table to the smoky char of live tandoor grills and comforting curries, we cook food that creates lasting memories.
+                From the aroma of our slow-dum biryanis to the smoky char of tandoor grills and comforting curries, we cook food that creates lasting memories.
               </p>
             </div>
 
@@ -77,8 +77,8 @@ export default function BrandStory() {
               </div>
               <div className="h-8 sm:h-10 w-px bg-[#35363A]/10" />
               <div>
-                <span className="block font-display text-2xl sm:text-3xl font-bold text-[#F69522]">2</span>
-                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Hyderabad Hubs</span>
+                <span className="block font-display text-2xl sm:text-3xl font-bold text-[#F69522]">1</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Tellapur Kitchen</span>
               </div>
               <div className="h-8 sm:h-10 w-px bg-[#35363A]/10" />
               <div>

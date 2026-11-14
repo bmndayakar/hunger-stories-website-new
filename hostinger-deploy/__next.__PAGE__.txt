@@ -1,55 +1,59 @@
 1:"$Sreact.fragment"
-3:I[7121,[],""]
-4:I[4581,[],""]
-8:"static/chunks/2eea7701-4b0cd26289d130b2.js"
-9:"static/chunks/744-7eabb574f67d70bd.js"
-a:"static/chunks/app/page-873e1de3c6f213d0.js"
-b:I[1869,["569","$8","744","$9","974","$a"],"default"]
-c:I[3797,["569","$8","744","$9","974","$a"],"default"]
-d:I[2345,["569","$8","744","$9","974","$a"],"default"]
-e:I[8084,["569","$8","744","$9","974","$a"],"default"]
-f:I[1729,["569","$8","744","$9","974","$a"],"default"]
-10:I[8104,["569","$8","744","$9","974","$a"],"default"]
-11:I[190,["569","$8","744","$9","974","$a"],"default"]
-12:I[7371,["569","$8","744","$9","974","$a"],"default"]
-13:I[3535,["569","$8","744","$9","974","$a"],"default"]
-14:I[7694,["569","$8","744","$9","974","$a"],"default"]
-15:I[484,[],"OutletBoundary"]
-16:"$Sreact.suspense"
-19:"ViewportBoundary"
-1a:I[484,[],"$19"]
-1b:"MetadataBoundary"
+2:I[7121,[],""]
+3:I[4581,[],""]
+7:"static/chunks/2eea7701-4b0cd26289d130b2.js"
+8:"static/chunks/278-40f03236efd69f72.js"
+9:"static/chunks/app/page-d1ab4bb56b1d3a64.js"
+a:I[272,["569","$7","278","$8","974","$9"],"StoryMotion"]
+b:I[1869,["569","$7","278","$8","974","$9"],"default"]
+c:I[3797,["569","$7","278","$8","974","$9"],"default"]
+d:I[2345,["569","$7","278","$8","974","$9"],"default"]
+e:I[9426,["569","$7","278","$8","974","$9"],"default"]
+f:I[8084,["569","$7","278","$8","974","$9"],"default"]
+10:I[1729,["569","$7","278","$8","974","$9"],"default"]
+11:I[8104,["569","$7","278","$8","974","$9"],"default"]
+12:I[190,["569","$7","278","$8","974","$9"],"default"]
+13:I[7371,["569","$7","278","$8","974","$9"],"default"]
+14:I[8437,["569","$7","278","$8","974","$9"],"Image"]
+1b:"ViewportBoundary"
 1c:I[484,[],"$1b"]
-:HL["/_next/static/css/a5f4b432828c182d.css","style"]
+1d:"MetadataBoundary"
+1e:I[484,[],"$1d"]
+1f:"$Sreact.suspense"
+:HL["/_next/static/css/082808b30a1a8fc1.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap","style"]
-2:T4da,{"@context":"https://schema.org","@type":"Restaurant","name":"Hunger Stories","image":"https://about.hungerstories.com/images/food/hero-biryani.jpg","url":"https://about.hungerstories.com","telephone":"+91-88867-62323","email":"hello@hungerstories.in","servesCuisine":["Hyderabadi Dum Biryani","North Indian","South Indian","Tandoori","Indo-Chinese"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:30","closes":"23:30"}],"department":[{"@type":"Restaurant","name":"Hunger Stories Manikonda Dining Room","address":{"@type":"PostalAddress","streetAddress":"Puppalaguda - Manikonda Main Road","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500089","addressCountry":"IN"},"telephone":"+91-88867-62323"},{"@type":"FoodEstablishment","name":"Hunger Stories Tellapur Craft Hub","address":{"@type":"PostalAddress","streetAddress":"Survey No. 42, Near ORR Junction, Tellapur Road","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"502032","addressCountry":"IN"},"telephone":"+91-88867-62323"}],"sameAs":["https://instagram.com/hungerstories.hyd","https://facebook.com/hungerstories.hyd"]}6:X
-7:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-[#FFF8EF] text-[#35363A] flex flex-col selection:bg-[#F69522] selection:text-white","children":[["$","$Lb",null,{}],["$","$Lc",null,{}],["$","main",null,{"className":"flex-grow","children":[["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}]]}],["$","$L14",null,{}]]}],null,["$","$L15",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@17"}]}]]}],"p":"$@18","v":null,"s":"$6"}}]]
-0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a5f4b432828c182d.css","precedence":"next"}]],["$","html",null,{"lang":"en","className":"h-full antialiased scroll-smooth","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap","rel":"stylesheet"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"className":"min-h-full flex flex-col font-body bg-[#FFF8EF] text-[#35363A]","children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}]]}]]}],"p":"$@5","v":null,"s":"$6"},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1c",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$16",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Hunger Stories — Every Flavour Has A Story | Premium Multi-Cuisine Restaurant & Catering, Hyderabad"}],["$","meta","1",{"name":"description","content":"Hunger Stories is a craft multi-cuisine restaurant and catering kitchen in Hyderabad, India. Experience authentic slow-dum Hyderabadi biryani, rich North Indian curries, tandoori grills, and bespoke celebration catering."}],"$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a","$L2b","$L2c","$L2d","$L2e","$L2f"]}]}],null]}],null]}],"p":"$@30","v":null,"s":"$6"}},"a":"$@31","u":"$@32","b":"p1JTF-0YtwNGLMQWHqX7i"}
-33:I[6869,[],"IconMark"]
-17:null
-1d:["$","meta","2",{"name":"keywords","content":"Hunger Stories,Hunger Stories Hyderabad,Hyderabadi biryani,multi-cuisine restaurant,Tellapur cloud kitchen,Manikonda restaurant,catering Hyderabad,wedding catering Hyderabad,corporate catering Hyderabad"}]
-1e:["$","meta","3",{"name":"robots","content":"index, follow"}]
-1f:["$","meta","4",{"property":"og:title","content":"Hunger Stories — Every Flavour Has A Story"}]
-20:["$","meta","5",{"property":"og:description","content":"Craft multi-cuisine kitchen engineered for taste, heat retention, and slow-dum heritage in Hyderabad, India."}]
-21:["$","meta","6",{"property":"og:site_name","content":"Hunger Stories"}]
-22:["$","meta","7",{"property":"og:locale","content":"en_IN"}]
-23:["$","meta","8",{"property":"og:image","content":"https://about.hungerstories.com/images/food/hero-biryani.jpg"}]
-24:["$","meta","9",{"property":"og:image:width","content":"1200"}]
-25:["$","meta","10",{"property":"og:image:height","content":"630"}]
-26:["$","meta","11",{"property":"og:image:alt","content":"Hunger Stories Royal Hyderabadi Dum Biryani"}]
-27:["$","meta","12",{"property":"og:type","content":"website"}]
-28:["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}]
-29:["$","meta","14",{"name":"twitter:title","content":"Hunger Stories — Every Flavour Has A Story"}]
-2a:["$","meta","15",{"name":"twitter:description","content":"Premium multi-cuisine restaurant and bespoke catering brand based in Hyderabad, India."}]
-2b:["$","meta","16",{"name":"twitter:image","content":"https://about.hungerstories.com/images/food/hero-biryani.jpg"}]
-2c:["$","link","17",{"rel":"icon","href":"/favicon.ico?7161ee1d105bc9c7","type":"image/x-icon","sizes":"48x48"}]
-2d:["$","link","18",{"rel":"icon","href":"/images/favicon.png"}]
-2e:["$","link","19",{"rel":"apple-touch-icon","href":"/images/favicon.png"}]
-2f:["$","$L33","20",{}]
-6:300
-32:true
-6:C
-31:0
-5:"$undefined"
-30:"$undefined"
-18:"$undefined"
+5:X
+6:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","$La",null,{"children":["$","div",null,{"className":"min-h-screen bg-[#FFF8EF] text-[#35363A] flex flex-col selection:bg-[#F69522] selection:text-white","children":[["$","$Lb",null,{}],["$","$Lc",null,{}],["$","main",null,{"className":"flex-grow","children":[["$","$Ld",null,{}],["$","$Le",null,{"children":[["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","section",null,{"className":"relative overflow-hidden bg-[#30231F] text-[#FFF8EF]","children":["$","div",null,{"className":"container-wide py-20 sm:py-28 lg:py-32","children":[["$","div",null,{"className":"flex flex-col gap-3 border-b border-white/15 pb-5 sm:flex-row sm:items-center sm:justify-between","children":[["$","span",null,{"className":"eyebrow-tag text-[#F69522]","children":"Chapter 06 / 07 • The Hunger Stories Experience"}],["$","span",null,{"className":"font-mono text-xs uppercase tracking-widest text-white/50","children":"Hyderabad, India"}]]}],["$","div",null,{"className":"grid items-center gap-10 pt-12 sm:gap-16 sm:pt-16 lg:grid-cols-12 lg:pt-20","children":[["$","div",null,{"className":"relative aspect-[4/3] overflow-hidden rounded-3xl bg-[#35363A] lg:col-span-6 lg:aspect-[4/5]","children":[["$","$L14",null,{"src":"/images/food/signature-biryani.jpg","alt":"Hunger Stories biryani prepared for sharing","fill":true,"sizes":"(max-width: 1024px) 100vw, 45vw","className":"object-cover"}],"$L15"]}],"$L16"]}]]}]}],"$L17"]}]]}],"$L18"]}]}],null,"$L19"]}],"p":"$@1a","v":null,"s":"$5"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/082808b30a1a8fc1.css","precedence":"next"}]],["$","html",null,{"lang":"en","className":"h-full antialiased scroll-smooth","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap","rel":"stylesheet"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Restaurant\",\"name\":\"Hunger Stories Tellapur\",\"image\":\"https://about.hungerstories.com/images/food/hero-biryani.jpg\",\"url\":\"https://about.hungerstories.com\",\"telephone\":\"+91 99593 33931\",\"email\":\"hello@hungerstories.in\",\"hasMap\":\"https://maps.app.goo.gl/MdTnYai85ysyPVv37\",\"servesCuisine\":[\"Hyderabadi Dum Biryani\",\"North Indian\",\"South Indian\",\"Tandoori\",\"Indo-Chinese\"],\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"18-52, Komaram Bheem Colony, Indira Nagar\",\"addressLocality\":\"Tellapur\",\"addressRegion\":\"Telangana\",\"postalCode\":\"500089\",\"addressCountry\":\"IN\"},\"sameAs\":[\"https://instagram.com/hungerstories.hyd\",\"https://facebook.com/hungerstories.hyd\"]}"}}]]}],["$","body",null,{"className":"min-h-full flex flex-col font-body bg-[#FFF8EF] text-[#35363A]","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}]]}]]}],"p":"$@4","v":null,"s":"$5"},"c":"$Q6"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Hunger Stories — Every Flavour Has A Story | Tellapur Kitchen & Catering"}],["$","meta","1",{"name":"description","content":"Hunger Stories is a multi-cuisine kitchen in Tellapur, Hyderabad, offering biryani, curries, tandoori grills, delivery and celebration catering."}],["$","meta","2",{"name":"keywords","content":"Hunger Stories,Hunger Stories Hyderabad,Hyderabadi biryani,multi-cuisine restaurant,Tellapur cloud kitchen,catering Hyderabad,wedding catering Hyderabad,corporate catering Hyderabad"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","meta","4",{"property":"og:title","content":"Hunger Stories — Every Flavour Has A Story"}],["$","meta","5",{"property":"og:description","content":"Discover freshly prepared multi-cuisine food and celebration catering from our Tellapur kitchen."}],["$","meta","6",{"property":"og:site_name","content":"Hunger Stories"}],["$","meta","7",{"property":"og:locale","content":"en_IN"}],"$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a","$L2b","$L2c"]}]}],null]}],null]}],"p":"$@2d","v":null,"s":"$5"}},"a":"$@2e","u":"$@2f","b":"vOdKBtkCx_9Q2xVgsWyN6"}
+30:I[272,["569","$7","278","$8","974","$9"],"StoryReveal"]
+31:I[209,["569","$7","278","$8","974","$9"],"default"]
+32:I[3535,["569","$7","278","$8","974","$9"],"default"]
+33:I[7694,["569","$7","278","$8","974","$9"],"default"]
+34:I[484,[],"OutletBoundary"]
+36:I[6869,[],"IconMark"]
+15:["$","div",null,{"className":"absolute inset-0 bg-gradient-to-t from-[#30231F]/60 to-transparent"}]
+16:["$","$L30",null,{"className":"lg:col-span-6 lg:pl-8","children":[["$","p",null,{"className":"eyebrow-tag mb-5 text-[#F69522]","children":"The Hunger Stories Experience"}],["$","h2",null,{"className":"font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl","children":["A story best ",["$","br",null,{}],["$","span",null,{"className":"font-editorial-italic text-[#FFF8EF]/80","children":"shared."}]]}],["$","p",null,{"className":"mt-6 max-w-lg text-sm leading-relaxed text-[#FFF8EF]/75 sm:text-lg","children":"Freshly prepared flavours, warm hospitality, convenient delivery and catering bring people together, from everyday meals to celebrations."}],["$","div",null,{"className":"mt-10 border-t border-white/15","children":[["$","a","01",{"href":"#cuisines","className":"group flex min-h-[64px] items-center gap-4 border-b border-white/15 py-4 text-sm transition-colors hover:text-[#F69522] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F69522] sm:text-base","children":[["$","span",null,{"className":"font-mono text-xs text-[#F69522]","children":"01"}],["$","span",null,{"className":"flex-1","children":"Explore our cuisines"}],["$","$L31",null,{"icon":{"name":"arrow-up-right","size":24,"node":[["path",{"d":"M7 7h10v10","key":"1tivn9"}],["path",{"d":"M7 17 17 7","key":"1vkiza"}]]},"className":"h-4 w-4","aria-hidden":"true"}]]}],["$","a","02",{"href":"#order","className":"group flex min-h-[64px] items-center gap-4 border-b border-white/15 py-4 text-sm transition-colors hover:text-[#F69522] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F69522] sm:text-base","children":[["$","span",null,{"className":"font-mono text-xs text-[#F69522]","children":"02"}],["$","span",null,{"className":"flex-1","children":"Order from Tellapur"}],["$","$L31",null,{"icon":"$16:props:children:3:props:children:0:props:children:2:props:icon","className":"h-4 w-4","aria-hidden":"true"}]]}],["$","a","03",{"href":"#catering","className":"group flex min-h-[64px] items-center gap-4 border-b border-white/15 py-4 text-sm transition-colors hover:text-[#F69522] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F69522] sm:text-base","children":[["$","span",null,{"className":"font-mono text-xs text-[#F69522]","children":"03"}],["$","span",null,{"className":"flex-1","children":"Gather over good food"}],["$","$L31",null,{"icon":"$16:props:children:3:props:children:0:props:children:2:props:icon","className":"h-4 w-4","aria-hidden":"true"}]]}]]}]]}]
+17:["$","$L32",null,{}]
+18:["$","$L33",null,{}]
+19:["$","$L34",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@35"}]}]
+20:["$","meta","8",{"property":"og:image","content":"https://about.hungerstories.com/images/food/hero-biryani.jpg"}]
+21:["$","meta","9",{"property":"og:image:width","content":"1200"}]
+22:["$","meta","10",{"property":"og:image:height","content":"630"}]
+23:["$","meta","11",{"property":"og:image:alt","content":"Hunger Stories Royal Hyderabadi Dum Biryani"}]
+24:["$","meta","12",{"property":"og:type","content":"website"}]
+25:["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}]
+26:["$","meta","14",{"name":"twitter:title","content":"Hunger Stories — Every Flavour Has A Story"}]
+27:["$","meta","15",{"name":"twitter:description","content":"Multi-cuisine food, delivery and catering from Hunger Stories in Tellapur, Hyderabad."}]
+28:["$","meta","16",{"name":"twitter:image","content":"https://about.hungerstories.com/images/food/hero-biryani.jpg"}]
+29:["$","link","17",{"rel":"icon","href":"/favicon.ico?7161ee1d105bc9c7","type":"image/x-icon","sizes":"48x48"}]
+2a:["$","link","18",{"rel":"icon","href":"/images/favicon.png"}]
+2b:["$","link","19",{"rel":"apple-touch-icon","href":"/images/favicon.png"}]
+2c:["$","$L36","20",{}]
+5:300
+35:null
+2f:true
+5:C
+2e:0
+4:"$undefined"
+2d:"$undefined"
+1a:"$undefined"
