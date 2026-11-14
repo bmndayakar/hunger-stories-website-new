@@ -5,7 +5,6 @@ import CuisineDiscovery from '@/components/sections/CuisineDiscovery';
 import FoodExperiences from '@/components/sections/FoodExperiences';
 import Catering from '@/components/sections/Catering';
 import Locations from '@/components/sections/Locations';
-import Testimonials from '@/components/sections/Testimonials';
 import FinalCTA from '@/components/sections/FinalCTA';
 import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
@@ -22,7 +21,6 @@ export default function Home() {
         <FoodExperiences />
         <Catering />
         <Locations />
-        <Testimonials />
         <FinalCTA />
       </main>
       <Footer />

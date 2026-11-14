@@ -27,7 +27,7 @@ const pillars = [
 
 export default function BrandStory() {
   return (
-    <section id="story" className="relative py-32 lg:py-44 bg-[#FFF8EF] text-[#35363A] overflow-hidden">
+    <section id="story" className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden">
       {/* Anchor alias for #about */}
       <div id="about" className="sr-only" />
 
@@ -37,34 +37,34 @@ export default function BrandStory() {
       <div className="container-wide relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#35363A]/10 mb-16 lg:mb-24">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-[#35363A]/10 mb-12 sm:mb-16 lg:mb-24">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#F69522]">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
               Our Food Philosophy • Our Story
             </span>
           </div>
-          <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/40">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">
             Founded 2024 • Hyderabad, India
           </span>
         </div>
 
         {/* Hero Editorial Spread */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start mb-24 lg:mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-start mb-14 sm:mb-20 lg:mb-28">
           
           {/* Left Column: Big Headline & Manifesto Essay */}
-          <div className="lg:col-span-7 space-y-8">
-            <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+            <h2 className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight">
               More Than <br />
               <span className="font-editorial-italic font-normal text-[#35363A]/80">Just A </span>
               <span className="font-editorial-italic font-normal text-[#EA2628]">Meal.</span>
             </h2>
 
-            <p className="font-display text-xl sm:text-2xl text-[#35363A]/85 leading-snug font-normal italic max-w-2xl border-l-2 border-[#F69522] pl-6 py-2">
+            <p className="font-display text-lg sm:text-2xl text-[#35363A]/85 leading-snug font-normal italic max-w-2xl border-l-2 border-[#F69522] pl-4 sm:pl-6 py-1 sm:py-2">
               &ldquo;Great food brings people together. Every recipe is crafted with deep respect for Indian culinary traditions, rich natural spices, and the joy of sharing a memorable meal.&rdquo;
             </p>
 
-            <div className="space-y-6 font-body text-base sm:text-lg text-[#35363A]/70 leading-relaxed max-w-xl font-normal pt-2">
+            <div className="space-y-4 sm:space-y-6 font-body text-sm sm:text-lg text-[#35363A]/75 leading-relaxed max-w-xl font-normal pt-1">
               <p>
                 Founded in Hyderabad in 2024, <strong className="text-[#35363A] font-semibold">Hunger Stories</strong> was born from a simple belief: everyday dining and grand celebrations alike deserve exceptional flavour, honest ingredients, and genuine hospitality.
               </p>
@@ -73,30 +73,30 @@ export default function BrandStory() {
               </p>
             </div>
 
-            <div className="pt-4 flex items-center gap-8">
+            <div className="pt-2 sm:pt-4 flex items-center justify-between sm:justify-start gap-4 sm:gap-8">
               <div>
-                <span className="block font-display text-3xl font-bold text-[#F69522]">5</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#35363A]/60 font-semibold">Cuisine Styles</span>
+                <span className="block font-display text-2xl sm:text-3xl font-bold text-[#F69522]">5</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Cuisine Styles</span>
               </div>
-              <div className="h-10 w-px bg-[#35363A]/10" />
+              <div className="h-8 sm:h-10 w-px bg-[#35363A]/10" />
               <div>
-                <span className="block font-display text-3xl font-bold text-[#F69522]">2</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#35363A]/60 font-semibold">Hyderabad Hubs</span>
+                <span className="block font-display text-2xl sm:text-3xl font-bold text-[#F69522]">2</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Hyderabad Hubs</span>
               </div>
-              <div className="h-10 w-px bg-[#35363A]/10" />
+              <div className="h-8 sm:h-10 w-px bg-[#35363A]/10" />
               <div>
-                <span className="block font-display text-3xl font-bold text-[#F69522]">100%</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#35363A]/60 font-semibold">Fresh Daily Cooking</span>
+                <span className="block font-display text-2xl sm:text-3xl font-bold text-[#F69522]">100%</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Fresh Daily</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Asymmetric Vertical Photography Composition */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
-              {/* Tall Vertical Spices Frame */}
-              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-[#35363A] border-4 border-white">
+              {/* Vertical Spices Frame */}
+              <div className="relative aspect-[4/3] xs:aspect-[5/4] sm:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl bg-[#35363A] border-4 border-white">
                 <Image
                   src="/images/food/craft-spices.jpg"
                   alt="Artisanal stone-ground spices at Hunger Stories"
@@ -104,13 +104,13 @@ export default function BrandStory() {
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center filter contrast-[1.05] hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#30231F]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#30231F]/90 via-transparent to-transparent" />
                 
-                <div className="absolute bottom-6 left-6 right-6 text-white">
+                <div className="absolute bottom-5 sm:bottom-6 left-5 sm:left-6 right-5 sm:right-6 text-white text-shadow-food">
                   <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#F69522] mb-1">
                     Whole Spice Blends
                   </p>
-                  <p className="font-display text-lg font-bold">
+                  <p className="font-display text-base sm:text-lg font-bold">
                     Roasted & Ground In Small Batches
                   </p>
                 </div>
@@ -138,23 +138,23 @@ export default function BrandStory() {
 
         </div>
 
-        {/* 3 Editorial Pillars (Non-generic, magazine-style timeline) */}
-        <div className="pt-16 border-t border-[#35363A]/10 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        {/* 3 Pillars */}
+        <div className="pt-10 sm:pt-16 border-t border-[#35363A]/10 grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-16">
           {pillars.map((pillar) => (
-            <div key={pillar.number} className="space-y-4">
+            <div key={pillar.number} className="space-y-2.5 sm:space-y-4">
               <div className="flex items-baseline gap-3">
-                <span className="font-display text-4xl font-bold text-[#F69522]/40">
+                <span className="font-display text-3xl sm:text-4xl font-bold text-[#F69522]/40">
                   {pillar.number}
                 </span>
                 <div className="h-px flex-1 bg-[#35363A]/10" />
               </div>
-              <h4 className="font-display text-2xl font-bold text-[#35363A] leading-snug">
+              <h4 className="font-display text-xl sm:text-2xl font-bold text-[#35363A] leading-snug">
                 {pillar.title}
               </h4>
-              <p className="text-xs uppercase tracking-wider text-[#F69522] font-semibold">
+              <p className="text-[11px] sm:text-xs uppercase tracking-wider text-[#F69522] font-semibold">
                 {pillar.subtitle}
               </p>
-              <p className="font-body text-sm text-[#35363A]/70 leading-relaxed font-normal">
+              <p className="font-body text-sm text-[#35363A]/75 leading-relaxed font-normal">
                 {pillar.narrative}
               </p>
             </div>

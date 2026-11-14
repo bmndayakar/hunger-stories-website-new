@@ -32,6 +32,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -39,6 +41,7 @@ body {
   color: #35363A;
   background-color: #FFF8EF;
   overflow-x: hidden;
+  width: 100%;
   letter-spacing: -0.01em;
 }
 
@@ -113,12 +116,26 @@ p {
   background: #F69522;
 }
 
+/* Hide scrollbars for clean mobile touch strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .container-wide {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.25rem, 4vw, 3.5rem);
-  padding-right: clamp(1.25rem, 4vw, 3.5rem);
+  padding-left: clamp(1rem, 4vw, 3.5rem);
+  padding-right: clamp(1rem, 4vw, 3.5rem);
+}
+
+/* Subtle text contrast shadow for photography overlays */
+.text-shadow-food {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
 }
 
 /* Subtle editorial marquee */

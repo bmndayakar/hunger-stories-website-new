@@ -190,64 +190,29 @@ hunger-stories-website-new/
 - **Two Profiles:**
   - *Manikonda Restaurant* (Dine-In • Takeaway) with `location-manikonda.jpg`
   - *Tellapur Cloud Kitchen* (Express Delivery Hub) with `location-tellapur.jpg`
+- **Actions:** High-contrast touch buttons: Direct Call (`tel:+918886762323`), Online Order (`#order`), and Google Maps Navigation (`Get Directions`).
 - **Data Source:** Wired directly to `siteConfig.locations` in `src/lib/config.ts`.
 
-### 07: Customer Experiences (`Testimonials.tsx`)
-- **Anchor ID:** `#testimonials`
-- **Atmosphere:** Warm dark Espresso salon aesthetic.
-- **Interactions:** Swiper carousel with custom quotation marks and responsive breakpoints.
-- **Compliance:** Testimonials are explicitly flagged as `[Guest Review Placeholder]` with an explicit disclaimer noting they will be updated with verified patron reviews.
-
-### 08: Order Online & Catering Enquiries (`FinalCTA.tsx`)
+### 07: Order Online & Catering Touchpoint (`FinalCTA.tsx`)
 - **Anchor ID:** `#order` (with alias `#contact`)
 - **Headline:** *"Your Next Food Story Starts Here."*
+- **Strict Brand Awareness Directive:** Pure external dispatch links, NO checkout, NO shopping cart, NO prices, and NO internal submission forms.
 - **4 Prominent External Channels:**
-  1. **Swiggy:** Direct order link for Tellapur & Western Hyderabad delivery.
-  2. **Zomato:** Direct order link for Tellapur delivery & Manikonda dine-in.
-  3. **Ownly:** Direct brand kitchen ordering (**active**, not coming soon).
-  4. **WhatsApp:** Instant chat with kitchen & catering team.
-- **Integrated Catering & Event Enquiry:** Direct hotline (`+91 88867 62323`), email, WhatsApp, and interactive quick inquiry form with instant confirmation feedback. Eliminates duplicate contact sections.
-- **Features:** Master centerpiece photo card (`catering-feast.jpg`) + interactive 5-format selector:
-  1. *Corporate Galas & IT Summits* (50–2,000+ guests)
-  2. *Weddings & Reception Banquets* (100–2,500+ guests)
-  3. *Birthday Celebrations & Milestones* (25–150 guests)
-  4. *Intimate Family Gatherings & House Parties* (20–80 guests)
-  5. *Bulk Food & Packed Meal Box Solutions* (50–3,000 boxes daily)
+  1. **Swiggy:** Direct order link for Tellapur & Western Hyderabad delivery (`siteConfig.ordering.swiggy`).
+  2. **Zomato:** Direct order link for Tellapur delivery & Manikonda dine-in (`siteConfig.ordering.zomato`).
+  3. **Ownly:** Direct brand kitchen ordering (`https://order.hungerstories.com`).
+  4. **WhatsApp:** Instant concierge chat with kitchen team (`https://wa.me/918886762323...`).
+- **Integrated Catering & Event Desk:** Direct hotline (`+91 88867 62323`), WhatsApp concierge link, and email inquiries. Clean non-form touchpoint eliminating fake form submissions.
 
-### Chapter 06: Our Sanctuaries (`Locations.tsx`)
-- **Anchor ID:** `#locations`
-- **Headline:** *"Our Hyderabad Culinary Houses."*
-- **Two Profiles:**
-  - *Manikonda Dining Room* (Dine-In • Takeaway) with `location-manikonda.jpg`
-  - *Tellapur Craft Hub* (Express Delivery Hub) with `location-tellapur.jpg`
-- **Data Source:** Wired directly to `siteConfig.sanctuaries` in `src/lib/config.ts`.
-
-### Chapter 07: Customer Experiences (`Testimonials.tsx`)
-- **Anchor ID:** `#testimonials`
-- **Atmosphere:** Dark Espresso salon aesthetic.
-- **Interactions:** Swiper carousel with custom quotation marks and responsive breakpoints.
-- **Compliance:** All 4 testimonials are explicitly flagged as `[Guest Review Placeholder]` with an explicit disclaimer noting they will be updated with verified patron reviews.
-
-### Chapter 08: External Order Channels (`FinalCTA.tsx`)
-- **Anchor ID:** `#order`
-- **Headline:** *"Your Next Food Story Starts Here."*
-- **4 Destination Passes:**
-  1. **Swiggy:** Live link to Tellapur outlet.
-  2. **Zomato:** Live link to Tellapur outlet.
-  3. **Ownly:** Direct Kitchen Dispatch.
-  4. **WhatsApp Concierge:** Direct WhatsApp chat link with pre-filled message.
-
-### Chapter 09: Hospitality Desk & Concierge (`Contact.tsx`)
-- **Anchor ID:** `#contact`
-- **Headline:** *"Let's Craft Your Next Gathering."*
-- **Direct Cards:** Hotline (`tel:+918886762323`), WhatsApp (`https://wa.me/...`), Email (`mailto:hello@hungerstories.in`).
-- **Interactive Form:** Select gathering format, guest count range, and notes. Features client-side state with instant submission acknowledgment.
+### Testimonials Note
+- Previously contained placeholder customer reviews. Removed per client directive: *"Use real customer testimonials only. If verified testimonials are unavailable, remove the section rather than displaying fabricated placeholder reviews."* Can be restored to `page.tsx` once verified reviews are provided.
 
 ### Navigation & Header (`Navbar.tsx`)
 - Dual-mode header:
   - **Top of page:** Transparent with dark gradient scrim, using `logo-light.png`.
   - **Scrolled (>50px):** Warm Ivory background with 95% opacity, backdrop blur, hairline border, using dark `logo.png`.
-- Full-screen mobile menu drawer with touch-friendly navigation links and quick-action buttons (Order Swiggy, Order Zomato, WhatsApp Concierge, Call Kitchen).
+  - **Mobile Menu Open:** Transparent overlay with `logo-light.png` and full 44px touch targets.
+- Full-screen mobile menu drawer with touch-friendly navigation links and direct hotline actions.
 
 ---
 

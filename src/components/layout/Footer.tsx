@@ -10,8 +10,7 @@ const footerNav = [
   { href: '#experiences', label: 'Signature Dishes', index: '03' },
   { href: '#catering', label: 'Catering & Celebrations', index: '04' },
   { href: '#locations', label: 'Our Locations', index: '05' },
-  { href: '#testimonials', label: 'Customer Experiences', index: '06' },
-  { href: '#order', label: 'Order Online', index: '07' },
+  { href: '#order', label: 'Order Online', index: '06' },
 ];
 
 export default function Footer() {
@@ -32,8 +31,8 @@ export default function Footer() {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F69522]/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Main Footer Container */}
-      <div className="container-wide py-20 lg:py-28 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14">
+      <div className="container-wide py-16 sm:py-20 lg:py-28 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-14">
           
           {/* Brand Col */}
           <div className="lg:col-span-5 space-y-6">
@@ -48,7 +47,7 @@ export default function Footer() {
               </div>
             </a>
             
-            <p className="font-body text-base text-white/60 leading-relaxed max-w-sm font-normal">
+            <p className="font-body text-sm sm:text-base text-white/60 leading-relaxed max-w-sm font-normal">
               A craft multi-cuisine restaurant and catering kitchen in Hyderabad, India. Bringing people together through exceptional food, unforgettable flavours, and shared celebration tables.
             </p>
 
@@ -62,7 +61,7 @@ export default function Footer() {
                   href={siteConfig.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-[#F69522] hover:border-[#F69522] hover:bg-white/5 transition-all duration-300"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-[#F69522] hover:border-[#F69522] hover:bg-white/5 transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -75,7 +74,7 @@ export default function Footer() {
                   href={siteConfig.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-[#F69522] hover:border-[#F69522] hover:bg-white/5 transition-all duration-300"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-[#F69522] hover:border-[#F69522] hover:bg-white/5 transition-all duration-300"
                   aria-label="Facebook"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -88,7 +87,7 @@ export default function Footer() {
                   href={getWhatsAppUrl('Hi Hunger Stories, I would like to get in touch')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-[#25D366] hover:border-[#25D366] hover:bg-white/5 transition-all duration-300"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-[#25D366] hover:border-[#25D366] hover:bg-white/5 transition-all duration-300"
                   aria-label="WhatsApp"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -183,10 +182,10 @@ export default function Footer() {
           </p>
           <button
             onClick={scrollToTop}
-            className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-[#F69522] hover:bg-[#F69522] transition-all duration-300 group"
+            className="w-11 h-11 min-h-[44px] min-w-[44px] rounded-full border border-white/20 flex items-center justify-center hover:border-[#F69522] hover:bg-[#F69522] transition-all duration-300 group"
             aria-label="Scroll back to top"
           >
-            <ChevronUp className="w-4 h-4 group-hover:text-white" />
+            <ChevronUp className="w-5 h-5 group-hover:text-white" />
           </button>
         </div>
       </div>

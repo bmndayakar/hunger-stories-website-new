@@ -42,7 +42,9 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
+          isMobileMenuOpen
+            ? 'bg-transparent py-4 border-transparent shadow-none'
+            : isScrolled
             ? 'bg-[#FFF8EF]/95 backdrop-blur-xl border-b border-[#35363A]/10 shadow-[0_4px_30px_rgba(53,54,58,0.04)] py-3.5'
             : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5'
         }`}
@@ -54,7 +56,7 @@ export default function Navbar() {
             <a href="#" className="relative z-50 flex items-center group" aria-label="Hunger Stories Home">
               <div className="relative h-10 md:h-12 w-44 md:w-52 transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
-                  src={isScrolled ? "/images/logo.png" : "/images/logo-light.png"}
+                  src={isMobileMenuOpen || !isScrolled ? "/images/logo-light.png" : "/images/logo.png"}
                   alt="Hunger Stories — Every Flavour Has A Story"
                   fill
                   priority
@@ -119,12 +121,14 @@ export default function Navbar() {
           {/* Mobile Menu Hamburger Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`relative z-50 lg:hidden p-2 rounded-xl transition-colors ${
-              isScrolled ? 'text-[#35363A] hover:bg-[#35363A]/5' : 'text-white hover:bg-white/10'
+            className={`relative z-50 lg:hidden min-h-[44px] min-w-[44px] p-2 rounded-xl flex items-center justify-center transition-colors ${
+              isMobileMenuOpen || !isScrolled
+                ? 'text-white hover:bg-white/10'
+                : 'text-[#35363A] hover:bg-[#35363A]/5'
             }`}
             aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Navigation Menu'}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
         </div>
