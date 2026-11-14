@@ -45,13 +45,13 @@ Under **NO CIRCUMSTANCES** should any agent implement:
 2. **No Shopping Cart or Cart State:** No drawer, badge count, or add-to-cart buttons.
 3. **No Checkout Engine or Payment Gateways:** No Stripe, Razorpay, Cashfree, or UPI payment processing.
 4. **No Internal Ordering Flow:** All ordering MUST route externally to verified third-party platforms.
-5. **No Fake Customer Identities:** Testimonials must remain explicitly marked as placeholders until real Google/Dineout reviews are supplied by the client.
+5. **No Fake Customer Reviews:** Do not introduce fabricated or placeholder testimonials. The testimonials section has been removed entirely until verified reviews from Google, Dineout, or Swiggy are provided by the client.
 
 ### Authorized External Ordering Channels:
 All ordering actions must point exclusively to:
-- **Swiggy:** `https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad`
-- **Zomato:** `https://www.zomato.com/hyderabad/hunger-stories-tellapur`
-- **Ownly:** Direct brand dispatch (configurable via `NEXT_PUBLIC_OWNLY_URL`)
+- **Swiggy:** `https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad` (Active HTTP 200)
+- **Zomato:** `https://www.zomato.com/hyderabad/hunger-stories-tellapur` (Verify exact listing URL with client)
+- **Ownly:** Direct brand kitchen ordering at `https://order.hungerstories.com` (Configurable via `NEXT_PUBLIC_OWNLY_URL`)
 - **WhatsApp Concierge:** Pre-formatted message to `https://wa.me/918886762323?text=...`
 
 ---
@@ -109,7 +109,7 @@ hunger-stories-website-new/
 │   │   └── page.tsx                  # Single-page master composition
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── Navbar.tsx            # Sticky header + full-screen mobile drawer
+│   │   │   ├── Navbar.tsx            # Sticky header + full-screen mobile drawer (5 links + Order CTA)
 │   │   │   └── Footer.tsx            # Editorial sitemap & brand colophon
 │   │   ├── sections/
 │   │   │   ├── Hero.tsx              # 01: Hero — Welcome to Hunger Stories (#hero)
@@ -118,8 +118,7 @@ hunger-stories-website-new/
 │   │   │   ├── FoodExperiences.tsx   # 04: Signature Dishes (#experiences)
 │   │   │   ├── Catering.tsx          # 05: Catering & Celebrations (#catering)
 │   │   │   ├── Locations.tsx         # 06: Our Locations — Manikonda & Tellapur (#locations)
-│   │   │   ├── Testimonials.tsx      # 07: Customer Experiences (#testimonials)
-│   │   │   └── FinalCTA.tsx          # 08: Order Online & Catering Enquiries (#order)
+│   │   │   └── FinalCTA.tsx          # 07: Order Online (4 channels) & Catering Enquiry (#order, #contact)
 │   │   └── ui/
 │   │       ├── ScrollProgress.tsx    # Viewport scroll progress indicator
 │   │       └── animations.tsx        # Framer Motion reveal wrappers
@@ -150,7 +149,7 @@ hunger-stories-website-new/
 - **Three Craft Pillars:**
   1. *Authentic Dum Cooking* (Slow-cooked in sealed clay handis).
   2. *Freshly Roasted Spices* (Stone-ground in small batches).
-  3. *Honest, Wholesome Ingredients* (Pure ghee, fresh daily batches).
+  3. *Honest, Wholesome Ingredients* (Quality ghee, fresh daily batches, authentic spices).
 
 ### 03: Explore Our Cuisines (`CuisineDiscovery.tsx`)
 - **Anchor ID:** `#cuisines`
@@ -161,7 +160,7 @@ hunger-stories-website-new/
   3. Charcoal Tandoor & Grills
   4. South Indian Coastal & Deccan
   5. Indo-Chinese Wok Art
-- **Content:** Short, punchy 1-2 sentence introductions, key flavours, and popular dishes.
+- **Content:** Short, customer-friendly 2-sentence introductions without unnecessary ingredient jargon.
 
 ### 04: Signature Food Experiences (`FoodExperiences.tsx`)
 - **Anchor ID:** `#experiences` (with alias `#story`)
@@ -176,13 +175,13 @@ hunger-stories-website-new/
 ### 05: Catering & Celebrations (`Catering.tsx`)
 - **Anchor ID:** `#catering`
 - **Headline:** *"Made For Every Occasion."*
-- **Capacity:** Serving 20 to 2,000+ Guests
+- **Capacity:** Serving 20 to 500+ Guests
 - **Features:** Master centerpiece photo card (`catering-feast.jpg`) + interactive 5-format selector:
-  1. *Corporate Events & Summits* (50–1,000+ guests)
-  2. *Weddings & Receptions* (100–2,000+ guests)
+  1. *Corporate Events & Summits* (50–500+ guests)
+  2. *Weddings & Receptions* (100+ guests)
   3. *Birthdays & Private Parties* (25–150 guests)
   4. *Family Gatherings & House Parties* (20–80 guests)
-  5. *Bulk Orders & Box Meals* (50–2,000+ boxes)
+  5. *Bulk Orders & Box Meals* (50+ boxes)
 
 ### 06: Our Locations (`Locations.tsx`)
 - **Anchor ID:** `#locations`
@@ -196,18 +195,20 @@ hunger-stories-website-new/
 ### 07: Order Online & Catering Touchpoint (`FinalCTA.tsx`)
 - **Anchor ID:** `#order` (with alias `#contact`)
 - **Headline:** *"Your Next Food Story Starts Here."*
-- **Strict Brand Awareness Directive:** Pure external dispatch links, NO checkout, NO shopping cart, NO prices, and NO internal submission forms.
+- **Strict Brand Awareness Directive:** Pure external dispatch links, NO checkout, NO shopping cart, NO prices.
 - **4 Prominent External Channels:**
   1. **Swiggy:** Direct order link for Tellapur & Western Hyderabad delivery (`siteConfig.ordering.swiggy`).
   2. **Zomato:** Direct order link for Tellapur delivery & Manikonda dine-in (`siteConfig.ordering.zomato`).
   3. **Ownly:** Direct brand kitchen ordering (`https://order.hungerstories.com`).
   4. **WhatsApp:** Instant concierge chat with kitchen team (`https://wa.me/918886762323...`).
-- **Integrated Catering & Event Desk:** Direct hotline (`+91 88867 62323`), WhatsApp concierge link, and email inquiries. Clean non-form touchpoint eliminating fake form submissions.
+- **Integrated Catering Enquiry & Contact Desk:** Includes direct hotline (`+91 88867 62323`), WhatsApp concierge link, email inquiries, and an interactive Catering Enquiry Form (name, phone, event type, guest count, notes) for tailored event quotes.
 
 ### Testimonials Note
-- Previously contained placeholder customer reviews. Removed per client directive: *"Use real customer testimonials only. If verified testimonials are unavailable, remove the section rather than displaying fabricated placeholder reviews."* Can be restored to `page.tsx` once verified reviews are provided.
+- Previously contained placeholder customer reviews. Removed completely from codebase per client directive: *"Use real customer testimonials only. If verified testimonials are unavailable, remove the section rather than displaying fabricated placeholder reviews."* Can be restored to `page.tsx` once verified reviews are provided.
 
 ### Navigation & Header (`Navbar.tsx`)
+- 5 clean navigation links: `Our Story` (`#story`), `Cuisines` (`#cuisines`), `Catering` (`#catering`), `Locations` (`#locations`), and `Contact` (`#contact`).
+- Prominent `Order Online` CTA button pointing directly to `#order`.
 - Dual-mode header:
   - **Top of page:** Transparent with dark gradient scrim, using `logo-light.png`.
   - **Scrolled (>50px):** Warm Ivory background with 95% opacity, backdrop blur, hairline border, using dark `logo.png`.
@@ -242,9 +243,9 @@ export const siteConfig = {
   ordering: {
     swiggy: process.env.NEXT_PUBLIC_SWIGGY_URL || 'https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad',
     zomato: process.env.NEXT_PUBLIC_ZOMATO_URL || 'https://www.zomato.com/hyderabad/hunger-stories-tellapur',
-    ownly: process.env.NEXT_PUBLIC_OWNLY_URL || '#',
+    ownly: process.env.NEXT_PUBLIC_OWNLY_URL || 'https://order.hungerstories.com',
     whatsappDefaultMessage: 'Hi Hunger Stories, I would like to order fresh food from your kitchen',
-    whatsappCateringMessage: 'Hi Hunger Stories, I would like to inquire about your catering and banquet services',
+    whatsappCateringMessage: 'Hi Hunger Stories, I would like to enquire about your catering and event food services',
   },
   locations: {
     manikonda: { ... },
@@ -308,3 +309,23 @@ export function getWhatsAppUrl(customMessage?: string): string;
 - [ ] If changing phone numbers or ordering URLs, modify ONLY [`src/lib/config.ts`](file:///c:/Users/dayam/Documents/hunger-stories-website-new/src/lib/config.ts) or set the corresponding `NEXT_PUBLIC_*` environment variables.
 - [ ] If creating new sections, maintain the chapter numbering format (`Chapter XX / 07 • Title`) to preserve editorial continuity.
 - [ ] Always verify `npm run build` succeeds with exit code 0 before pushing changes to `main`.
+
+---
+
+## 10. External Channels Verification & Client Action Items
+
+| Channel | URL Configured in `src/lib/config.ts` | Verification Status | Owner Action Required |
+|---|---|---|---|
+| **Swiggy** | `https://www.swiggy.com/restaurants/hunger-stories-tellapur-hyderabad` | **Verified (HTTP 200)** | None. Active store listing. |
+| **WhatsApp** | `https://wa.me/918886762323?text=...` | **Verified (Active)** | None. Direct concierge line operational. |
+| **Zomato** | `https://www.zomato.com/hyderabad/hunger-stories-tellapur` | **HTTP 404 Returned** | Client must verify exact restaurant slug from their Zomato Merchant Dashboard. |
+| **Ownly** | `https://order.hungerstories.com` | **DNS Not Resolving** | Client must add a CNAME record in Hostinger DNS: `order` -> `hungerstories.dotpe.in`. |
+
+---
+
+## 11. Next Milestone: Scroll-Driven Brand Storytelling Experience
+
+The current request in the pipeline is evolving the existing single-page layout into a cinematic, scroll-driven storytelling experience:
+- **7-Chapter Flow:** Our Food Philosophy → A World of Flavours → Chef Highlights (new placeholder) → Signature Food Experiences → Catering & Celebrations → Our Locations → Order Online.
+- **Interactions:** Sticky overlapping chapter transitions, subtle parallax on food imagery, scroll progress indicator, and staggered reveals.
+- **Non-negotiables:** Mobile must remain natural scrolling without sticky scroll traps; `prefers-reduced-motion` must be respected; visual identity (ivory, charcoal, orange accents) and existing external ordering channels remain intact.
