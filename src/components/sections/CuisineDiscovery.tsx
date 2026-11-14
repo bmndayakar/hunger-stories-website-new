@@ -14,7 +14,7 @@ const cuisines = [
     title: 'Hyderabadi Dum Biryani',
     badge: 'Signature Specialty',
     description:
-      'Aged long-grain basmati rice layered with tender cuts and whole spices, slow-cooked in sealed clay handis. Served steaming hot with rich mirchi ka salan and dahi raita for an unforgettable meal.',
+      'Fragrant basmati rice layered with marinated tender cuts and spices, slow-cooked in sealed clay pots. Served steaming hot with rich mirchi ka salan and cooling raita.',
     image: '/images/food/hero-biryani.jpg',
   },
   {
@@ -23,7 +23,7 @@ const cuisines = [
     title: 'North Indian Classics',
     badge: 'Rich Curries & Gravies',
     description:
-      'Velvety butter chicken, slow-simmered black lentils, and creamy paneer curries prepared fresh every day. Paired with warm tandoori breads, this is pure North Indian comfort food at its best.',
+      'Velvety butter chicken, creamy paneer curries, and slow-simmered lentils prepared fresh every day. Enjoy them with hot tandoori rotis and naans for a deeply satisfying meal.',
     image: '/images/food/signature-chicken.jpg',
   },
   {
@@ -32,7 +32,7 @@ const cuisines = [
     title: 'Charcoal Tandoor & Grills',
     badge: 'Smoky Clay Oven Grills',
     description:
-      'Succulent chicken skewers, spiced seekh kebabs, and soft paneer cubes marinated in yogurt and herbs, fire-roasted over live embers. Juicy on the inside with a crisp charred edge, served with tangy mint chutney.',
+      'Tender chicken tikka, spiced kebabs, and soft paneer roasted over live charcoal embers. Crisp on the edges and juicy inside, served with fresh mint chutney.',
     image: '/images/food/signature-paneer.jpg',
   },
   {
@@ -41,7 +41,7 @@ const cuisines = [
     title: 'South Indian & Deccan Flavours',
     badge: 'Deccan & Coastal Classics',
     description:
-      'Crisp golden dosas, fragrant bagara rice, and fiery pepper roasts bursting with fresh curry leaves and black pepper. Authentic regional recipes that bring comforting southern warmth straight to your table.',
+      'Crisp ghee dosas, fragrant bagara rice, and spicy pepper roasts tempered with fresh curry leaves. Enjoy vibrant regional specialties that deliver authentic southern comfort.',
     image: '/images/food/cuisine-south.jpg',
   },
   {
@@ -50,7 +50,7 @@ const cuisines = [
     title: 'Indo-Chinese Wok Specials',
     badge: 'High-Flame Wok Art',
     description:
-      'Tossed hakka noodles, aromatic fried rice, and crisp chili appetizers cooked to order over high heat. Packed with vibrant crunch and just the right touch of spicy zest.',
+      'Smoky hakka noodles, aromatic fried rice, and crispy chili chicken tossed over high heat. Made fresh to order with crunchy vegetables and bold, savory sauces.',
     image: '/images/food/cuisine-chinese.jpg',
   },
 ];
