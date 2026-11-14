@@ -51,7 +51,7 @@ const branches = [
 
 export default function Locations() {
   return (
-    <section id="locations" className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden border-t border-[#35363A]/10">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden border-t border-[#35363A]/10">
       <div className="container-wide relative z-10">
         
         {/* Section Header */}
@@ -59,7 +59,7 @@ export default function Locations() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#F69522]">
-              Chapter 06 / 07 • Our Locations
+              Chapter 05 / 07 • Our Locations
             </span>
           </div>
           <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-[#35363A]/50">

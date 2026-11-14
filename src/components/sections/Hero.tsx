@@ -17,7 +17,7 @@ const marqueeItems = [
 
 export default function Hero() {
   return (
-    <section className="story-prologue relative min-h-screen flex flex-col justify-between overflow-hidden bg-[#30231F] text-[#FFF8EF]">
+    <section className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-[#30231F] text-[#FFF8EF]">
       {/* Cinematic Ambient Overlays */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-1/4 w-[650px] h-[650px] bg-[#F69522]/15 rounded-full blur-[160px]" />

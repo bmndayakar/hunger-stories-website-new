@@ -2,14 +2,15 @@ import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/sections/Hero';
 import BrandStory from '@/components/sections/BrandStory';
 import CuisineDiscovery from '@/components/sections/CuisineDiscovery';
-import ChefHighlights from '@/components/sections/ChefHighlights';
 import FoodExperiences from '@/components/sections/FoodExperiences';
 import Catering from '@/components/sections/Catering';
 import Locations from '@/components/sections/Locations';
+import HungerStoriesExperience from '@/components/sections/HungerStoriesExperience';
 import FinalCTA from '@/components/sections/FinalCTA';
 import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import { StoryMotion } from '@/components/ui/StoryMotion';
+import StoryStack from '@/components/ui/StoryStack';
 
 export default function Home() {
   return (
@@ -19,13 +20,15 @@ export default function Home() {
         <Navbar />
         <main className="flex-grow">
           <Hero />
-          <BrandStory />
-          <CuisineDiscovery />
-          <ChefHighlights />
-          <FoodExperiences />
-          <Catering />
-          <Locations />
-          <FinalCTA />
+          <StoryStack>
+            <BrandStory />
+            <CuisineDiscovery />
+            <FoodExperiences />
+            <Catering />
+            <Locations />
+            <HungerStoriesExperience />
+            <FinalCTA />
+          </StoryStack>
         </main>
         <Footer />
       </div>

@@ -65,7 +65,7 @@ export default function Catering() {
   const activeOccasion = occasions.find((o) => o.id === selectedId) || occasions[0];
 
   return (
-    <section id="catering" className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-[#F3E8D9]/70 rounded-full blur-[160px] pointer-events-none translate-x-1/3" />
 
@@ -76,7 +76,7 @@ export default function Catering() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Chapter 05 / 07 • Catering & Celebrations
+              Chapter 04 / 07 • The Art of Catering
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">

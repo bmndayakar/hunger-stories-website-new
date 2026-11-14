@@ -53,7 +53,7 @@ const portfolio = [
 
 export default function FoodExperiences() {
   return (
-    <section id="experiences" className="relative py-20 sm:py-28 lg:py-36 bg-[#FAF2E6] text-[#35363A] overflow-hidden">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#FAF2E6] text-[#35363A] overflow-hidden">
       {/* Decorative Warm Glow */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#FFF8EF]/80 rounded-full blur-[140px] pointer-events-none" />
 
@@ -64,7 +64,7 @@ export default function FoodExperiences() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Chapter 04 / 07 • Signature Food Experiences
+              Chapter 03 / 07 • Signature Dishes
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">

@@ -88,7 +88,7 @@ export default function CuisineDiscovery() {
   };
 
   return (
-    <section id="cuisines" className="relative py-20 sm:py-28 lg:py-36 bg-white text-[#35363A] overflow-hidden">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-white text-[#35363A] overflow-hidden">
       {/* Decorative Warm Ambient Glow */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#F3E8D9]/40 rounded-full blur-[140px] pointer-events-none -translate-x-1/2" />
 
@@ -99,7 +99,7 @@ export default function CuisineDiscovery() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Chapter 02 / 07 • Explore Our Cuisines
+              Chapter 02 / 07 • A World of Flavours
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">

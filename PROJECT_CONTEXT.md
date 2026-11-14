@@ -112,16 +112,17 @@ hunger-stories-website-new/
 │   │   │   ├── Navbar.tsx            # Sticky header + full-screen mobile drawer (5 links + Order CTA)
 │   │   │   └── Footer.tsx            # Editorial sitemap & brand colophon
 │   │   ├── sections/
-│   │   │   ├── Hero.tsx              # 01: Hero — Welcome to Hunger Stories (#hero)
-│   │   │   ├── BrandStory.tsx        # 02: Our Story — More Than Just A Meal (#story)
-│   │   │   ├── CuisineDiscovery.tsx  # 03: Explore Our Cuisines (#cuisines)
-│   │   │   ├── ChefHighlights.tsx    # Chapter 03: Chef-story placeholder (#people)
-│   │   │   ├── FoodExperiences.tsx   # 04: Signature Dishes (#experiences)
-│   │   │   ├── Catering.tsx          # 05: Catering & Celebrations (#catering)
-│   │   │   ├── Locations.tsx         # 06: Our Locations — Manikonda & Tellapur (#locations)
+│   │   │   ├── Hero.tsx              # Introductory hero
+│   │   │   ├── BrandStory.tsx        # Chapter 01: Food Philosophy (#story)
+│   │   │   ├── CuisineDiscovery.tsx  # Chapter 02: A World of Flavours (#cuisines)
+│   │   │   ├── FoodExperiences.tsx   # Chapter 03: Signature Dishes (#experiences)
+│   │   │   ├── Catering.tsx          # Chapter 04: The Art of Catering (#catering)
+│   │   │   ├── Locations.tsx         # Chapter 05: Our Locations (#locations)
+│   │   │   ├── HungerStoriesExperience.tsx # Chapter 06: The Hunger Stories Experience
 │   │   │   └── FinalCTA.tsx          # 07: Order Online (4 channels) & Catering Enquiry (#order, #contact)
 │   │   └── ui/
 │   │       ├── ScrollProgress.tsx    # Viewport scroll progress indicator
+│   │       ├── StoryStack.tsx        # Sticky chapter panels and chapter navigation
 │   │       ├── StoryMotion.tsx       # Reduced-motion provider and chapter reveals
 │   │       └── animations.tsx        # Framer Motion reveal wrappers
 │   └── lib/
@@ -136,7 +137,7 @@ hunger-stories-website-new/
 
 ## 5. Section-by-Section Anatomy (V2 Streamlined)
 
-### 01: Hero (`Hero.tsx`)
+### Hero (`Hero.tsx`)
 - **Tone:** Welcoming, modern, energetic, distinctively Indian.
 - **Headline:** *"Every Flavour Has A Story."*
 - **Sub-copy:** *"Bringing people together through exceptional food, unforgettable flavours and experiences worth sharing."*
@@ -144,7 +145,7 @@ hunger-stories-website-new/
 - **Secondary CTA:** `Order Online` → `#order`.
 - **Visuals:** Split canvas featuring `hero-biryani.jpg` in a clay handi with live steam, amber backlighting, and an infinite marquee ribbon showcasing culinary pillars.
 
-### 02: Our Story (`BrandStory.tsx`)
+### Chapter 01: Our Food Philosophy (`BrandStory.tsx`)
 - **Anchor ID:** `#story` (with alias `#about`)
 - **Headline:** *"More Than Just A Meal."*
 - **Tone:** Warm, authentic, and grounded.
@@ -153,7 +154,7 @@ hunger-stories-website-new/
   2. *Freshly Roasted Spices* (Stone-ground in small batches).
   3. *Honest, Wholesome Ingredients* (Quality ghee, fresh daily batches, authentic spices).
 
-### 03: Explore Our Cuisines (`CuisineDiscovery.tsx`)
+### Chapter 02: A World of Flavours (`CuisineDiscovery.tsx`)
 - **Anchor ID:** `#cuisines`
 - **Headline:** *"A World Of Exceptional Flavours."*
 - **Interactions:** Top horizontal filter ribbon + smooth touch Swiper carousel with 5 traditions:
@@ -164,21 +165,17 @@ hunger-stories-website-new/
   5. Indo-Chinese Wok Art
 - **Content:** Short, customer-friendly 2-sentence introductions without unnecessary ingredient jargon.
 
-### Chapter 03: The People Behind the Food (`ChefHighlights.tsx`)
-- **Anchor ID:** `#people`
-- **Content:** A short chef-story placeholder, using existing spice photography. Add profiles only when verified information and images are supplied by the owner.
-
-### Chapter 04: Signature Food Experiences (`FoodExperiences.tsx`)
+### Chapter 03: Signature Dishes (`FoodExperiences.tsx`)
 - **Anchor ID:** `#experiences`
 - **Headline:** *"Where Food Becomes An Experience."*
-- **Sub-tag:** *Chef's Highlights • Freshly Prepared Daily*
+- **Sub-tag:** *Signature Dishes • Freshly Prepared Daily*
 - **4-Course Asymmetric Spread:** Alternating 7-column and 5-column layout:
   - Course I: Hyderabadi Dum Biryani (`signature-biryani.jpg`)
   - Course II: Paneer Tikka Angara (`signature-paneer.jpg`)
   - Course III: Purani Dilli Butter Chicken (`signature-chicken.jpg`)
   - Course IV: 12-Hour Dal Makhani (`signature-dal.jpg`)
 
-### 05: Catering & Celebrations (`Catering.tsx`)
+### Chapter 04: The Art of Catering (`Catering.tsx`)
 - **Anchor ID:** `#catering`
 - **Headline:** *"Made For Every Occasion."*
 - **Capacity:** Serving 20 to 500+ Guests
@@ -189,7 +186,7 @@ hunger-stories-website-new/
   4. *Family Gatherings & House Parties* (20–80 guests)
   5. *Bulk Orders & Box Meals* (50+ boxes)
 
-### 06: Our Locations (`Locations.tsx`)
+### Chapter 05: Our Locations (`Locations.tsx`)
 - **Anchor ID:** `#locations`
 - **Headline:** *"Visit Us or Order In."*
 - **Two Profiles:**
@@ -198,7 +195,11 @@ hunger-stories-website-new/
 - **Actions:** High-contrast touch buttons: Direct Call (`tel:+918886762323`), Online Order (`#order`), and Google Maps Navigation (`Get Directions`).
 - **Data Source:** Wired directly to `siteConfig.locations` in `src/lib/config.ts`.
 
-### 07: Order Online & Catering Touchpoint (`FinalCTA.tsx`)
+### Chapter 06: The Hunger Stories Experience (`HungerStoriesExperience.tsx`)
+- **Anchor ID:** `#hunger-stories-experience`
+- Links to the existing locations, ordering, and catering sections.
+
+### Chapter 07: Order Online & Catering Touchpoint (`FinalCTA.tsx`)
 - **Anchor ID:** `#order` (with alias `#contact`)
 - **Headline:** *"Your Next Food Story Starts Here."*
 - **Strict Brand Awareness Directive:** Pure external dispatch links, NO checkout, NO shopping cart, NO prices.
@@ -331,8 +332,6 @@ export function getWhatsAppUrl(customMessage?: string): string;
 
 ## 11. Scroll-Driven Brand Storytelling
 
-The hero introduces seven chapters: Our Food Philosophy → A World of Flavours → The People Behind the Food → Signature Food Experiences → Catering & Celebrations → Our Locations → Order Online.
+The hero introduces seven chapters: Our Food Philosophy → A World of Flavours → Signature Dishes → The Art of Catering → Our Locations → The Hunger Stories Experience → Your Next Food Story Starts Here.
 
-The prologue and the people chapter use sticky layering on larger desktop viewports; the people chapter also uses subtle scroll-linked photography. Smaller screens and reduced-motion preferences use natural scrolling without sticky or parallax effects. Chapter reveals use Framer Motion, and the existing scroll indicator and external ordering links remain in place.
-
-The people chapter is intentionally a placeholder: replace it with chef profiles or photography only when the owner supplies verified material.
+`StoryStack.tsx` wraps the seven chapters in sticky panels on desktop, with later panels layered above earlier ones. It measures each panel so that long chapters scroll fully before sticking; avoid overflow-clipping or transformed ancestors around the stack. The desktop chapter navigation links to markers in normal document flow. Smaller screens and reduced-motion preferences use natural scrolling; keyboard focus within a chapter temporarily returns panels to normal flow so focused controls are not obscured. Existing external ordering links remain unchanged.

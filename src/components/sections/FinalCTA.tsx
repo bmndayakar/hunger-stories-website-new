@@ -65,7 +65,7 @@ export default function FinalCTA() {
   ];
 
   return (
-    <section id="order" className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden border-t border-[#35363A]/10">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden border-t border-[#35363A]/10">
       {/* Decorative Warm Ambient Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#F3E8D9]/70 rounded-full blur-[140px] pointer-events-none" />
 
@@ -76,7 +76,7 @@ export default function FinalCTA() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#F69522]">
-              Chapter 07 / 07 • Order Online
+              Chapter 07 / 07 • Your Next Food Story Starts Here
             </span>
           </div>
           <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-[#35363A]/50">

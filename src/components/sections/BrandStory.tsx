@@ -27,10 +27,7 @@ const pillars = [
 
 export default function BrandStory() {
   return (
-    <section id="story" className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden">
-      {/* Anchor alias for #about */}
-      <div id="about" className="sr-only" />
-
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#FFF8EF] text-[#35363A] overflow-hidden">
       {/* Background Subtle Gradient Glow */}
       <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-[#F3E8D9]/70 rounded-full blur-[150px] pointer-events-none translate-x-1/3" />
       
