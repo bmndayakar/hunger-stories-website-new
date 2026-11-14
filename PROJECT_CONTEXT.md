@@ -109,18 +109,17 @@ hunger-stories-website-new/
 │   │   └── page.tsx                  # Single-page master composition
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── Navbar.tsx            # Dual-mode sticky header + mobile drawer
-│   │   │   └── Footer.tsx            # Editorial sitemap & heritage colophon
+│   │   │   ├── Navbar.tsx            # Sticky header + full-screen mobile drawer
+│   │   │   └── Footer.tsx            # Editorial sitemap & brand colophon
 │   │   ├── sections/
-│   │   │   ├── Hero.tsx              # Chapter 01: The Sacred Hearth
-│   │   │   ├── BrandStory.tsx        # Chapter 02: Ancestry & Craft Pillars (#about)
-│   │   │   ├── CuisineDiscovery.tsx  # Chapter 03: 5-Cuisine Swiper Carousel (#cuisines)
-│   │   │   ├── FoodExperiences.tsx   # Chapter 04: Signature 4-Course Portfolio (#story)
-│   │   │   ├── Catering.tsx          # Chapter 05: The Banqueting Atelier (#catering)
-│   │   │   ├── Locations.tsx         # Chapter 06: The Two Sanctuaries (#locations)
-│   │   │   ├── Testimonials.tsx      # Chapter 07: Salon Testimonials Carousel (#testimonials)
-│   │   │   ├── FinalCTA.tsx          # External Order Gateways (#order)
-│   │   │   └── Contact.tsx           # Hospitality Desk & Banquet Concierge (#contact)
+│   │   │   ├── Hero.tsx              # 01: Hero — Welcome to Hunger Stories (#hero)
+│   │   │   ├── BrandStory.tsx        # 02: Our Story — More Than Just A Meal (#story)
+│   │   │   ├── CuisineDiscovery.tsx  # 03: Explore Our Cuisines (#cuisines)
+│   │   │   ├── FoodExperiences.tsx   # 04: Signature Dishes (#experiences)
+│   │   │   ├── Catering.tsx          # 05: Catering & Celebrations (#catering)
+│   │   │   ├── Locations.tsx         # 06: Our Locations — Manikonda & Tellapur (#locations)
+│   │   │   ├── Testimonials.tsx      # 07: Customer Experiences (#testimonials)
+│   │   │   └── FinalCTA.tsx          # 08: Order Online & Catering Enquiries (#order)
 │   │   └── ui/
 │   │       ├── ScrollProgress.tsx    # Viewport scroll progress indicator
 │   │       └── animations.tsx        # Framer Motion reveal wrappers
@@ -134,50 +133,80 @@ hunger-stories-website-new/
 
 ---
 
-## 5. Section-by-Section Anatomy
+## 5. Section-by-Section Anatomy (V2 Streamlined)
 
-### Chapter 01: Hero — The Sacred Hearth (`Hero.tsx`)
-- **Tone:** Luxury hospitality campaign.
+### 01: Hero (`Hero.tsx`)
+- **Tone:** Welcoming, modern, energetic, distinctively Indian.
 - **Headline:** *"Every Flavour Has A Story."*
 - **Sub-copy:** *"Bringing people together through exceptional food, unforgettable flavours and experiences worth sharing."*
-- **Primary CTA:** `Explore Our Story` → smoothly scrolls to `#about`.
-- **Secondary CTA:** `Order Online` → smoothly scrolls to `#order`.
-- **Visuals:** Architectural split featuring `hero-biryani.jpg` in a clay handi with live steam, amber backlighting, and an infinite marquee ribbon showcasing culinary pillars.
+- **Primary CTA:** `Explore Our Story` → `#story`.
+- **Secondary CTA:** `Order Online` → `#order`.
+- **Visuals:** Split canvas featuring `hero-biryani.jpg` in a clay handi with live steam, amber backlighting, and an infinite marquee ribbon showcasing culinary pillars.
 
-### Chapter 02: Brand Story — Ancestry & Craft (`BrandStory.tsx`)
-- **Anchor ID:** `#about`
+### 02: Our Story (`BrandStory.tsx`)
+- **Anchor ID:** `#story` (with alias `#about`)
 - **Headline:** *"More Than Just A Meal."*
-- **Asymmetric Layout:** Left column features founding narrative and pull quote; right column showcases `craft-spices.jpg` with a founding medallion (`2024`).
+- **Tone:** Warm, authentic, and grounded.
 - **Three Craft Pillars:**
-  1. *The Sacred Dum Tradition* (180-minute wheat-dough sealed handis).
-  2. *Stone-Ground Masala Alchemy* (Slow stone mills, volatile oils intact).
-  3. *Purity & Virgin Oil Ethic* (Desi ghee, pure mustard oil, genuine saffron).
+  1. *Authentic Dum Cooking* (Slow-cooked in sealed clay handis).
+  2. *Freshly Roasted Spices* (Stone-ground in small batches).
+  3. *Honest, Wholesome Ingredients* (Pure ghee, fresh daily batches).
 
-### Chapter 03: Cuisine Discovery (`CuisineDiscovery.tsx`)
+### 03: Explore Our Cuisines (`CuisineDiscovery.tsx`)
 - **Anchor ID:** `#cuisines`
-- **Headline:** *"A World Of Flavours."*
+- **Headline:** *"A World Of Exceptional Flavours."*
 - **Interactions:** Top horizontal filter ribbon + smooth touch Swiper carousel with 5 traditions:
   1. Hyderabadi Dum Biryani
   2. North Indian Classics
   3. Charcoal Tandoor & Grills
   4. South Indian Coastal & Deccan
   5. Indo-Chinese Wok Art
-- **Content:** Method tags, key aromatics pills, signature dishes.
+- **Content:** Short, punchy 1-2 sentence introductions, key flavours, and popular dishes.
 
-### Chapter 04: Signature Food Experiences (`FoodExperiences.tsx`)
-- **Anchor ID:** `#story` (also references `#experiences`)
+### 04: Signature Food Experiences (`FoodExperiences.tsx`)
+- **Anchor ID:** `#experiences` (with alias `#story`)
 - **Headline:** *"Where Food Becomes An Experience."*
-- **Sub-tag:** *Editorial Showcase • Strictly No Menu Pricing*
+- **Sub-tag:** *Chef's Highlights • Freshly Prepared Daily*
 - **4-Course Asymmetric Spread:** Alternating 7-column and 5-column layout:
-  - Course I: The Dum Biryani Ritual (`signature-biryani.jpg`)
+  - Course I: Hyderabadi Dum Biryani (`signature-biryani.jpg`)
   - Course II: Paneer Tikka Angara (`signature-paneer.jpg`)
   - Course III: Purani Dilli Butter Chicken (`signature-chicken.jpg`)
-  - Course IV: 12-Hour Simmered Dal Makhani (`signature-dal.jpg`)
+  - Course IV: 12-Hour Dal Makhani (`signature-dal.jpg`)
 
-### Chapter 05: The Banqueting Atelier (`Catering.tsx`)
+### 05: Catering & Celebrations (`Catering.tsx`)
 - **Anchor ID:** `#catering`
 - **Headline:** *"Made For Every Occasion."*
-- **Capacity:** 20 — 2,000+ Couverts
+- **Capacity:** Serving 20 to 2,000+ Guests
+- **Features:** Master centerpiece photo card (`catering-feast.jpg`) + interactive 5-format selector:
+  1. *Corporate Events & Summits* (50–1,000+ guests)
+  2. *Weddings & Receptions* (100–2,000+ guests)
+  3. *Birthdays & Private Parties* (25–150 guests)
+  4. *Family Gatherings & House Parties* (20–80 guests)
+  5. *Bulk Orders & Box Meals* (50–2,000+ boxes)
+
+### 06: Our Locations (`Locations.tsx`)
+- **Anchor ID:** `#locations`
+- **Headline:** *"Visit Us or Order In."*
+- **Two Profiles:**
+  - *Manikonda Restaurant* (Dine-In • Takeaway) with `location-manikonda.jpg`
+  - *Tellapur Cloud Kitchen* (Express Delivery Hub) with `location-tellapur.jpg`
+- **Data Source:** Wired directly to `siteConfig.locations` in `src/lib/config.ts`.
+
+### 07: Customer Experiences (`Testimonials.tsx`)
+- **Anchor ID:** `#testimonials`
+- **Atmosphere:** Warm dark Espresso salon aesthetic.
+- **Interactions:** Swiper carousel with custom quotation marks and responsive breakpoints.
+- **Compliance:** Testimonials are explicitly flagged as `[Guest Review Placeholder]` with an explicit disclaimer noting they will be updated with verified patron reviews.
+
+### 08: Order Online & Catering Enquiries (`FinalCTA.tsx`)
+- **Anchor ID:** `#order` (with alias `#contact`)
+- **Headline:** *"Your Next Food Story Starts Here."*
+- **4 Prominent External Channels:**
+  1. **Swiggy:** Direct order link for Tellapur & Western Hyderabad delivery.
+  2. **Zomato:** Direct order link for Tellapur delivery & Manikonda dine-in.
+  3. **Ownly:** Direct brand kitchen ordering (**active**, not coming soon).
+  4. **WhatsApp:** Instant chat with kitchen & catering team.
+- **Integrated Catering & Event Enquiry:** Direct hotline (`+91 88867 62323`), email, WhatsApp, and interactive quick inquiry form with instant confirmation feedback. Eliminates duplicate contact sections.
 - **Features:** Master centerpiece photo card (`catering-feast.jpg`) + interactive 5-format selector:
   1. *Corporate Galas & IT Summits* (50–2,000+ guests)
   2. *Weddings & Reception Banquets* (100–2,500+ guests)

@@ -9,37 +9,37 @@ const sanctuaries = [
   {
     id: 'manikonda',
     number: '01',
-    name: siteConfig.sanctuaries.manikonda.name,
-    role: siteConfig.sanctuaries.manikonda.type,
-    badge: siteConfig.sanctuaries.manikonda.badge,
+    name: siteConfig.locations.manikonda.name,
+    role: siteConfig.locations.manikonda.type,
+    badge: siteConfig.locations.manikonda.badge,
     badgeClass: 'bg-[#F69522] text-white',
-    tagline: 'Warm amber ambiance, dedicated table stewards, and family dining.',
-    narrative: 'Our flagship hospitality house in Manikonda where every meal is treated as an occasion. Features dedicated family seating, private group booths, and an open aroma counter.',
-    address: siteConfig.sanctuaries.manikonda.address,
-    hours: siteConfig.sanctuaries.manikonda.hours,
-    phone: siteConfig.sanctuaries.manikonda.phone,
-    phoneHref: siteConfig.sanctuaries.manikonda.phoneHref,
-    coverage: siteConfig.sanctuaries.manikonda.coverage,
+    tagline: 'Comfortable family dining, warm hospitality, and fresh food.',
+    narrative: 'Our welcoming dine-in restaurant in Manikonda features comfortable family tables, private booths, and a relaxed ambiance perfect for everyday lunches, dinners, and weekend get-togethers.',
+    address: siteConfig.locations.manikonda.address,
+    hours: siteConfig.locations.manikonda.hours,
+    phone: siteConfig.locations.manikonda.phone,
+    phoneHref: siteConfig.locations.manikonda.phoneHref,
+    coverage: siteConfig.locations.manikonda.coverage,
     image: '/images/food/location-manikonda.jpg',
-    actionText: 'Reserve Table or Call',
-    actionHref: siteConfig.sanctuaries.manikonda.phoneHref,
+    actionText: 'Call Manikonda Branch',
+    actionHref: siteConfig.locations.manikonda.phoneHref,
   },
   {
     id: 'tellapur',
     number: '02',
-    name: siteConfig.sanctuaries.tellapur.name,
-    role: siteConfig.sanctuaries.tellapur.type,
-    badge: siteConfig.sanctuaries.tellapur.badge,
+    name: siteConfig.locations.tellapur.name,
+    role: siteConfig.locations.tellapur.type,
+    badge: siteConfig.locations.tellapur.badge,
     badgeClass: 'bg-[#EA2628] text-white',
-    tagline: 'Engineered for speed, heat retention, and tamper-evident delivery.',
-    narrative: 'High-powered commercial ranges and clay tandoors operating at peak heat. Serving Hyderabad’s western IT corridors with steaming dum biryanis and warm gravies delivered within minutes.',
-    address: siteConfig.sanctuaries.tellapur.address,
-    hours: siteConfig.sanctuaries.tellapur.hours,
-    phone: siteConfig.sanctuaries.tellapur.phone,
-    phoneHref: siteConfig.sanctuaries.tellapur.phoneHref,
-    coverage: siteConfig.sanctuaries.tellapur.coverage,
+    tagline: 'High-speed cloud kitchen delivering steaming-hot meals.',
+    narrative: 'Serving Western Hyderabad’s IT corridors with steaming dum biryanis, tandoori grills, and fresh curries packed securely in tamper-evident containers.',
+    address: siteConfig.locations.tellapur.address,
+    hours: siteConfig.locations.tellapur.hours,
+    phone: siteConfig.locations.tellapur.phone,
+    phoneHref: siteConfig.locations.tellapur.phoneHref,
+    coverage: siteConfig.locations.tellapur.coverage,
     image: '/images/food/location-tellapur.jpg',
-    actionText: 'Order For Tellapur Dispatch',
+    actionText: 'Order From Tellapur',
     actionHref: '#order',
   },
 ];
@@ -49,28 +49,28 @@ export default function Locations() {
     <section id="locations" className="relative py-32 lg:py-44 bg-[#FFF8EF] text-[#35363A] overflow-hidden border-t border-[#35363A]/10">
       <div className="container-wide relative z-10">
         
-        {/* Section Chapter Header */}
+        {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#35363A]/10 mb-16 lg:mb-24">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#F69522]">
-              Chapter 06 / 07 • The Two Sanctuaries
+              Our Locations • Hyderabad
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/40">
-            Dine-In Flagship & Express Kitchen
+            Dine-In Restaurant & Cloud Kitchen
           </span>
         </div>
 
         {/* Section Headline */}
         <div className="max-w-3xl mb-20 lg:mb-24">
           <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight mb-6">
-            Our Hyderabad <br />
-            <span className="font-editorial-italic font-normal text-[#35363A]/80">Culinary </span>
-            <span className="font-editorial-italic font-normal text-[#F69522]">Houses.</span>
+            Visit Us or <br />
+            <span className="font-editorial-italic font-normal text-[#35363A]/80">Order </span>
+            <span className="font-editorial-italic font-normal text-[#F69522]">In.</span>
           </h2>
           <p className="font-body text-base sm:text-lg text-[#35363A]/70 leading-relaxed font-normal max-w-2xl">
-            Whether you desire relaxed sit-down hospitality with family in Manikonda or steaming-hot dum biryani dispatched rapidly to your Financial District home or office from Tellapur.
+            Enjoy relaxed sit-down dining with family and friends at our Manikonda restaurant, or order hot, freshly prepared meals delivered fast from our Tellapur kitchen.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export default function Locations() {
                       {house.badge}
                     </span>
                     <span className="font-mono text-sm font-bold text-white/80">
-                      HOUSE {house.number}
+                      LOCATION {house.number}
                     </span>
                   </div>
 

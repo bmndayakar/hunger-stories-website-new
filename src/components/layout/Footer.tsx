@@ -5,13 +5,13 @@ import Image from 'next/image';
 import { siteConfig, getWhatsAppUrl } from '@/lib/config';
 
 const footerNav = [
-  { href: '#about', label: 'Our Ancestry & Craft', index: '01' },
-  { href: '#cuisines', label: 'The Culinary Repertoire', index: '02' },
-  { href: '#story', label: 'Signature Food Experiences', index: '03' },
-  { href: '#catering', label: 'Banquets & Celebrations', index: '04' },
-  { href: '#locations', label: 'The Two Sanctuaries', index: '05' },
-  { href: '#order', label: 'Dispatch Concierge', index: '06' },
-  { href: '#contact', label: 'Hospitality Desk', index: '07' },
+  { href: '#story', label: 'Our Story', index: '01' },
+  { href: '#cuisines', label: 'Explore Our Cuisines', index: '02' },
+  { href: '#experiences', label: 'Signature Dishes', index: '03' },
+  { href: '#catering', label: 'Catering & Celebrations', index: '04' },
+  { href: '#locations', label: 'Our Locations', index: '05' },
+  { href: '#testimonials', label: 'Customer Experiences', index: '06' },
+  { href: '#order', label: 'Order Online', index: '07' },
 ];
 
 export default function Footer() {
@@ -20,10 +20,10 @@ export default function Footer() {
   };
 
   const dispatchDestinations = [
-    { href: siteConfig.ordering.swiggy, label: 'Swiggy Partner Dispatch' },
-    { href: siteConfig.ordering.zomato, label: 'Zomato Dining & Delivery' },
-    { href: siteConfig.ordering.ownly === '#' ? '#order' : siteConfig.ordering.ownly, label: 'Ownly Direct Channel' },
-    { href: getWhatsAppUrl('Hi Hunger Stories, I would like to order fresh food from your kitchen'), label: 'WhatsApp VIP Concierge' },
+    { href: siteConfig.ordering.swiggy, label: 'Order on Swiggy' },
+    { href: siteConfig.ordering.zomato, label: 'Order on Zomato' },
+    { href: siteConfig.ordering.ownly, label: 'Order on Ownly' },
+    { href: getWhatsAppUrl('Hi Hunger Stories, I would like to order fresh food from your kitchen'), label: 'Chat on WhatsApp' },
   ];
 
   return (
@@ -101,7 +101,7 @@ export default function Footer() {
 
           {/* Quick Navigation Sitemap */}
           <div className="lg:col-span-3">
-            <h4 className="font-display text-lg text-white mb-6">The Chapters</h4>
+            <h4 className="font-display text-lg text-white mb-6">Explore</h4>
             <ul className="space-y-3">
               {footerNav.map((link) => (
                 <li key={link.href}>
@@ -119,7 +119,7 @@ export default function Footer() {
 
           {/* Online Ordering Channels */}
           <div className="lg:col-span-2">
-            <h4 className="font-display text-lg text-white mb-6">Dispatch Portals</h4>
+            <h4 className="font-display text-lg text-white mb-6">Order Online</h4>
             <ul className="space-y-3">
               {dispatchDestinations.map((link) => (
                 <li key={link.label}>
@@ -137,15 +137,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Sanctuaries & Contact Details */}
+          {/* Locations & Contact Details */}
           <div className="lg:col-span-2">
-            <h4 className="font-display text-lg text-white mb-6">Sanctuaries</h4>
+            <h4 className="font-display text-lg text-white mb-6">Our Locations</h4>
             <ul className="space-y-4 text-xs">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#F69522] shrink-0 mt-0.5" />
                 <div className="text-white/60">
-                  <p className="text-white/90 font-bold">Manikonda Flagship</p>
-                  <p>Tellapur Cloud Hub</p>
+                  <p className="text-white/90 font-bold">Manikonda Restaurant</p>
+                  <p>Tellapur Cloud Kitchen</p>
                 </div>
               </li>
               <li className="flex items-center gap-2.5">

@@ -11,7 +11,7 @@ export const siteConfig = {
     name: 'Hunger Stories',
     tagline: 'Every Flavour Has A Story.',
     foundingYear: 2024,
-    cuisineType: 'Premium Multi-Cuisine & Artisanal Banquets',
+    cuisineType: 'Premium Multi-Cuisine Restaurant & Catering',
     city: 'Hyderabad, Telangana, India',
     coordinates: '17.4065° N, 78.4772° E',
     domain: 'https://about.hungerstories.com',
@@ -27,7 +27,7 @@ export const siteConfig = {
     hours: '11:30 AM – 11:30 PM Daily',
   },
 
-  // Configurable External Ordering & Dispatch URLs
+  // Configurable External Ordering & Delivery URLs
   ordering: {
     swiggy:
       process.env.NEXT_PUBLIC_SWIGGY_URL ||
@@ -37,11 +37,11 @@ export const siteConfig = {
       'https://www.zomato.com/hyderabad/hunger-stories-tellapur',
     ownly:
       process.env.NEXT_PUBLIC_OWNLY_URL ||
-      '#',
+      'https://order.hungerstories.com',
     whatsappDefaultMessage:
       'Hi Hunger Stories, I would like to order fresh food from your kitchen',
     whatsappCateringMessage:
-      'Hi Hunger Stories, I would like to inquire about your catering and banquet services',
+      'Hi Hunger Stories, I would like to enquire about your catering and event food services',
   },
 
   // Social & Community Channels
@@ -54,22 +54,48 @@ export const siteConfig = {
       'https://facebook.com/hungerstories.hyd',
   },
 
-  // The Two Sanctuaries
-  sanctuaries: {
+  // Our Locations (Manikonda & Tellapur)
+  locations: {
     manikonda: {
-      name: 'Manikonda Dining Room',
-      type: 'Flagship Restaurant & Table Service',
+      name: 'Manikonda Restaurant',
+      type: 'Dine-In Restaurant & Takeaway',
       badge: 'Dine-In • Takeaway',
       address: 'Puppalaguda - Manikonda Main Road, Hyderabad, Telangana 500089',
       hours: '12:00 PM – 11:30 PM Daily',
       phone: '+91 88867 62323',
       phoneHref: 'tel:+918886762323',
-      coverage: 'Manikonda, Shaikpet, Jubilee Hills Checkpost, Puppalaguda, Tolichowki',
+      coverage: 'Manikonda, Shaikpet, Jubilee Hills, Puppalaguda, Tolichowki',
       mapQuery: 'Hunger+Stories+Manikonda+Hyderabad',
     },
     tellapur: {
-      name: 'Tellapur Craft Hub',
-      type: 'High-Heat Cloud Kitchen & Express Dispatch',
+      name: 'Tellapur Cloud Kitchen',
+      type: 'Cloud Kitchen & Express Delivery',
+      badge: 'Express Delivery Hub',
+      address: 'Survey No. 42, Near ORR Junction, Tellapur Road, Hyderabad, Telangana 502032',
+      hours: '11:30 AM – 11:30 PM Daily',
+      phone: '+91 88867 62323',
+      phoneHref: 'tel:+918886762323',
+      coverage: 'Tellapur, Kollur, Financial District, Kokapet, Gachibowli, Nallagandla',
+      mapQuery: 'Hunger+Stories+Tellapur+Hyderabad',
+    },
+  },
+
+  // Legacy alias for compatibility
+  sanctuaries: {
+    manikonda: {
+      name: 'Manikonda Restaurant',
+      type: 'Dine-In Restaurant & Takeaway',
+      badge: 'Dine-In • Takeaway',
+      address: 'Puppalaguda - Manikonda Main Road, Hyderabad, Telangana 500089',
+      hours: '12:00 PM – 11:30 PM Daily',
+      phone: '+91 88867 62323',
+      phoneHref: 'tel:+918886762323',
+      coverage: 'Manikonda, Shaikpet, Jubilee Hills, Puppalaguda, Tolichowki',
+      mapQuery: 'Hunger+Stories+Manikonda+Hyderabad',
+    },
+    tellapur: {
+      name: 'Tellapur Cloud Kitchen',
+      type: 'Cloud Kitchen & Express Delivery',
       badge: 'Express Delivery Hub',
       address: 'Survey No. 42, Near ORR Junction, Tellapur Road, Hyderabad, Telangana 502032',
       hours: '11:30 AM – 11:30 PM Daily',

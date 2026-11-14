@@ -10,52 +10,52 @@ const occasions = [
   {
     id: 'corporate',
     icon: Users,
-    title: 'Corporate Galas & IT Summits',
-    couverts: '50 — 2,000+ Guests',
+    title: 'Corporate Events & Summits',
+    couverts: '50 — 1,000+ Guests',
     location: 'Hitec City, Financial District, Gachibowli',
-    headline: 'Executive buffets, seamless conference lunch boxes & gala spreads.',
-    narrative: 'Tailored specifically for Hyderabad’s tech and financial corridors. We provide hot, tamper-evident executive meal boxes for boardrooms or full-service live buffet spreads for annual galas and multinational town halls.',
-    perks: ['Tamper-evident sealed executive boxes', 'Hot chafing setup with banquet stewards', 'Flexible invoicing & corporate GST billing'],
+    headline: 'Hot executive lunch boxes, conference buffets, and team celebrations.',
+    narrative: 'Tailored for corporate teams and campus gatherings across Hyderabad. We offer hygienic executive meal boxes and complete buffet catering setups.',
+    perks: ['Tamper-evident sealed executive boxes', 'Hot chafing setup with service team', 'Corporate GST invoicing & scheduled delivery'],
   },
   {
     id: 'weddings',
     icon: PartyPopper,
-    title: 'Weddings & Reception Banquets',
-    couverts: '100 — 2,500+ Guests',
-    location: 'Hyderabad All-Zones Banquets & Venues',
-    headline: 'Royal Nizami dum handis and theatrical live counters.',
-    narrative: 'Create an unforgettable wedding feast. Our Nizami chefs prepare royal dum handis sealed live at your venue, accompanied by tandoor naan stations, chaat counters, and elaborate saffron dessert displays.',
-    perks: ['Live coal tandoor bread stations', 'Dedicated executive banquet captain', 'Royal unsealed handi presentation'],
+    title: 'Weddings & Receptions',
+    couverts: '100 — 2,000+ Guests',
+    location: 'Banquets & Venues Across Hyderabad',
+    headline: 'Authentic Hyderabadi dum biryanis, tandoori stations, and rich curries.',
+    narrative: 'Celebrate your special moments with a feast your guests will remember. Freshly prepared dum biryani handis, live naan stations, and signature desserts.',
+    perks: ['Live tandoori bread stations', 'Dedicated event catering coordinator', 'Traditional clay handi presentation'],
   },
   {
     id: 'birthdays',
     icon: Cake,
-    title: 'Birthday Celebrations & Milestones',
+    title: 'Birthdays & Private Parties',
     couverts: '25 — 150 Guests',
     location: 'Homes, Clubhouses & Private Venues',
-    headline: 'Vibrant party platters and crowd-pleasing signature mains.',
-    narrative: 'Milestone birthdays deserve festive dining without host fatigue. We curate finger foods, smoky tandoori skewers, and fragrant biryanis that satisfy both elders and younger guests.',
-    perks: ['Kid-friendly & mild spice options', 'Compact tabletop chafing setup', 'Biodegradable premium cutlery options'],
+    headline: 'Vibrant party platters and crowd-pleasing signature dishes.',
+    narrative: 'Delicious party food made simple. We curate appetizers, smoky tandoori skewers, and flavorful biryanis that guests of all ages enjoy.',
+    perks: ['Customizable spice levels & kids options', 'Tabletop warming setup included', 'Eco-friendly premium cutlery options'],
   },
   {
     id: 'family',
     icon: Home,
-    title: 'Intimate Family Gatherings & House Parties',
+    title: 'Family Gatherings & House Parties',
     couverts: '20 — 80 Guests',
     location: 'Direct to Your Doorstep',
-    headline: 'Warm homestyle hospitality without spending hours in the kitchen.',
-    narrative: 'For housewarmings, anniversaries, or Sunday family reunions. Delivered hot in specialized insulated containers with easy-serve chafing trays, ensuring the host spends time celebrating rather than cooking.',
-    perks: ['Delivered piping hot with zero reheating needed', 'Pre-portioned family platters', 'Complimentary accompaniments & salan'],
+    headline: 'Warm homestyle dining without the kitchen stress.',
+    narrative: 'Perfect for housewarmings, anniversaries, or Sunday family get-togethers. Delivered hot and ready to serve in insulated food containers.',
+    perks: ['Delivered hot & fresh with zero reheating needed', 'Pre-portioned sharing platters', 'Complimentary accompaniments, raita & salan'],
   },
   {
     id: 'bulk',
     icon: PackageCheck,
-    title: 'Bulk Food & Packed Meal Box Solutions',
-    couverts: '50 — 3,000 Boxes Daily',
-    location: 'Direct Institutional & Site Dispatch',
-    headline: 'Consistent high-volume executive dining engineered for hygiene.',
-    narrative: 'Reliable, nutritional, and hot meal trays for university fests, corporate trainings, and large community events. Balanced multi-compartment trays containing biryani, curry, bread, dessert, and salad.',
-    perks: ['High-throughput sanitized packaging', 'Eco-friendly sugarcane bagasse trays', 'Scheduled timed delivery fleets'],
+    title: 'Bulk Orders & Box Meals',
+    couverts: '50 — 2,000+ Boxes',
+    location: 'Office & Venue Delivery',
+    headline: 'Consistent high-volume meal boxes packed with care and hygiene.',
+    narrative: 'Reliable, well-balanced meal trays for corporate trainings, institutional events, and large gatherings. Includes biryani, curry, bread, dessert, and salad.',
+    perks: ['Hygienic compartmentalized food packaging', 'Eco-friendly sugarcane bagasse trays', 'Scheduled on-time delivery fleets'],
   },
 ];
 
@@ -70,16 +70,16 @@ export default function Catering() {
 
       <div className="container-wide relative z-10">
         
-        {/* Section Chapter Header */}
+        {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#35363A]/10 mb-16 lg:mb-24">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#F69522]">
-              Chapter 05 / 07 • The Banqueting Atelier
+              Catering & Celebrations • Hyderabad
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/40">
-            Capacity: 20 — 2,000+ Couverts
+            Events for 20 to 2,000+ Guests
           </span>
         </div>
 
@@ -90,7 +90,7 @@ export default function Catering() {
             {/* Left Narrative Panel */}
             <div className="lg:col-span-6 p-8 sm:p-14 lg:p-16 space-y-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F69522] text-white text-[10px] font-bold uppercase tracking-widest">
-                <span>Feasts Built For The Center Table</span>
+                <span>Made For Memorable Gatherings</span>
               </div>
 
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">
@@ -100,12 +100,12 @@ export default function Catering() {
               </h2>
 
               <p className="font-body text-base text-[#FFF8EF]/80 leading-relaxed font-normal">
-                Whether orchestrating a 1,500-guest wedding banquet in Gachibowli or hosting 30 family members for a weekend milestone, Hunger Stories brings banquet mastery and sincere hospitality to your gathering.
+                Whether hosting a 500-guest wedding reception or an intimate family milestone of 25, Hunger Stories brings genuine hospitality, authentic taste, and dependable service to your event.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <a
-                  href="#contact"
+                  href="#order"
                   className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#F69522] text-white text-xs font-bold uppercase tracking-[0.18em] hover:bg-[#EA2628] transition-all shadow-xl shadow-[#F69522]/30 hover:-translate-y-0.5"
                 >
                   <span>Enquire For Catering</span>
@@ -117,7 +117,7 @@ export default function Catering() {
                   className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-white/20 text-white text-xs font-semibold uppercase tracking-[0.16em] hover:bg-white/10 transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#F69522]" />
-                  <span>Call Catering Desk</span>
+                  <span>Call Catering Team</span>
                 </a>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function Catering() {
 
                 <div className="lg:col-span-4 bg-[#FFF8EF] p-6 rounded-2xl border border-[#F3E8D9] space-y-4">
                   <p className="text-[10px] font-bold uppercase tracking-wider text-[#35363A]/60">
-                    Banqueting Standards
+                    Included Services
                   </p>
                   <div className="space-y-3">
                     {activeOccasion.perks.map((perk) => (
@@ -225,10 +225,10 @@ export default function Catering() {
 
                   <div className="pt-2">
                     <a
-                      href="#contact"
+                      href="#order"
                       className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#35363A] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#F69522] transition-colors"
                     >
-                      <span>Inquire For This Format</span>
+                      <span>Enquire For This Event</span>
                       <span>→</span>
                     </a>
                   </div>

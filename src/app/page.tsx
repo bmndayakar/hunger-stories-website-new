@@ -7,7 +7,6 @@ import Catering from '@/components/sections/Catering';
 import Locations from '@/components/sections/Locations';
 import Testimonials from '@/components/sections/Testimonials';
 import FinalCTA from '@/components/sections/FinalCTA';
-import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 
@@ -25,7 +24,6 @@ export default function Home() {
         <Locations />
         <Testimonials />
         <FinalCTA />
-        <Contact />
       </main>
       <Footer />
     </div>

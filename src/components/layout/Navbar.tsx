@@ -7,12 +7,12 @@ import Image from 'next/image';
 import { siteConfig } from '@/lib/config';
 
 const navLinks = [
-  { href: '#about', label: 'About Us', index: '01' },
+  { href: '#story', label: 'Our Story', index: '01' },
   { href: '#cuisines', label: 'Our Cuisines', index: '02' },
-  { href: '#story', label: 'Our Story', index: '03' },
-  { href: '#catering', label: 'Catering & Banquets', index: '04' },
-  { href: '#locations', label: 'Sanctuaries', index: '05' },
-  { href: '#contact', label: 'Contact', index: '06' },
+  { href: '#experiences', label: 'Signature Dishes', index: '03' },
+  { href: '#catering', label: 'Catering', index: '04' },
+  { href: '#locations', label: 'Locations', index: '05' },
+  { href: '#order', label: 'Order Online', index: '06' },
 ];
 
 export default function Navbar() {
@@ -146,7 +146,7 @@ export default function Navbar() {
             <div className="relative z-10 space-y-8">
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#F69522]">
-                  The Culinary Anthology
+                  Hunger Stories • Hyderabad
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-white/40">
                   Hyderabad • 2024

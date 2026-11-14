@@ -8,71 +8,71 @@ const portfolio = [
   {
     id: 'biryani',
     index: 'I',
-    title: 'The Dum Biryani Ritual',
-    subtitle: 'Royal Nizami Heritage • Sealed Dough Dum',
-    caption: 'Slow-simmered over dying charcoal embers in sealed unglazed clay handis. Aged long-grain basmati rice infused with saffron stigma extract, whole stone-crushed spices, and tender meat. Unsealed only at the center table.',
+    title: 'Hyderabadi Dum Biryani',
+    subtitle: 'Authentic Clay Handi Dum',
+    caption: 'Aged long-grain basmati rice infused with pure saffron and whole roasted spices, slow-steamed with tender cuts in sealed clay handis.',
     image: '/images/food/signature-biryani.jpg',
     span: 'lg:col-span-7',
     aspect: 'h-[440px] sm:h-[520px]',
-    technique: '180-Minute Clay Handi Dum',
-    texture: 'Delicate, Fragrant, Layered',
+    technique: 'Sealed Clay Handi Dum',
+    texture: 'Fragrant, Tender, Layered',
   },
   {
     id: 'paneer',
     index: 'II',
     title: 'Paneer Tikka Angara',
-    subtitle: 'Live Coconut Charcoal • Clay Tandoor',
-    caption: 'Velvety malai paneer cubes marinated in stone-ground yellow mustard, toasted fenugreek leaves, and spiced hung curd. Fire-roasted to tender charred perfection with a delicate smoky kiss.',
+    subtitle: 'Live Charcoal Tandoor',
+    caption: 'Soft paneer cubes steeped in spiced hung curd and toasted fenugreek, fire-roasted on skewers to a succulent smoky finish.',
     image: '/images/food/signature-paneer.jpg',
     span: 'lg:col-span-5',
     aspect: 'h-[440px] sm:h-[520px]',
-    technique: 'Direct Skewer Broiling at 400°C',
-    texture: 'Smoky Exterior, Melt-in-Mouth Core',
+    technique: 'Clay Tandoor Roasted',
+    texture: 'Smoky & Tender',
   },
   {
     id: 'chicken',
     index: 'III',
     title: 'Purani Dilli Butter Chicken',
-    subtitle: 'North Indian Heritage Makhani Reduction',
-    caption: 'Charcoal-smoked boneless chicken folded into a slow-simmered reduction of vine-ripened tomatoes, cashews, and churned white butter, finished with hand-rubbed kasuri methi.',
+    subtitle: 'Rich Creamy Makhani Gravy',
+    caption: 'Tandoor-charred chicken simmered in a slow reduction of ripe tomatoes, cashews, and churned butter, finished with hand-rubbed kasuri methi.',
     image: '/images/food/signature-chicken.jpg',
     span: 'lg:col-span-5',
     aspect: 'h-[440px] sm:h-[520px]',
-    technique: 'Slow Degchi Reduction with Cultured Butter',
-    texture: 'Silken, Velvety, Rich',
+    technique: 'Slow Butter Simmer',
+    texture: 'Silky, Rich & Comforting',
   },
   {
     id: 'dal',
     index: 'IV',
-    title: '12-Hour Simmered Dal Makhani',
-    subtitle: 'Tandoor Warmth • Overnight Heritage',
-    caption: 'Whole black urad and kidney beans slowly reduced overnight over gentle clay embers. Finished with clotted cream, ginger juliennes, and slow heat without shortcuts or thickeners.',
+    title: '12-Hour Dal Makhani',
+    subtitle: 'Overnight Slow Simmer',
+    caption: 'Whole black lentils slowly reduced overnight over gentle embers, finished with clotted cream, ginger juliennes, and pure butter.',
     image: '/images/food/signature-dal.jpg',
     span: 'lg:col-span-7',
     aspect: 'h-[440px] sm:h-[520px]',
-    technique: 'Overnight Simmer on Tandoor Heat',
-    texture: 'Creamy, Earthy, Comforting',
+    technique: 'Overnight Slow Simmer',
+    texture: 'Creamy, Earthy & Hearty',
   },
 ];
 
 export default function FoodExperiences() {
   return (
-    <section id="story" className="relative py-32 lg:py-44 bg-[#F3E8D9]/40 text-[#35363A] overflow-hidden">
+    <section id="experiences" className="relative py-32 lg:py-44 bg-[#F3E8D9]/40 text-[#35363A] overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#FFF8EF]/80 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="container-wide relative z-10">
         
-        {/* Section Chapter Header */}
+        {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#35363A]/10 mb-16 lg:mb-24">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#F69522]">
-              Chapter 04 / 07 • Signature Food Experiences
+              Chef&apos;s Highlights • Signature Dishes
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/40">
-            Editorial Showcase • Strictly No Menu Pricing
+            Freshly Prepared Daily
           </span>
         </div>
 
@@ -84,7 +84,7 @@ export default function FoodExperiences() {
             <span className="font-editorial-italic font-normal text-[#EA2628]">Experience.</span>
           </h2>
           <p className="font-body text-base sm:text-lg text-[#35363A]/70 leading-relaxed font-normal">
-            Each plate is an artisanal composition. We celebrate the sensory rhythm of Indian cooking — the crackle of whole spices, the fragrant perfume of slow steam, and the unmistakable depth of clay tandoor cooking.
+            Every dish is prepared fresh with traditional techniques and authentic spices — from slow-steamed biryanis and clay-oven tandoori grills to velvety butter gravies.
           </p>
         </div>
 

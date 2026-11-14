@@ -58,11 +58,11 @@ export default function Testimonials() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#F69522]">
-              Customer Experiences • Voices Of The Table
+              Customer Experiences • Community Voices
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-white/40">
-            Tellapur & Manikonda Chronicles
+            Tellapur & Manikonda Guests
           </span>
         </div>
 

@@ -13,34 +13,34 @@ const cuisines = [
     index: '01',
     title: 'Hyderabadi Dum Biryani',
     region: 'Nizami Heritage • Sealed Handi',
-    headline: 'Slow-steamed basmati with saffron streams and dough seal.',
-    description: 'Aged long-grain rice, whole roasted garam masalas, and tender cuts simmered under a sealed wheat-dough boundary over gentle coal embers. Served with artisanal mirchi ka salan and dahi raita.',
+    headline: 'Slow-steamed basmati with tender cuts and saffron aromatics.',
+    description: 'Long-grain basmati rice layered with marinated cuts and whole spices, sealed in clay handis and served piping hot with mirchi ka salan and dahi raita.',
     image: '/images/food/hero-biryani.jpg',
-    method: '180-Minute Clay Handi Dum',
+    method: 'Clay Handi Dum',
     aromatics: ['Shahi Saffron', 'Green Cardamom', 'Mace Flower', 'Desi Ghee'],
-    dishes: ['Royal Mutton Dum Handi', 'Kachhi Chicken Biryani', 'Saffron Subz Handi'],
+    dishes: ['Royal Mutton Dum Biryani', 'Kachhi Chicken Biryani', 'Saffron Subz Handi'],
   },
   {
     id: 'north-indian',
     index: '02',
     title: 'North Indian Classics',
-    region: 'Purani Dilli & Awadh Traditions',
-    headline: 'Velvety makhani reductions and slow-simmered gravies.',
-    description: 'Slow-cooked tomatoes, cashew reductions, churned white butter, and fenugreek leaves meet smoky tandoori naans straight from clay walls heated to 400°C.',
+    region: 'Rich Butter Gravies & Curries',
+    headline: 'Velvety butter chicken and slow-simmered regional favourites.',
+    description: 'Slow-cooked tomato gravies, clotted butter reductions, and rich paneer curries served alongside hot tandoori breads.',
     image: '/images/food/signature-chicken.jpg',
-    method: 'Simmered in Heavy Bottom Degchis',
+    method: 'Slow-Simmered Gravies',
     aromatics: ['Kasuri Methi', 'Fresh Churned Butter', 'Charred Garlic', 'Kashmiri Chili'],
-    dishes: ['Purani Dilli Butter Chicken', '12-Hour Dal Makhani', 'Shahi Paneer Lababdar'],
+    dishes: ['Purani Dilli Butter Chicken', '12-Hour Dal Makhani', 'Paneer Butter Masala'],
   },
   {
     id: 'tandoori',
     index: '03',
     title: 'Charcoal Tandoor & Grills',
-    region: 'Northwest Frontier Skewers',
+    region: 'Smoky Clay Oven Skewers',
     headline: 'Live coconut charcoal embers yielding tender smoky char.',
-    description: 'Velvety malai paneer, seasoned seekh kebabs, and whole spiced chicken skewers steeped in mustard oil and hung yogurt, fire-roasted to succulent charred perfection.',
+    description: 'Soft paneer cubes, spiced seekh kebabs, and succulent chicken skewers marinated in yogurt and spices, fire-roasted to perfection.',
     image: '/images/food/signature-paneer.jpg',
-    method: 'Live Clay Oven at 400°C',
+    method: 'Live Charcoal Tandoor',
     aromatics: ['Yellow Mustard', 'Crushed Fenugreek', 'Smoked Cumin', 'Mint Reduction'],
     dishes: ['Paneer Tikka Angara', 'Murgh Malai Kebabs', 'Smoked Seekh Platter'],
   },
@@ -49,10 +49,10 @@ const cuisines = [
     index: '04',
     title: 'South Indian Coastal & Deccan',
     region: 'Guntur, Telangana & Rayalaseema',
-    headline: 'Crisp golden dosas, fiery roasts and coconut gravies.',
-    description: 'Fiery Andhra pepper chicken, fragrant bagara rice, crisp golden ghee roasts, and coconut-tempered seafood preparations cooked with fresh curry leaves and stone-crushed peppercorns.',
+    headline: 'Crisp golden dosas, fiery roasts and fragrant rice.',
+    description: 'Spicy Andhra pepper chicken, fragrant bagara rice, and crisp golden ghee roasts tempered with fresh curry leaves and black pepper.',
     image: '/images/food/cuisine-south.jpg',
-    method: 'Cast Iron Tawa & Kadai Tempering',
+    method: 'Cast Iron Tawa & Fresh Tempering',
     aromatics: ['Fresh Curry Leaves', 'Guntur Peppercorns', 'Toasted Mustard', 'Pure Desi Ghee'],
     dishes: ['Andhra Pepper Fry', 'Bagara Rice Special', 'Golden Ghee Roast Dosa'],
   },
@@ -60,11 +60,11 @@ const cuisines = [
     id: 'chinese',
     index: '05',
     title: 'Indo-Chinese Wok Art',
-    region: 'Tangra Wok Heritage',
-    headline: 'High-flame wok toss with charred garlic and fiery chilies.',
-    description: 'Intense high-temperature wok execution yielding crisp scallions, tossed hakka noodles, scorched garlic fried rice, and tangy schezwan reductions crafted from scratch.',
+    region: 'High-Flame Wok Specials',
+    headline: 'Tossed hakka noodles, fried rice, and fiery chili appetizers.',
+    description: 'High-heat wok specials loaded with crisp scallions, scorched garlic noodles, and spicy schezwan gravies crafted from scratch.',
     image: '/images/food/cuisine-chinese.jpg',
-    method: 'High-Flame Cast Wok Technique',
+    method: 'High-Flame Wok Toss',
     aromatics: ['Charred Scallion', 'Burnt Garlic Crisp', 'Sichuan Peppercorn', 'Dark Soy'],
     dishes: ['Crispy Chili Chicken', 'Burnt Garlic Noodles', 'Schezwan Tossed Wok'],
   },
@@ -91,11 +91,11 @@ export default function CuisineDiscovery() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#F69522]">
-              Chapter 03 / 07 • The Repertoire
+              Menu Showcase • Explore Our Cuisines
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/40">
-            5 Distinct Regional Traditions
+            5 Signature Food Styles
           </span>
         </div>
 
@@ -108,7 +108,7 @@ export default function CuisineDiscovery() {
               <span className="font-editorial-italic font-normal text-[#F69522]">Flavours.</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-[#35363A]/70 max-w-xl font-normal leading-relaxed">
-              Every cuisine at Hunger Stories is curated as an independent culinary atelier — respecting traditional ingredients, clay techniques, and uncompromised spice integrity.
+              From fragrant slow-dum biryanis and clay-oven tandoori grills to comforting North Indian curries and high-flame wok specials — cooked fresh daily with authentic spices.
             </p>
           </div>
 
@@ -227,11 +227,11 @@ export default function CuisineDiscovery() {
                     </p>
                   </div>
 
-                  {/* Aromatics Profile Pills */}
+                  {/* Key Flavours Profile Pills */}
                   <div className="pt-4 border-t border-[#35363A]/10 space-y-3">
                     <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[#35363A]/50">
                       <Sparkles className="w-3.5 h-3.5 text-[#F69522]" />
-                      <span>Signature Aromatics</span>
+                      <span>Key Flavours & Spices</span>
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {c.aromatics.map((aroma) => (
@@ -248,7 +248,7 @@ export default function CuisineDiscovery() {
                   {/* Featured Plates */}
                   <div className="pt-3 border-t border-[#35363A]/10">
                     <p className="text-[10px] font-bold uppercase tracking-wider text-[#35363A]/50 mb-2">
-                      Notable Preparations
+                      Popular Dishes
                     </p>
                     <p className="text-xs text-[#35363A]/80 font-medium">
                       {c.dishes.join('  •  ')}

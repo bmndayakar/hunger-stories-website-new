@@ -6,13 +6,13 @@ import Image from 'next/image';
 
 const marqueeItems = [
   'Royal Hyderabadi Dum Biryani',
-  'Clay Oven Tandoori Skewers',
-  'Purani Dilli Butter Gravies',
+  'Clay Oven Tandoori Grills',
+  'Rich Butter Gravies',
   'Slow-Simmered Heritage Dals',
   'Deccan Pepper Roasts',
   'Fiery High-Flame Wok',
-  'Bespoke Banquets & Catering',
-  'Pure Coal Embers • Stone Ground',
+  'Catering & Celebrations',
+  'Pure Desi Ghee & Fresh Spices',
 ];
 
 export default function Hero() {
@@ -42,11 +42,11 @@ export default function Hero() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#F69522] animate-ping" />
               <span className="text-[11px] font-bold uppercase tracking-[0.26em] text-[#F69522]">
-                Chapter 01 : The Sacred Hearth
+                Hyderabad • Multi-Cuisine
               </span>
               <span className="text-white/20">•</span>
               <span className="text-[11px] text-white/60 tracking-wider font-mono">
-                Hyderabad 2024
+                Est. 2024
               </span>
             </motion.div>
 
@@ -83,7 +83,7 @@ export default function Hero() {
               className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2"
             >
               <a
-                href="#about"
+                href="#story"
                 className="group inline-flex items-center gap-3 px-8 sm:px-9 py-4 rounded-full bg-[#F69522] text-white font-body text-xs font-bold uppercase tracking-[0.18em] shadow-2xl shadow-[#F69522]/30 hover:bg-[#EA2628] hover:shadow-[#EA2628]/40 hover:-translate-y-0.5 transition-all duration-300"
               >
                 <span>Explore Our Story</span>
@@ -107,16 +107,16 @@ export default function Hero() {
               className="pt-6 border-t border-white/10 grid grid-cols-3 gap-6 max-w-lg text-left"
             >
               <div>
-                <span className="block font-display text-2xl font-bold text-[#F69522]">180m</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">Slow Dough Dum</span>
+                <span className="block font-display text-2xl font-bold text-[#F69522]">Slow Dum</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">Sealed Clay Handis</span>
               </div>
               <div className="border-l border-white/10 pl-6">
-                <span className="block font-display text-2xl font-bold text-[#F69522]">400°C</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">Live Coal Tandoor</span>
+                <span className="block font-display text-2xl font-bold text-[#F69522]">Live Coal</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">Tandoori Grills</span>
               </div>
               <div className="border-l border-white/10 pl-6">
-                <span className="block font-display text-2xl font-bold text-[#F69522]">100%</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">Virgin Oil Standard</span>
+                <span className="block font-display text-2xl font-bold text-[#F69522]">Pure Ghee</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">Fresh Masalas</span>
               </div>
             </motion.div>
 
@@ -180,13 +180,13 @@ export default function Hero() {
                   </div>
                   <div>
                     <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#F69522] mb-0.5">
-                      The Culinary Atelier
+                      Fresh From Our Kitchen
                     </span>
                     <h4 className="font-display text-base font-bold text-[#35363A] leading-snug">
-                      Engineered for Heat Retention
+                      Served Steaming Hot
                     </h4>
                     <p className="text-[11px] text-[#35363A]/70 mt-1 leading-normal">
-                      Every handi arrives at dining table or doorstep steaming hot.
+                      Piping-hot delivery and authentic dine-in hospitality across Hyderabad.
                     </p>
                   </div>
                 </div>
