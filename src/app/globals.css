@@ -10,8 +10,8 @@
   --color-espresso: #30231F;
   --color-white: #FFFFFF;
 
-  --font-display: var(--font-display, 'Playfair Display', Georgia, serif);
-  --font-body: var(--font-body, 'Manrope', system-ui, -apple-system, sans-serif);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 :root {
@@ -32,7 +32,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -40,7 +40,7 @@ body {
   font-family: var(--font-body);
   color: #35363A;
   background-color: #FFF8EF;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   letter-spacing: -0.01em;
 }
@@ -96,6 +96,41 @@ p {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  .story-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Keep the short people chapter behind the following chapter on desktop. */
+@media (min-width: 1024px) and (min-height: 800px) and (prefers-reduced-motion: no-preference) {
+  .story-interlude {
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media (min-width: 1280px) and (min-height: 1000px) and (prefers-reduced-motion: no-preference) {
+  .story-prologue {
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media (max-width: 1023px), (prefers-reduced-motion: reduce) {
+  .story-parallax {
+    transform: none !important;
+  }
+}
+
+.story-reveal:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+main > section {
+  scroll-margin-top: 6rem;
 }
 
 /* Custom luxury scrollbar */

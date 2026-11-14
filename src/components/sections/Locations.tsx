@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Clock, Phone, ArrowUpRight, Navigation } from 'lucide-react';
 import Image from 'next/image';
 import { siteConfig } from '@/lib/config';
+import { StoryReveal } from '@/components/ui/StoryMotion';
 
 const branches = [
   {
@@ -58,7 +59,7 @@ export default function Locations() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#F69522]">
-              Our Locations • Hyderabad
+              Chapter 06 / 07 • Our Locations
             </span>
           </div>
           <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-[#35363A]/50">
@@ -67,7 +68,7 @@ export default function Locations() {
         </div>
 
         {/* Section Headline */}
-        <div className="max-w-3xl mb-12 sm:mb-16 lg:mb-20">
+        <StoryReveal className="max-w-3xl mb-12 sm:mb-16 lg:mb-20">
           <h2 className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight mb-4 sm:mb-6">
             Visit Us or <br />
             <span className="font-editorial-italic font-normal text-[#35363A]/80">Order </span>
@@ -76,7 +77,7 @@ export default function Locations() {
           <p className="font-body text-sm sm:text-lg text-[#35363A]/75 leading-relaxed font-normal max-w-2xl">
             Enjoy relaxed sit-down dining with family and friends at our Manikonda restaurant, or order hot, freshly prepared meals delivered fast from our Tellapur kitchen.
           </p>
-        </div>
+        </StoryReveal>
 
         {/* Two Operational Outlets Split */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-14">

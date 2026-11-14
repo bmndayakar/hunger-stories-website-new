@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Sparkles, Utensils, Flame, Award } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { StoryReveal } from '@/components/ui/StoryMotion';
 
 const pillars = [
   {
@@ -41,7 +41,7 @@ export default function BrandStory() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Our Food Philosophy • Our Story
+              Chapter 01 / 07 • Our Food Philosophy
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">
@@ -53,7 +53,7 @@ export default function BrandStory() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-start mb-14 sm:mb-20 lg:mb-28">
           
           {/* Left Column: Big Headline & Manifesto Essay */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+          <StoryReveal className="lg:col-span-7 space-y-6 sm:space-y-8">
             <h2 className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight">
               More Than <br />
               <span className="font-editorial-italic font-normal text-[#35363A]/80">Just A </span>
@@ -89,10 +89,10 @@ export default function BrandStory() {
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Cooked Daily</span>
               </div>
             </div>
-          </div>
+          </StoryReveal>
 
           {/* Right Column: Asymmetric Vertical Photography Composition */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
+          <StoryReveal delay={0.15} className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Vertical Spices Frame */}
@@ -134,7 +134,7 @@ export default function BrandStory() {
               </div>
 
             </div>
-          </div>
+          </StoryReveal>
 
         </div>
 

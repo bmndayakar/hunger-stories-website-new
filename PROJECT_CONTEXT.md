@@ -115,12 +115,14 @@ hunger-stories-website-new/
 │   │   │   ├── Hero.tsx              # 01: Hero — Welcome to Hunger Stories (#hero)
 │   │   │   ├── BrandStory.tsx        # 02: Our Story — More Than Just A Meal (#story)
 │   │   │   ├── CuisineDiscovery.tsx  # 03: Explore Our Cuisines (#cuisines)
+│   │   │   ├── ChefHighlights.tsx    # Chapter 03: Chef-story placeholder (#people)
 │   │   │   ├── FoodExperiences.tsx   # 04: Signature Dishes (#experiences)
 │   │   │   ├── Catering.tsx          # 05: Catering & Celebrations (#catering)
 │   │   │   ├── Locations.tsx         # 06: Our Locations — Manikonda & Tellapur (#locations)
 │   │   │   └── FinalCTA.tsx          # 07: Order Online (4 channels) & Catering Enquiry (#order, #contact)
 │   │   └── ui/
 │   │       ├── ScrollProgress.tsx    # Viewport scroll progress indicator
+│   │       ├── StoryMotion.tsx       # Reduced-motion provider and chapter reveals
 │   │       └── animations.tsx        # Framer Motion reveal wrappers
 │   └── lib/
 │       └── config.ts                 # Centralized brand, hotline & dispatch config
@@ -162,8 +164,12 @@ hunger-stories-website-new/
   5. Indo-Chinese Wok Art
 - **Content:** Short, customer-friendly 2-sentence introductions without unnecessary ingredient jargon.
 
-### 04: Signature Food Experiences (`FoodExperiences.tsx`)
-- **Anchor ID:** `#experiences` (with alias `#story`)
+### Chapter 03: The People Behind the Food (`ChefHighlights.tsx`)
+- **Anchor ID:** `#people`
+- **Content:** A short chef-story placeholder, using existing spice photography. Add profiles only when verified information and images are supplied by the owner.
+
+### Chapter 04: Signature Food Experiences (`FoodExperiences.tsx`)
+- **Anchor ID:** `#experiences`
 - **Headline:** *"Where Food Becomes An Experience."*
 - **Sub-tag:** *Chef's Highlights • Freshly Prepared Daily*
 - **4-Course Asymmetric Spread:** Alternating 7-column and 5-column layout:
@@ -323,9 +329,10 @@ export function getWhatsAppUrl(customMessage?: string): string;
 
 ---
 
-## 11. Next Milestone: Scroll-Driven Brand Storytelling Experience
+## 11. Scroll-Driven Brand Storytelling
 
-The current request in the pipeline is evolving the existing single-page layout into a cinematic, scroll-driven storytelling experience:
-- **7-Chapter Flow:** Our Food Philosophy → A World of Flavours → Chef Highlights (new placeholder) → Signature Food Experiences → Catering & Celebrations → Our Locations → Order Online.
-- **Interactions:** Sticky overlapping chapter transitions, subtle parallax on food imagery, scroll progress indicator, and staggered reveals.
-- **Non-negotiables:** Mobile must remain natural scrolling without sticky scroll traps; `prefers-reduced-motion` must be respected; visual identity (ivory, charcoal, orange accents) and existing external ordering channels remain intact.
+The hero introduces seven chapters: Our Food Philosophy → A World of Flavours → The People Behind the Food → Signature Food Experiences → Catering & Celebrations → Our Locations → Order Online.
+
+The prologue and the people chapter use sticky layering on larger desktop viewports; the people chapter also uses subtle scroll-linked photography. Smaller screens and reduced-motion preferences use natural scrolling without sticky or parallax effects. Chapter reveals use Framer Motion, and the existing scroll indicator and external ordering links remain in place.
+
+The people chapter is intentionally a placeholder: replace it with chef profiles or photography only when the owner supplies verified material.

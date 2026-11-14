@@ -1,11 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { StoryReveal } from '@/components/ui/StoryMotion';
+
+const reducedMotionQuery = '(prefers-reduced-motion: reduce)';
+
+function subscribeToMotionPreference(onChange: () => void) {
+  const preference = window.matchMedia(reducedMotionQuery);
+  preference.addEventListener('change', onChange);
+  return () => preference.removeEventListener('change', onChange);
+}
+
+function getMotionPreference() {
+  return window.matchMedia(reducedMotionQuery).matches;
+}
 
 const cuisines = [
   {
@@ -58,6 +71,16 @@ const cuisines = [
 export default function CuisineDiscovery() {
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const reducedMotion = useSyncExternalStore(subscribeToMotionPreference, getMotionPreference, () => true);
+
+  useEffect(() => {
+    if (!swiperInstance) return;
+    if (reducedMotion) {
+      swiperInstance.autoplay.stop();
+    } else {
+      swiperInstance.autoplay.start();
+    }
+  }, [reducedMotion, swiperInstance]);
 
   const handleSelectTab = (idx: number) => {
     setActiveIndex(idx);
@@ -76,7 +99,7 @@ export default function CuisineDiscovery() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Menu Showcase • Explore Our Cuisines
+              Chapter 02 / 07 • Explore Our Cuisines
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">
@@ -86,7 +109,7 @@ export default function CuisineDiscovery() {
 
         {/* Header Block & Controls */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-8 sm:mb-12 lg:mb-16">
-          <div className="lg:col-span-8 space-y-3 sm:space-y-4">
+          <StoryReveal className="lg:col-span-8 space-y-3 sm:space-y-4">
             <h2 className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight">
               A World Of <br />
               <span className="font-editorial-italic font-normal text-[#35363A]/80">Exceptional </span>
@@ -95,7 +118,7 @@ export default function CuisineDiscovery() {
             <p className="font-body text-sm sm:text-lg text-[#35363A]/75 max-w-xl font-normal leading-relaxed">
               From fragrant slow-dum biryanis and clay-oven tandoori grills to comforting North Indian curries and high-flame wok specials — cooked fresh daily with authentic spices.
             </p>
-          </div>
+          </StoryReveal>
 
           {/* Navigation Controls & Counter */}
           <div className="lg:col-span-4 flex items-center justify-between lg:justify-end gap-6 pt-2 lg:pt-0">
@@ -152,8 +175,8 @@ export default function CuisineDiscovery() {
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           spaceBetween={16}
           slidesPerView={1.15}
-          speed={700}
-          autoplay={{
+          speed={reducedMotion ? 0 : 700}
+          autoplay={reducedMotion ? false : {
             delay: 5000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,

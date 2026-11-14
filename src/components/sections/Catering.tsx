@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Users, Cake, Home, PartyPopper, PackageCheck, CheckCircle2, ChevronRight, Phone } from 'lucide-react';
 import { siteConfig } from '@/lib/config';
+import { StoryReveal } from '@/components/ui/StoryMotion';
 
 const occasions = [
   {
@@ -75,7 +76,7 @@ export default function Catering() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Catering & Celebrations • Hyderabad
+              Chapter 05 / 07 • Catering & Celebrations
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">
@@ -88,7 +89,7 @@ export default function Catering() {
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
             
             {/* Left Narrative Panel */}
-            <div className="lg:col-span-6 p-6 sm:p-12 lg:p-16 space-y-6 sm:space-y-8">
+            <StoryReveal className="lg:col-span-6 p-6 sm:p-12 lg:p-16 space-y-6 sm:space-y-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F69522] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest">
                 <span>Made For Memorable Gatherings</span>
               </div>
@@ -120,7 +121,7 @@ export default function Catering() {
                   <span>Call Catering Team</span>
                 </a>
               </div>
-            </div>
+            </StoryReveal>
 
             {/* Right Large Banquet Photography */}
             <div className="lg:col-span-6 relative h-[260px] xs:h-[320px] sm:h-[440px] lg:h-[580px] w-full">

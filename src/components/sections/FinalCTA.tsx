@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, Phone, Mail, MessageCircle, Send, CheckCircle2, MapPin, Clock } from 'lucide-react';
 import { siteConfig, getWhatsAppUrl } from '@/lib/config';
+import { StoryReveal } from '@/components/ui/StoryMotion';
 
 export default function FinalCTA() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -75,7 +76,7 @@ export default function FinalCTA() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#F69522]">
-              Order Online • External Channels
+              Chapter 07 / 07 • Order Online
             </span>
           </div>
           <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-[#35363A]/50">
@@ -84,7 +85,7 @@ export default function FinalCTA() {
         </div>
 
         {/* Master Headline Block */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20">
+        <StoryReveal className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20">
           <h2 className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight mb-4 sm:mb-6">
             Your Next Food Story <br />
             <span className="font-editorial-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#F69522] via-[#F69522] to-[#EA2628]">
@@ -95,7 +96,7 @@ export default function FinalCTA() {
           <p className="font-body text-sm sm:text-lg text-[#35363A]/75 leading-relaxed font-normal max-w-xl mx-auto">
             Choose your preferred ordering platform below. Every dish is freshly prepared upon confirmation and dispatched steaming hot across Hyderabad.
           </p>
-        </div>
+        </StoryReveal>
 
         {/* 4 Prominent External Channel Options */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-16 sm:mb-20 lg:mb-28">

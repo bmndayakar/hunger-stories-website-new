@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { StoryReveal } from '@/components/ui/StoryMotion';
 
 const portfolio = [
   {
@@ -52,7 +53,7 @@ const portfolio = [
 
 export default function FoodExperiences() {
   return (
-    <section id="experiences" className="relative py-20 sm:py-28 lg:py-36 bg-[#F3E8D9]/40 text-[#35363A] overflow-hidden">
+    <section id="experiences" className="relative py-20 sm:py-28 lg:py-36 bg-[#FAF2E6] text-[#35363A] overflow-hidden">
       {/* Decorative Warm Glow */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#FFF8EF]/80 rounded-full blur-[140px] pointer-events-none" />
 
@@ -63,7 +64,7 @@ export default function FoodExperiences() {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#F69522]" />
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Chef&apos;s Highlights • Signature Dishes
+              Chapter 04 / 07 • Signature Food Experiences
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">
@@ -72,7 +73,7 @@ export default function FoodExperiences() {
         </div>
 
         {/* Section Headline */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 lg:mb-24">
+        <StoryReveal className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 lg:mb-24">
           <h2 className="font-display text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-bold text-[#35363A] leading-[1.08] tracking-tight mb-4 sm:mb-6">
             Where Food Becomes <br />
             <span className="font-editorial-italic font-normal text-[#35363A]/80">An </span>
@@ -81,7 +82,7 @@ export default function FoodExperiences() {
           <p className="font-body text-sm sm:text-lg text-[#35363A]/75 leading-relaxed font-normal max-w-2xl mx-auto">
             Every dish is prepared fresh with traditional recipes and authentic spices — from slow-steamed biryanis and clay-oven tandoori grills to comforting North Indian curries.
           </p>
-        </div>
+        </StoryReveal>
 
         {/* Asymmetrical 4-Plate Editorial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10">

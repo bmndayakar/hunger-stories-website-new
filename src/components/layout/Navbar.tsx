@@ -29,12 +29,17 @@ export default function Navbar() {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') setIsMobileMenuOpen(false);
+      };
+      document.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', handleKeyDown);
+      };
     } else {
       document.body.style.overflow = '';
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isMobileMenuOpen]);
 
   return (
@@ -64,7 +69,7 @@ export default function Navbar() {
               </div>
             </a>
 
-            <div className={`hidden xl:block pl-6 border-l transition-colors ${
+            <div className={`hidden 2xl:block pl-6 border-l transition-colors ${
               isScrolled ? 'border-[#35363A]/15 text-[#35363A]/60' : 'border-white/20 text-white/50'
             }`}>
               <p className="text-[10px] uppercase tracking-[0.25em] font-semibold">
@@ -77,7 +82,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Editorial Navigation */}
-          <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
+          <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -99,7 +104,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-5">
             <a
               href={siteConfig.contact.phoneHref}
-              className={`flex items-center gap-2 text-xs font-semibold tracking-wider uppercase transition-colors duration-300 ${
+              className={`hidden xl:flex items-center gap-2 text-xs font-semibold tracking-wider uppercase transition-colors duration-300 ${
                 isScrolled ? 'text-[#35363A]/70 hover:text-[#F69522]' : 'text-white/80 hover:text-[#F69522]'
               }`}
             >
@@ -126,6 +131,8 @@ export default function Navbar() {
                 : 'text-[#35363A] hover:bg-[#35363A]/5'
             }`}
             aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Navigation Menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -137,8 +144,9 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0, clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' }}
-            animate={{ opacity: 1, clipPath: 'polygon(0 0, 100% 100%, 0 100%)' }}
+            animate={{ opacity: 1, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
             exit={{ opacity: 0, clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 z-40 bg-[#30231F] text-[#FFF8EF] flex flex-col justify-between p-6 sm:p-10 pt-28 pb-10 overflow-y-auto"
