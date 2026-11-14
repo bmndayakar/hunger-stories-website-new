@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hunger Stories — Premium Website Redesign
 
-## Getting Started
+> *"Every Flavour Has A Story."*  
+> Official brand awareness and banqueting atelier website for **Hunger Stories** (Hyderabad, India).
 
-First, run the development server:
+---
 
+## 📖 Master Project Context & Agent Handbook
+
+For complete details on brand identity, design philosophy, section architecture, strict business boundaries, photography assets, and deployment procedures, please consult:
+
+👉 **[PROJECT_CONTEXT.md](./PROJECT_CONTEXT.md)**
+
+---
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Run Local Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Production Build
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎨 Technology Stack
+- **Framework:** Next.js 16 (App Router)
+- **Library:** React 19 & TypeScript
+- **Styling:** Tailwind CSS v4 & PostCSS
+- **Carousels:** Swiper 14
+- **Icons:** Lucide React
+- **Animations:** Framer Motion
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔒 Strict Business Boundaries
+- **Zero Pricing:** Food experiences are presented through storytelling without menu pricing.
+- **Zero Cart / Checkout:** This is a brand awareness website with external ordering links to Swiggy, Zomato, Ownly, and WhatsApp.
+- **Centralized Dispatch Config:** All external links and contact information are centralized in `src/lib/config.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
