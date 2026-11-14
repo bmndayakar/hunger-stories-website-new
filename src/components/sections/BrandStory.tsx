@@ -20,8 +20,8 @@ const pillars = [
   {
     number: '03',
     title: 'Honest, Wholesome Ingredients',
-    subtitle: 'Pure Ghee & Fresh Daily Batches',
-    narrative: 'We cook fresh every single day using pure desi ghee, mustard oil, and premium ingredients. No artificial colors, no preservatives — just wholesome, delicious food.',
+    subtitle: 'Fresh Daily Batches',
+    narrative: 'We cook fresh every day using quality ghee, mustard oil, and authentic Indian spices. No artificial colors or preservatives — just honest, flavorful food.',
   },
 ];
 
@@ -85,8 +85,8 @@ export default function BrandStory() {
               </div>
               <div className="h-8 sm:h-10 w-px bg-[#35363A]/10" />
               <div>
-                <span className="block font-display text-2xl sm:text-3xl font-bold text-[#F69522]">100%</span>
-                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Fresh Daily</span>
+                <span className="block font-display text-2xl sm:text-3xl font-bold text-[#F69522]">Fresh</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#35363A]/60 font-semibold">Cooked Daily</span>
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function BrandStory() {
                   </div>
                   <div>
                     <h5 className="font-display text-sm font-bold text-[#35363A]">
-                      Pure Desi Ghee & Spices
+                      Quality Ghee & Spices
                     </h5>
                     <p className="text-[10px] text-[#35363A]/60 mt-0.5">
                       Authentic recipes cooked fresh daily

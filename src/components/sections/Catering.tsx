@@ -11,7 +11,7 @@ const occasions = [
     id: 'corporate',
     icon: Users,
     title: 'Corporate Events & Summits',
-    couverts: '50 — 1,000+ Guests',
+    capacity: '50 — 500+ Guests',
     location: 'Hitec City, Financial District, Gachibowli',
     headline: 'Hot executive lunch boxes, conference buffets, and team celebrations.',
     narrative: 'Tailored for corporate teams and campus gatherings across Hyderabad. We offer hygienic executive meal boxes and complete buffet catering setups.',
@@ -21,7 +21,7 @@ const occasions = [
     id: 'weddings',
     icon: PartyPopper,
     title: 'Weddings & Receptions',
-    couverts: '100 — 2,000+ Guests',
+    capacity: '100+ Guests',
     location: 'Banquets & Venues Across Hyderabad',
     headline: 'Authentic Hyderabadi dum biryanis, tandoori stations, and rich curries.',
     narrative: 'Celebrate your special moments with a feast your guests will remember. Freshly prepared dum biryani handis, live naan stations, and signature desserts.',
@@ -31,7 +31,7 @@ const occasions = [
     id: 'birthdays',
     icon: Cake,
     title: 'Birthdays & Private Parties',
-    couverts: '25 — 150 Guests',
+    capacity: '25 — 150 Guests',
     location: 'Homes, Clubhouses & Private Venues',
     headline: 'Vibrant party platters and crowd-pleasing signature dishes.',
     narrative: 'Delicious party food made simple. We curate appetizers, smoky tandoori skewers, and flavorful biryanis that guests of all ages enjoy.',
@@ -41,7 +41,7 @@ const occasions = [
     id: 'family',
     icon: Home,
     title: 'Family Gatherings & House Parties',
-    couverts: '20 — 80 Guests',
+    capacity: '20 — 80 Guests',
     location: 'Direct to Your Doorstep',
     headline: 'Warm homestyle dining without the kitchen stress.',
     narrative: 'Perfect for housewarmings, anniversaries, or Sunday family get-togethers. Delivered hot and ready to serve in insulated food containers.',
@@ -51,7 +51,7 @@ const occasions = [
     id: 'bulk',
     icon: PackageCheck,
     title: 'Bulk Orders & Box Meals',
-    couverts: '50 — 2,000+ Boxes',
+    capacity: '50+ Meal Boxes',
     location: 'Office & Venue Delivery',
     headline: 'Consistent high-volume meal boxes packed with care and hygiene.',
     narrative: 'Reliable, well-balanced meal trays for corporate trainings, institutional events, and large gatherings. Includes biryani, curry, bread, dessert, and salad.',
@@ -79,7 +79,7 @@ export default function Catering() {
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">
-            Events for 20 to 2,000+ Guests
+            Custom Events & Gathering Feasts
           </span>
         </div>
 
@@ -100,12 +100,12 @@ export default function Catering() {
               </h2>
 
               <p className="font-body text-sm sm:text-base text-[#FFF8EF]/80 leading-relaxed font-normal">
-                Whether hosting a 500-guest wedding reception or an intimate family milestone of 25, Hunger Stories brings genuine hospitality, authentic taste, and dependable service to your event.
+                Whether hosting a grand celebration or an intimate family gathering, Hunger Stories brings genuine hospitality, authentic taste, and dependable service to your event.
               </p>
 
               <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <a
-                  href="#order"
+                  href="#contact"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#F69522] text-white text-xs font-bold uppercase tracking-[0.18em] hover:bg-[#EA2628] transition-all shadow-xl shadow-[#F69522]/30 hover:-translate-y-0.5 min-h-[48px]"
                 >
                   <span>Enquire For Catering</span>
@@ -166,7 +166,7 @@ export default function Catering() {
                   <Icon className={`w-5 h-5 mb-3 sm:mb-4 ${isSelected ? 'text-[#F69522]' : 'text-[#35363A]/60'}`} />
                   <div>
                     <p className={`text-[9px] sm:text-[10px] uppercase tracking-wider font-semibold ${isSelected ? 'text-[#F69522]' : 'text-[#35363A]/50'}`}>
-                      {occ.couverts}
+                      {occ.capacity}
                     </p>
                     <h4 className="font-display text-sm sm:text-base font-bold leading-snug mt-1">
                       {occ.title.split(' ')[0]} {occ.title.split(' ')[1] || ''}
@@ -192,7 +192,7 @@ export default function Catering() {
                 <div className="lg:col-span-8 space-y-3 sm:space-y-4">
                   <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                     <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FFF8EF] text-[#F69522] border border-[#F69522]/20">
-                      {activeOccasion.couverts}
+                      {activeOccasion.capacity}
                     </span>
                     <span className="text-xs text-[#35363A]/60 font-mono">
                       {activeOccasion.location}
@@ -225,7 +225,7 @@ export default function Catering() {
 
                   <div className="pt-2">
                     <a
-                      href="#order"
+                      href="#contact"
                       className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#35363A] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#F69522] transition-colors min-h-[44px]"
                     >
                       <span>Enquire For This Event</span>

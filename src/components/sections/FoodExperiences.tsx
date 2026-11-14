@@ -2,63 +2,58 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Sparkles, Flame, Clock, Award } from 'lucide-react';
 
 const portfolio = [
   {
     id: 'biryani',
-    index: 'I',
+    index: '01',
     title: 'Hyderabadi Dum Biryani',
-    subtitle: 'Authentic Clay Handi Dum',
-    caption: 'Aged long-grain basmati rice infused with pure saffron and whole roasted spices, slow-steamed with tender cuts in sealed clay handis.',
+    badge: 'Clay Handi Dum',
+    caption:
+      'Aged long-grain basmati rice slow-cooked with tender marinated cuts and saffron in dough-sealed handis. Served piping hot with authentic mirchi ka salan and chilled dahi raita.',
     image: '/images/food/signature-biryani.jpg',
     span: 'lg:col-span-7',
     aspect: 'h-[390px] sm:h-[460px] lg:h-[520px]',
-    technique: 'Sealed Clay Handi Dum',
-    texture: 'Fragrant, Tender, Layered',
   },
   {
     id: 'paneer',
-    index: 'II',
+    index: '02',
     title: 'Paneer Tikka Angara',
-    subtitle: 'Live Charcoal Tandoor',
-    caption: 'Soft paneer cubes steeped in spiced hung curd and toasted fenugreek, fire-roasted on skewers to a succulent smoky finish.',
+    badge: 'Clay Oven Roasted',
+    caption:
+      'Soft cottage cheese cubes marinated in spiced yogurt and roasted over hot embers until tender with a light smoky char. Served with fresh mint dip and spiced onions.',
     image: '/images/food/signature-paneer.jpg',
     span: 'lg:col-span-5',
     aspect: 'h-[390px] sm:h-[460px] lg:h-[520px]',
-    technique: 'Clay Tandoor Roasted',
-    texture: 'Smoky & Tender',
   },
   {
     id: 'chicken',
-    index: 'III',
+    index: '03',
     title: 'Purani Dilli Butter Chicken',
-    subtitle: 'Rich Creamy Makhani Gravy',
-    caption: 'Tandoor-charred chicken simmered in a slow reduction of ripe tomatoes, cashews, and churned butter, finished with hand-rubbed kasuri methi.',
+    badge: 'Rich Butter Gravy',
+    caption:
+      'Tender grilled chicken pieces simmered gently in a velvety tomato and butter reduction finished with crushed fenugreek leaves. A rich North Indian classic perfect with hot garlic naan.',
     image: '/images/food/signature-chicken.jpg',
     span: 'lg:col-span-5',
     aspect: 'h-[390px] sm:h-[460px] lg:h-[520px]',
-    technique: 'Slow Butter Simmer',
-    texture: 'Silky, Rich & Comforting',
   },
   {
     id: 'dal',
-    index: 'IV',
+    index: '04',
     title: '12-Hour Dal Makhani',
-    subtitle: 'Overnight Slow Simmer',
-    caption: 'Whole black lentils slowly reduced overnight over gentle embers, finished with clotted cream, ginger juliennes, and pure butter.',
+    badge: 'Slow-Simmered Lentils',
+    caption:
+      'Whole black lentils slow-simmered overnight over gentle embers, finished with churned butter and fresh cream. Comforting, hearty, and deeply satisfying with every spoonful.',
     image: '/images/food/signature-dal.jpg',
     span: 'lg:col-span-7',
     aspect: 'h-[390px] sm:h-[460px] lg:h-[520px]',
-    technique: 'Overnight Slow Simmer',
-    texture: 'Creamy, Earthy & Hearty',
   },
 ];
 
 export default function FoodExperiences() {
   return (
     <section id="experiences" className="relative py-20 sm:py-28 lg:py-36 bg-[#F3E8D9]/40 text-[#35363A] overflow-hidden">
-      {/* Decorative Glow */}
+      {/* Decorative Warm Glow */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#FFF8EF]/80 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="container-wide relative z-10">
@@ -84,7 +79,7 @@ export default function FoodExperiences() {
             <span className="font-editorial-italic font-normal text-[#EA2628]">Experience.</span>
           </h2>
           <p className="font-body text-sm sm:text-lg text-[#35363A]/75 leading-relaxed font-normal max-w-2xl mx-auto">
-            Every dish is prepared fresh with traditional techniques and authentic spices — from slow-steamed biryanis and clay-oven tandoori grills to velvety butter gravies.
+            Every dish is prepared fresh with traditional recipes and authentic spices — from slow-steamed biryanis and clay-oven tandoori grills to comforting North Indian curries.
           </p>
         </div>
 
@@ -107,35 +102,37 @@ export default function FoodExperiences() {
                   alt={item.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="object-cover object-center transition-transform duration-1000 group-hover:scale-106 filter brightness-[0.78] contrast-[1.08]"
+                  className="object-cover object-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.78] contrast-[1.08]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1b1412]/95 via-[#1b1412]/50 to-black/30" />
                 
-                {/* Top Badge: Roman Numeral & Technique Tag */}
+                {/* Top Badge: Number & Category */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="font-display text-xl sm:text-2xl font-bold text-[#F69522]">
+                  <span className="font-mono text-sm sm:text-base font-bold text-white/90 bg-black/40 px-3 py-1 rounded-full">
                     {item.index}
                   </span>
-                  <span className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-white/95 text-[#35363A] shadow-md backdrop-blur-sm">
-                    {item.technique}
+                  <span className="px-3.5 py-1.5 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-white/95 text-[#35363A] shadow-md backdrop-blur-sm">
+                    {item.badge}
                   </span>
                 </div>
 
                 {/* Bottom Narrative Block */}
                 <div className="relative z-10 space-y-2 sm:space-y-3 text-shadow-food">
-                  <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#F69522]">
-                    {item.subtitle}
-                  </p>
-                  <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold leading-tight">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold leading-tight">
                     {item.title}
                   </h3>
                   <p className="font-body text-xs sm:text-sm text-white/90 leading-relaxed font-normal max-w-xl">
                     {item.caption}
                   </p>
 
-                  <div className="pt-2 sm:pt-3 flex items-center gap-2 text-[10px] sm:text-[11px] text-[#FFF8EF]/75 font-mono">
-                    <span className="text-[#F69522] font-semibold">Texture Profile:</span>
-                    <span>{item.texture}</span>
+                  <div className="pt-2">
+                    <a
+                      href="#order"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#F69522] hover:text-white transition-colors"
+                    >
+                      <span>Order on delivery platforms</span>
+                      <span>→</span>
+                    </a>
                   </div>
                 </div>
 
@@ -148,7 +145,7 @@ export default function FoodExperiences() {
         <div className="mt-12 sm:mt-16 lg:mt-20 p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#FFF8EF] border border-[#F3E8D9] shadow-md flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
           <div className="max-w-2xl space-y-2 text-center lg:text-left">
             <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#F69522]">
-              Our Quality Commitment
+              Our Food Philosophy
             </span>
             <h4 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-[#35363A] leading-snug">
               &ldquo;No artificial essences. No recycled oils. Pure slow-cooked honesty at every table.&rdquo;
@@ -158,7 +155,7 @@ export default function FoodExperiences() {
             href="#catering"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-[#35363A] text-white text-xs font-bold uppercase tracking-[0.16em] hover:bg-[#F69522] transition-colors shrink-0 shadow-lg min-h-[44px]"
           >
-            <span>Explore Event Feasts</span>
+            <span>Explore Catering Options</span>
             <span>→</span>
           </a>
         </div>

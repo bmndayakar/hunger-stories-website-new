@@ -12,7 +12,7 @@ const marqueeItems = [
   'Deccan Pepper Roasts',
   'Fiery High-Flame Wok',
   'Catering & Celebrations',
-  'Pure Desi Ghee & Fresh Spices',
+  'Traditional Ghee & Fresh Spices',
 ];
 
 export default function Hero() {
@@ -115,7 +115,7 @@ export default function Hero() {
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-white/60 font-semibold leading-tight block mt-0.5">Tandoori Grills</span>
               </div>
               <div className="border-l border-white/10 pl-3 sm:pl-6">
-                <span className="block font-display text-xl sm:text-2xl font-bold text-[#F69522]">Pure Ghee</span>
+                <span className="block font-display text-xl sm:text-2xl font-bold text-[#F69522]">Desi Ghee</span>
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-white/60 font-semibold leading-tight block mt-0.5">Fresh Masalas</span>
               </div>
             </motion.div>

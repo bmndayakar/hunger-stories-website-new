@@ -8,11 +8,10 @@ import { siteConfig } from '@/lib/config';
 
 const navLinks = [
   { href: '#story', label: 'Our Story', index: '01' },
-  { href: '#cuisines', label: 'Our Cuisines', index: '02' },
-  { href: '#experiences', label: 'Signature Dishes', index: '03' },
-  { href: '#catering', label: 'Catering', index: '04' },
-  { href: '#locations', label: 'Locations', index: '05' },
-  { href: '#order', label: 'Order Online', index: '06' },
+  { href: '#cuisines', label: 'Cuisines', index: '02' },
+  { href: '#catering', label: 'Catering', index: '03' },
+  { href: '#locations', label: 'Locations', index: '04' },
+  { href: '#contact', label: 'Contact', index: '05' },
 ];
 
 export default function Navbar() {

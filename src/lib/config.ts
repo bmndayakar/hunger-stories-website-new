@@ -79,32 +79,6 @@ export const siteConfig = {
       mapQuery: 'Hunger+Stories+Tellapur+Hyderabad',
     },
   },
-
-  // Legacy alias for compatibility
-  sanctuaries: {
-    manikonda: {
-      name: 'Manikonda Restaurant',
-      type: 'Dine-In Restaurant & Takeaway',
-      badge: 'Dine-In • Takeaway',
-      address: 'Puppalaguda - Manikonda Main Road, Hyderabad, Telangana 500089',
-      hours: '12:00 PM – 11:30 PM Daily',
-      phone: '+91 88867 62323',
-      phoneHref: 'tel:+918886762323',
-      coverage: 'Manikonda, Shaikpet, Jubilee Hills, Puppalaguda, Tolichowki',
-      mapQuery: 'Hunger+Stories+Manikonda+Hyderabad',
-    },
-    tellapur: {
-      name: 'Tellapur Cloud Kitchen',
-      type: 'Cloud Kitchen & Express Delivery',
-      badge: 'Express Delivery Hub',
-      address: 'Survey No. 42, Near ORR Junction, Tellapur Road, Hyderabad, Telangana 502032',
-      hours: '11:30 AM – 11:30 PM Daily',
-      phone: '+91 88867 62323',
-      phoneHref: 'tel:+918886762323',
-      coverage: 'Tellapur, Kollur, Financial District, Kokapet, Gachibowli, Nallagandla',
-      mapQuery: 'Hunger+Stories+Tellapur+Hyderabad',
-    },
-  },
 } as const;
 
 /**

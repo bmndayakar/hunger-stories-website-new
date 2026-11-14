@@ -6,11 +6,10 @@ import { siteConfig, getWhatsAppUrl } from '@/lib/config';
 
 const footerNav = [
   { href: '#story', label: 'Our Story', index: '01' },
-  { href: '#cuisines', label: 'Explore Our Cuisines', index: '02' },
-  { href: '#experiences', label: 'Signature Dishes', index: '03' },
-  { href: '#catering', label: 'Catering & Celebrations', index: '04' },
-  { href: '#locations', label: 'Our Locations', index: '05' },
-  { href: '#order', label: 'Order Online', index: '06' },
+  { href: '#cuisines', label: 'Cuisines', index: '02' },
+  { href: '#catering', label: 'Catering', index: '03' },
+  { href: '#locations', label: 'Locations', index: '04' },
+  { href: '#contact', label: 'Contact', index: '05' },
 ];
 
 export default function Footer() {
@@ -22,7 +21,7 @@ export default function Footer() {
     { href: siteConfig.ordering.swiggy, label: 'Order on Swiggy' },
     { href: siteConfig.ordering.zomato, label: 'Order on Zomato' },
     { href: siteConfig.ordering.ownly, label: 'Order on Ownly' },
-    { href: getWhatsAppUrl('Hi Hunger Stories, I would like to order fresh food from your kitchen'), label: 'Chat on WhatsApp' },
+    { href: getWhatsAppUrl('Hi Hunger Stories, I would like to order fresh food from your kitchen'), label: 'Order on WhatsApp' },
   ];
 
   return (

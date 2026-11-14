@@ -5,7 +5,7 @@ import { MapPin, Clock, Phone, ArrowUpRight, Navigation } from 'lucide-react';
 import Image from 'next/image';
 import { siteConfig } from '@/lib/config';
 
-const sanctuaries = [
+const branches = [
   {
     id: 'manikonda',
     number: '01',
@@ -78,11 +78,11 @@ export default function Locations() {
           </p>
         </div>
 
-        {/* Architectural 2-House Split */}
+        {/* Two Operational Outlets Split */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-14">
-          {sanctuaries.map((house) => (
+          {branches.map((branch) => (
             <motion.div
-              key={house.id}
+              key={branch.id}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -93,8 +93,8 @@ export default function Locations() {
                 {/* Visual Header with Image */}
                 <div className="relative h-60 sm:h-72 lg:h-80 w-full overflow-hidden bg-[#35363A]">
                   <Image
-                    src={house.image}
-                    alt={house.name}
+                    src={branch.image}
+                    alt={branch.name}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center filter brightness-[0.82] contrast-[1.05] transition-transform duration-1000 group-hover:scale-105"
@@ -103,21 +103,21 @@ export default function Locations() {
 
                   {/* Top Bar Badges */}
                   <div className="absolute top-5 left-5 right-5 flex items-center justify-between">
-                    <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${house.badgeClass}`}>
-                      {house.badge}
+                    <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${branch.badgeClass}`}>
+                      {branch.badge}
                     </span>
                     <span className="font-mono text-xs font-bold text-white/80 bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                      OUTLET {house.number}
+                      OUTLET {branch.number}
                     </span>
                   </div>
 
                   {/* Name Over Image */}
                   <div className="absolute bottom-5 left-5 right-5 text-white text-shadow-food">
                     <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#F69522] mb-1">
-                      {house.role}
+                      {branch.role}
                     </p>
                     <h3 className="font-display text-2xl sm:text-3xl font-bold leading-tight">
-                      {house.name}
+                      {branch.name}
                     </h3>
                   </div>
                 </div>
@@ -125,28 +125,28 @@ export default function Locations() {
                 {/* Narrative & Practical Details */}
                 <div className="p-6 sm:p-8 lg:p-10 space-y-5">
                   <p className="font-display text-sm sm:text-base italic text-[#35363A] leading-snug">
-                    &ldquo;{house.tagline}&rdquo;
+                    &ldquo;{branch.tagline}&rdquo;
                   </p>
                   
                   <p className="font-body text-xs sm:text-sm text-[#35363A]/75 leading-relaxed font-normal">
-                    {house.narrative}
+                    {branch.narrative}
                   </p>
 
                   <div className="pt-4 border-t border-[#35363A]/10 space-y-3 text-xs text-[#35363A]/85">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-[#F69522] shrink-0 mt-0.5" />
-                      <span className="leading-relaxed">{house.address}</span>
+                      <span className="leading-relaxed">{branch.address}</span>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <Clock className="w-4 h-4 text-[#F69522] shrink-0" />
-                      <span>{house.hours}</span>
+                      <span>{branch.hours}</span>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <Phone className="w-4 h-4 text-[#F69522] shrink-0" />
-                      <a href={house.phoneHref} className="font-bold hover:text-[#F69522] transition-colors underline decoration-[#F69522]/30 underline-offset-4">
-                        {house.phone}
+                      <a href={branch.phoneHref} className="font-bold hover:text-[#F69522] transition-colors underline decoration-[#F69522]/30 underline-offset-4">
+                        {branch.phone}
                       </a>
                     </div>
                   </div>
@@ -156,7 +156,7 @@ export default function Locations() {
                       Delivery & Dine-In Coverage
                     </p>
                     <p className="text-xs text-[#35363A]/80 font-mono leading-relaxed">
-                      {house.coverage}
+                      {branch.coverage}
                     </p>
                   </div>
                 </div>
@@ -165,15 +165,15 @@ export default function Locations() {
               {/* Bottom Actions Footer (Direct Contact + Directions) */}
               <div className="p-6 sm:p-8 lg:p-10 pt-0 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a
-                  href={house.actionHref}
+                  href={branch.actionHref}
                   className="w-full inline-flex items-center justify-center gap-2 p-3.5 rounded-xl bg-[#F69522] text-white font-body text-xs font-bold uppercase tracking-[0.14em] shadow-md shadow-[#F69522]/20 hover:bg-[#EA2628] transition-all min-h-[44px]"
                 >
-                  {house.id === 'manikonda' ? <Phone className="w-4 h-4" /> : <ArrowUpRight className="w-4 h-4" />}
-                  <span>{house.actionText}</span>
+                  {branch.id === 'manikonda' ? <Phone className="w-4 h-4" /> : <ArrowUpRight className="w-4 h-4" />}
+                  <span>{branch.actionText}</span>
                 </a>
 
                 <a
-                  href={house.mapHref}
+                  href={branch.mapHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 p-3.5 rounded-xl bg-[#FFF8EF] border border-[#F3E8D9] text-[#35363A] font-body text-xs font-bold uppercase tracking-[0.14em] hover:bg-[#35363A] hover:text-white transition-all min-h-[44px]"

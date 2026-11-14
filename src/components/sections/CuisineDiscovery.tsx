@@ -5,68 +5,53 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { ChevronLeft, ChevronRight, Sparkles, Flame, UtensilsCrossed } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
 
 const cuisines = [
   {
     id: 'biryani',
     index: '01',
     title: 'Hyderabadi Dum Biryani',
-    region: 'Nizami Heritage • Sealed Handi',
-    headline: 'Slow-steamed basmati with tender cuts and saffron aromatics.',
-    description: 'Long-grain basmati rice layered with marinated cuts and whole spices, sealed in clay handis and served piping hot with mirchi ka salan and dahi raita.',
+    badge: 'Signature Specialty',
+    description:
+      'Aged long-grain basmati rice layered with tender cuts and whole spices, slow-cooked in sealed clay handis. Served steaming hot with rich mirchi ka salan and dahi raita for an unforgettable meal.',
     image: '/images/food/hero-biryani.jpg',
-    method: 'Clay Handi Dum',
-    aromatics: ['Shahi Saffron', 'Green Cardamom', 'Mace Flower', 'Desi Ghee'],
-    dishes: ['Royal Mutton Dum Biryani', 'Kachhi Chicken Biryani', 'Saffron Subz Handi'],
   },
   {
     id: 'north-indian',
     index: '02',
     title: 'North Indian Classics',
-    region: 'Rich Butter Gravies & Curries',
-    headline: 'Velvety butter chicken and slow-simmered regional favourites.',
-    description: 'Slow-cooked tomato gravies, clotted butter reductions, and rich paneer curries served alongside hot tandoori breads.',
+    badge: 'Rich Curries & Gravies',
+    description:
+      'Velvety butter chicken, slow-simmered black lentils, and creamy paneer curries prepared fresh every day. Paired with warm tandoori breads, this is pure North Indian comfort food at its best.',
     image: '/images/food/signature-chicken.jpg',
-    method: 'Slow-Simmered Gravies',
-    aromatics: ['Kasuri Methi', 'Fresh Churned Butter', 'Charred Garlic', 'Kashmiri Chili'],
-    dishes: ['Purani Dilli Butter Chicken', '12-Hour Dal Makhani', 'Paneer Butter Masala'],
   },
   {
     id: 'tandoori',
     index: '03',
     title: 'Charcoal Tandoor & Grills',
-    region: 'Smoky Clay Oven Skewers',
-    headline: 'Live coconut charcoal embers yielding tender smoky char.',
-    description: 'Soft paneer cubes, spiced seekh kebabs, and succulent chicken skewers marinated in yogurt and spices, fire-roasted to perfection.',
+    badge: 'Smoky Clay Oven Grills',
+    description:
+      'Succulent chicken skewers, spiced seekh kebabs, and soft paneer cubes marinated in yogurt and herbs, fire-roasted over live embers. Juicy on the inside with a crisp charred edge, served with tangy mint chutney.',
     image: '/images/food/signature-paneer.jpg',
-    method: 'Live Charcoal Tandoor',
-    aromatics: ['Yellow Mustard', 'Crushed Fenugreek', 'Smoked Cumin', 'Mint Reduction'],
-    dishes: ['Paneer Tikka Angara', 'Murgh Malai Kebabs', 'Smoked Seekh Platter'],
   },
   {
     id: 'south-indian',
     index: '04',
-    title: 'South Indian Coastal & Deccan',
-    region: 'Guntur, Telangana & Rayalaseema',
-    headline: 'Crisp golden dosas, fiery roasts and fragrant rice.',
-    description: 'Spicy Andhra pepper chicken, fragrant bagara rice, and crisp golden ghee roasts tempered with fresh curry leaves and black pepper.',
+    title: 'South Indian & Deccan Flavours',
+    badge: 'Deccan & Coastal Classics',
+    description:
+      'Crisp golden dosas, fragrant bagara rice, and fiery pepper roasts bursting with fresh curry leaves and black pepper. Authentic regional recipes that bring comforting southern warmth straight to your table.',
     image: '/images/food/cuisine-south.jpg',
-    method: 'Cast Iron Tawa & Fresh Tempering',
-    aromatics: ['Fresh Curry Leaves', 'Guntur Peppercorns', 'Toasted Mustard', 'Pure Desi Ghee'],
-    dishes: ['Andhra Pepper Fry', 'Bagara Rice Special', 'Golden Ghee Roast Dosa'],
   },
   {
     id: 'chinese',
     index: '05',
-    title: 'Indo-Chinese Wok Art',
-    region: 'High-Flame Wok Specials',
-    headline: 'Tossed hakka noodles, fried rice, and fiery chili appetizers.',
-    description: 'High-heat wok specials loaded with crisp scallions, scorched garlic noodles, and spicy schezwan gravies crafted from scratch.',
+    title: 'Indo-Chinese Wok Specials',
+    badge: 'High-Flame Wok Art',
+    description:
+      'Tossed hakka noodles, aromatic fried rice, and crisp chili appetizers cooked to order over high heat. Packed with vibrant crunch and just the right touch of spicy zest.',
     image: '/images/food/cuisine-chinese.jpg',
-    method: 'High-Flame Wok Toss',
-    aromatics: ['Charred Scallion', 'Burnt Garlic Crisp', 'Sichuan Peppercorn', 'Dark Soy'],
-    dishes: ['Crispy Chili Chicken', 'Burnt Garlic Noodles', 'Schezwan Tossed Wok'],
   },
 ];
 
@@ -95,7 +80,7 @@ export default function CuisineDiscovery() {
             </span>
           </div>
           <span className="font-mono text-xs uppercase tracking-widest text-[#35363A]/50">
-            5 Signature Food Styles
+            5 Distinct Cuisine Styles
           </span>
         </div>
 
@@ -159,7 +144,7 @@ export default function CuisineDiscovery() {
 
       </div>
 
-      {/* Swiper Carousel with Asymmetrical Editorial Cards */}
+      {/* Swiper Carousel with Clean 2-3 Sentence Cards */}
       <div className="w-full px-4 sm:px-8 lg:px-12">
         <Swiper
           modules={[Autoplay, Navigation]}
@@ -182,7 +167,7 @@ export default function CuisineDiscovery() {
         >
           {cuisines.map((c) => (
             <SwiperSlide key={c.id} className="h-auto">
-              <div className="group h-full flex flex-col rounded-3xl overflow-hidden bg-[#FFF8EF] border border-[#F3E8D9] shadow-sm hover:shadow-2xl transition-all duration-700">
+              <div className="group h-full flex flex-col rounded-3xl overflow-hidden bg-[#FFF8EF] border border-[#F3E8D9] shadow-sm hover:shadow-xl transition-all duration-500">
                 
                 {/* Visual Frame */}
                 <div className="relative h-64 sm:h-80 lg:h-96 w-full overflow-hidden bg-[#35363A]">
@@ -191,68 +176,42 @@ export default function CuisineDiscovery() {
                     alt={`${c.title} at Hunger Stories`}
                     fill
                     sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 36vw"
-                    className="object-cover transition-transform duration-1000 group-hover:scale-108"
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1f1715]/95 via-[#1f1715]/40 to-transparent" />
                   
-                  {/* Top Bar with Method Badge & Number */}
-                  <div className="absolute top-4 sm:top-6 left-4 sm:left-6 right-4 sm:right-6 flex items-center justify-between">
-                    <span className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-white/95 text-[#35363A] shadow-md backdrop-blur-sm">
-                      {c.method}
+                  {/* Top Bar with Badge & Number */}
+                  <div className="absolute top-4 sm:top-5 left-4 sm:left-5 right-4 sm:right-5 flex items-center justify-between">
+                    <span className="px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-white/95 text-[#35363A] shadow-md">
+                      {c.badge}
                     </span>
-                    <span className="font-mono text-xs sm:text-sm font-bold text-white/90">
+                    <span className="font-mono text-xs sm:text-sm font-bold text-white/90 bg-black/40 px-2.5 py-1 rounded-full">
                       {c.index}
                     </span>
                   </div>
 
-                  {/* Bottom Text Over Image */}
+                  {/* Title Over Image */}
                   <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-white text-shadow-food">
-                    <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] text-[#F69522] mb-1">
-                      {c.region}
-                    </p>
-                    <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold leading-tight">
+                    <h3 className="font-display text-2xl sm:text-3xl font-bold leading-tight">
                       {c.title}
                     </h3>
                   </div>
                 </div>
 
-                {/* Card Content & Aromatics Breakdown */}
-                <div className="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
-                  <div>
-                    <p className="font-display text-sm sm:text-base font-semibold text-[#35363A] leading-snug mb-2 sm:mb-3">
-                      &ldquo;{c.headline}&rdquo;
-                    </p>
-                    <p className="font-body text-xs sm:text-sm text-[#35363A]/75 leading-relaxed font-normal">
-                      {c.description}
-                    </p>
-                  </div>
+                {/* Clean 2-3 Sentence Description & Customer CTA */}
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-5">
+                  <p className="font-body text-sm sm:text-base text-[#35363A]/80 leading-relaxed font-normal">
+                    {c.description}
+                  </p>
 
-                  {/* Key Flavours Profile Pills */}
-                  <div className="pt-4 border-t border-[#35363A]/10 space-y-3">
-                    <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[#35363A]/50">
-                      <Sparkles className="w-3.5 h-3.5 text-[#F69522]" />
-                      <span>Key Flavours & Spices</span>
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {c.aromatics.map((aroma) => (
-                        <span
-                          key={aroma}
-                          className="text-[11px] font-medium px-3 py-1 rounded-full bg-white border border-[#35363A]/10 text-[#35363A]"
-                        >
-                          {aroma}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Featured Plates */}
-                  <div className="pt-3 border-t border-[#35363A]/10">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-[#35363A]/50 mb-2">
-                      Popular Dishes
-                    </p>
-                    <p className="text-xs text-[#35363A]/80 font-medium">
-                      {c.dishes.join('  •  ')}
-                    </p>
+                  <div className="pt-4 border-t border-[#35363A]/10 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-[#35363A]">
+                    <a
+                      href="#order"
+                      className="inline-flex items-center gap-2 text-[#F69522] hover:text-[#EA2628] transition-colors py-1 group/link"
+                    >
+                      <span>Order On Delivery Platforms</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                    </a>
                   </div>
 
                 </div>

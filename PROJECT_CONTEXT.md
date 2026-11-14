@@ -14,9 +14,9 @@
 - **Coordinates:** `17.4065° N, 78.4772° E`
 - **Domain:** `https://about.hungerstories.com`
 - **Repository:** `https://github.com/bmndayakar/hunger-stories-website-new`
-- **Type of Business:** Artisanal multi-cuisine hospitality brand, fine dining restaurant, high-heat delivery kitchen, and celebration banqueting atelier.
+- **Type of Business:** Artisanal multi-cuisine hospitality brand, dine-in restaurant, express delivery kitchen, and celebration catering services.
 
-### The Two Sanctuaries:
+### Our Two Locations:
 1. **Manikonda Dining Room (House 01):**
    - **Role:** Flagship Sit-Down Restaurant & Table Service
    - **Location:** Puppalaguda - Manikonda Main Road, Hyderabad 500089
@@ -246,7 +246,7 @@ export const siteConfig = {
     whatsappDefaultMessage: 'Hi Hunger Stories, I would like to order fresh food from your kitchen',
     whatsappCateringMessage: 'Hi Hunger Stories, I would like to inquire about your catering and banquet services',
   },
-  sanctuaries: {
+  locations: {
     manikonda: { ... },
     tellapur: { ... }
   }
