@@ -17,7 +17,8 @@
 
 ### Our Location:
 - **Hunger Stories Tellapur:** 18-52, Komaram Bheem Colony, Indira Nagar, Tellapur, 500089.
-- **Hours supplied by owner:** 12:00 PM – 3:30 PM and 6:30 PM – 1:00 AM. Days of operation need confirmation.
+- **Hours supplied by owner:** Every day, 12:00 PM – 3:30 PM and 6:30 PM – 1:00 AM.
+- **Service format supplied by owner:** No dine-in; takeaway and delivery through external ordering channels.
 - **Directions:** https://maps.app.goo.gl/MdTnYai85ysyPVv37
 
 ### Official Contact Channels:
@@ -54,8 +55,8 @@ The website design is inspired by high-end luxury editorial experiences (specifi
 
 ### Brand Color Palette:
 ```css
---color-ivory:          #FFF8EF; /* Primary canvas & dominant neutral background */
---color-sand:           #F3E8D9; /* Secondary soft warm parchment accent */
+--color-ivory:          #FFF7ED; /* Primary canvas & dominant neutral background */
+--color-sand:           #F3E6D5; /* Secondary soft warm parchment accent */
 --color-charcoal:       #35363A; /* Primary editorial typography & architectural lines */
 --color-charcoal-light: #525358; /* Secondary copy & metadata text */
 --color-espresso:       #30231F; /* Luxury dark salon canvas (Hero, Banquet card, Testimonials) */
@@ -76,13 +77,14 @@ The website design is inspired by high-end luxury editorial experiences (specifi
 
 ```
 hunger-stories-website-new/
+├── .env.example                    # Notes on the WhatsApp-first enquiry setup
 ├── public/
 │   ├── images/
 │   │   ├── favicon.png               # Official brand favicon
 │   │   ├── logo.png                  # Charcoal brand logo (scrolled state)
 │   │   ├── logo-light.png            # Ivory brand logo (hero state)
 │   │   ├── logo-brand.png            # Full brand emblem with tagline
-│   │   └── food/                     # High-resolution commercial photography
+│   │   └── food/                     # Source photography and responsive WebP derivatives
 │   │       ├── hero-biryani.jpg      # Flagship Hyderabadi Dum Biryani in clay handi
 │   │       ├── craft-spices.jpg      # Whole ancestral spices with stone mortar
 │   │       ├── signature-biryani.jpg # Unsealing clay handi with saffron steam
@@ -95,29 +97,44 @@ hunger-stories-website-new/
 │   │       └── location-tellapur.jpg # Tellapur craft kitchen & glowing tandoor
 ├── src/
 │   ├── app/
-│   │   ├── globals.css               # Design tokens, typography rules, Swiper CSS
+│   │   ├── globals.css               # Design tokens, typography and responsive layout rules
 │   │   ├── layout.tsx                # Fonts, SEO metadata, JSON-LD Schema
-│   │   └── page.tsx                  # Single-page master composition
+│   │   ├── sitemap.ts                # Sitemap for the six public routes
+│   │   ├── robots.ts                 # Crawler rules and sitemap reference
+│   │   ├── page.tsx                  # Catering-first homepage composition
+│   │   ├── catering/page.tsx         # Dedicated catering enquiries page
+│   │   ├── corporate-meals/page.tsx # Corporate meal enquiries
+│   │   ├── our-food/page.tsx         # Non-transactional cuisine portfolio
+│   │   ├── our-story/page.tsx        # Verified brand facts and story
+│   │   └── contact/page.tsx          # Tellapur location and contact options
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── Navbar.tsx            # Sticky header + full-screen mobile drawer (5 links + Order CTA)
-│   │   │   └── Footer.tsx            # Editorial sitemap & brand colophon
+│   │   │   ├── Navbar.tsx            # Sticky header + accessible mobile menu and external order links
+│   │   │   ├── Footer.tsx            # Brand, navigation, verified contact and external links
+│   │   │   └── SitePage.tsx          # Shared shell for supporting pages
 │   │   ├── sections/
-│   │   │   ├── Hero.tsx              # Introductory hero
-│   │   │   ├── BrandStory.tsx        # Chapter 01: Food Philosophy (#story)
-│   │   │   ├── CuisineDiscovery.tsx  # Chapter 02: A World of Flavours (#cuisines)
-│   │   │   ├── FoodExperiences.tsx   # Chapter 03: Signature Dishes (#experiences)
-│   │   │   ├── Catering.tsx          # Chapter 04: The Art of Catering (#catering)
-│   │   │   ├── Locations.tsx         # Chapter 05: Our Location (#locations)
-│   │   │   ├── HungerStoriesExperience.tsx # Chapter 06: The Hunger Stories Experience
-│   │   │   └── FinalCTA.tsx          # 07: Order Online (4 channels) & Catering Enquiry (#order, #contact)
+│   │   │   ├── Hero.tsx              # Catering-first editorial hero (#home)
+│   │   │   ├── Catering.tsx          # Occasion-led catering and enquiry details (#catering, #corporate-meals)
+│   │   │   ├── CateringPageSections.tsx # Dedicated catering occasions, formats, process and FAQs
+│   │   │   ├── CorporateMealsPageSections.tsx # Corporate meals, cuisine, process and enquiry
+│   │   │   ├── EnquiryForm.tsx       # Shared client-validated catering / corporate WhatsApp handoff
+│   │   │   ├── OurFoodPageSections.tsx # Cuisine-specific visual portfolio
+│   │   │   ├── OurStoryPageSections.tsx # Verified brand story content
+│   │   │   ├── ContactPageSections.tsx # Tellapur hours, service format and contact channels
+│   │   │   ├── HungerStoriesExperience.tsx # Brand principles and enquiry process
+│   │   │   ├── CuisineDiscovery.tsx  # Non-transactional cuisine portfolio (#our-food)
+│   │   │   ├── FoodExperiences.tsx   # Food gallery with owner-photo placeholders
+│   │   │   ├── BrandStory.tsx        # Confirmed brand origin and philosophy (#our-story)
+│   │   │   ├── Locations.tsx         # Tellapur location only (#locations)
+│   │   │   └── FinalCTA.tsx          # Direct catering contact and external ordering (#contact)
 │   │   └── ui/
-│   │       ├── ScrollProgress.tsx    # Viewport scroll progress indicator
-│   │       ├── StoryStack.tsx        # Sticky chapter panels and chapter navigation
-│   │       ├── StoryMotion.tsx       # Reduced-motion provider and chapter reveals
+│   │       ├── FoodImage.tsx         # Responsive WebP sources with original JPEG fallback
+│   │       ├── ScrollProgress.tsx    # Subtle viewport scroll progress indicator
+│   │       ├── StoryStack.tsx        # Legacy sticky chapter panels (not used on homepage)
+│   │       ├── StoryMotion.tsx       # Reduced-motion provider and reveal wrapper
 │   │       └── animations.tsx        # Framer Motion reveal wrappers
 │   └── lib/
-│       └── config.ts                 # Centralized brand, hotline & dispatch config
+│       ├── config.ts                 # Centralized brand, hotline & dispatch config
 ├── next.config.ts                    # Next.js configuration
 ├── package.json                      # Build script set to "next build --webpack"
 ├── tsconfig.json                     # Strict TypeScript configuration
@@ -126,94 +143,40 @@ hunger-stories-website-new/
 
 ---
 
-## 5. Section-by-Section Anatomy (V2 Streamlined)
+## 5. Homepage Architecture (Catering-First)
 
-### Hero (`Hero.tsx`)
-- **Tone:** Welcoming, modern, energetic, distinctively Indian.
-- **Headline:** *"Every Flavour Has A Story."*
-- **Sub-copy:** *"Bringing people together through exceptional food, unforgettable flavours and experiences worth sharing."*
-- **Primary CTA:** `Explore Our Story` → `#story`.
-- **Secondary CTA:** `Order Online` → `#order`.
-- **Visuals:** Split canvas featuring `hero-biryani.jpg` in a clay handi with live steam, amber backlighting, and an infinite marquee ribbon showcasing culinary pillars.
+The current homepage uses natural editorial scrolling rather than the previous full-page sticky stack. A slim scroll-progress line, responsive photography, hover treatments and progressive CSS view-timeline reveals provide motion without trapping mobile visitors. The persistent header provides Home, Catering, Corporate Meals, Our Food, Our Story and Contact, plus a quote CTA and compact external ordering links.
 
-### Chapter 01: Our Food Philosophy (`BrandStory.tsx`)
-- **Anchor ID:** `#story` (with alias `#about`)
-- **Headline:** *"More Than Just A Meal."*
-- **Tone:** Warm, authentic, and grounded.
-- **Three Craft Pillars:**
-  1. *Authentic Dum Cooking* (Slow-cooked in sealed clay handis).
-  2. *Freshly Roasted Spices* (Stone-ground in small batches).
-  3. *Honest, Wholesome Ingredients* (Quality ghee, fresh daily batches, authentic spices).
+1. **Hero (`Hero.tsx`, `#home`):** Full-bleed food image, “Exceptional Food. Memorable Gatherings.” and catering/exploration actions.
+2. **Occasions and enquiry context (`Catering.tsx`, `#catering`):** Corporate catering, weddings, private celebrations, traditional functions, meal-box enquiries and bulk requirements. Availability and service format are discussed, not asserted.
+3. **Brand principles and enquiry steps (`HungerStoriesExperience.tsx`):** Multi-cuisine perspective, gatherings, menu discussion and an enquiry-led process.
+4. **Cuisine portfolio (`CuisineDiscovery.tsx`, `#our-food`):** Biryani, North Indian, South Indian, Indo-Chinese, tandoor, vegetarian favourites, starters and accompaniments. No prices or transactional controls.
+5. **Food gallery (`FoodExperiences.tsx`):** Food photography with clearly identified owner-photo placeholders for meal boxes and genuine event work.
+6. **Brand story (`BrandStory.tsx`, `#our-story`):** Hyderabad roots, 2024 founding, multi-cuisine identity and established tagline; no unverified preparation claims.
+7. **Location (`Locations.tsx`, `#locations`):** Tellapur only, with configured address, verified daily hours, takeaway/delivery format and directions.
+8. **Contact and ordering (`FinalCTA.tsx`, `#contact`):** Catering enquiry CTAs, WhatsApp discussion, email and external Swiggy, Zomato, Ownly and WhatsApp order links. Catering details are prepared for an explicit WhatsApp handoff; there is no internal food-ordering flow.
 
-### Chapter 02: A World of Flavours (`CuisineDiscovery.tsx`)
-- **Anchor ID:** `#cuisines`
-- **Headline:** *"A World Of Exceptional Flavours."*
-- **Interactions:** Top horizontal filter ribbon + smooth touch Swiper carousel with 5 traditions:
-  1. Hyderabadi Dum Biryani
-  2. North Indian Classics
-  3. Charcoal Tandoor & Grills
-  4. South Indian Coastal & Deccan
-  5. Indo-Chinese Wok Art
-- **Content:** Short, customer-friendly 2-sentence introductions without unnecessary ingredient jargon.
+Only the configured Tellapur business location is shown. Do not add service capacity, recurring delivery, SLA, food-preparation standards, customer reviews or completed-event claims without owner confirmation and genuine supporting material.
 
-### Chapter 03: Signature Dishes (`FoodExperiences.tsx`)
-- **Anchor ID:** `#experiences`
-- **Headline:** *"Where Food Becomes An Experience."*
-- **Sub-tag:** *Signature Dishes • Freshly Prepared Daily*
-- **4-Course Asymmetric Spread:** Alternating 7-column and 5-column layout:
-  - Course I: Hyderabadi Dum Biryani (`signature-biryani.jpg`)
-  - Course II: Paneer Tikka Angara (`signature-paneer.jpg`)
-  - Course III: Purani Dilli Butter Chicken (`signature-chicken.jpg`)
-  - Course IV: 12-Hour Dal Makhani (`signature-dal.jpg`)
+The dedicated `/catering/` route (`src/app/catering/page.tsx`) reuses the shared navigation, footer, progress indicator, cuisine portfolio, food gallery and enquiry form. Its occasion and format descriptions are enquiry topics only; unconfirmed availability, quantities, lead times and catering coverage must be verified with the team.
 
-### Chapter 04: The Art of Catering (`Catering.tsx`)
-- **Anchor ID:** `#catering`
-- **Headline:** *"Made For Every Occasion."*
-- **Capacity:** Serving 20 to 500+ Guests
-- **Features:** Master centerpiece photo card (`catering-feast.jpg`) + interactive 5-format selector:
-  1. *Corporate Events & Summits* (50–500+ guests)
-  2. *Weddings & Receptions* (100+ guests)
-  3. *Birthdays & Private Parties* (25–150 guests)
-  4. *Family Gatherings & House Parties* (20–80 guests)
-  5. *Bulk Orders & Box Meals* (50+ boxes)
-
-### Chapter 05: Our Location (`Locations.tsx`)
-- **Anchor ID:** `#locations`
-- **Headline:** *"From Our Kitchen To You."*
-- **Profile:** Tellapur kitchen with `location-tellapur.jpg`.
-- **Actions:** Regular orders call (`tel:+919959333931`), Online Order (`#order`), and Google Maps Navigation (`Get Directions`).
-- **Data Source:** Wired directly to `siteConfig.locations` in `src/lib/config.ts`.
-
-### Chapter 06: The Hunger Stories Experience (`HungerStoriesExperience.tsx`)
-- **Anchor ID:** `#hunger-stories-experience`
-- Links to the existing locations, ordering, and catering sections.
-
-### Chapter 07: Order Online & Catering Touchpoint (`FinalCTA.tsx`)
-- **Anchor ID:** `#order` (with alias `#contact`)
-- **Headline:** *"Your Next Food Story Starts Here."*
-- **Strict Brand Awareness Directive:** Pure external dispatch links, NO checkout, NO shopping cart, NO prices.
-- **External Channels:** Ownly, WhatsApp, Zomato, and a less prominent Swiggy link.
-- **Catering Contact Desk:** Uses the catering hotline and WhatsApp number (`+91 88867 62323`). The enquiry form currently only changes local UI state and does not transmit submissions; do not treat it as an operational enquiry channel.
-
-### Testimonials Note
-- Previously contained placeholder customer reviews. Removed completely from codebase per client directive: *"Use real customer testimonials only. If verified testimonials are unavailable, remove the section rather than displaying fabricated placeholder reviews."* Can be restored to `page.tsx` once verified reviews are provided.
-
-### Navigation & Header (`Navbar.tsx`)
-- 5 clean navigation links: `Our Story` (`#story`), `Cuisines` (`#cuisines`), `Catering` (`#catering`), `Our Location` (`#locations`), and `Contact` (`#contact`).
-- Prominent `Order Online` CTA button pointing directly to `#order`.
-- Dual-mode header:
-  - **Top of page:** Transparent with dark gradient scrim, using `logo-light.png`.
-  - **Scrolled (>50px):** Warm Ivory background with 95% opacity, backdrop blur, hairline border, using dark `logo.png`.
-  - **Mobile Menu Open:** Transparent overlay with `logo-light.png` and full 44px touch targets.
-- Full-screen mobile menu drawer with touch-friendly navigation links and direct hotline actions.
+Supporting routes `/corporate-meals/`, `/our-food/`, `/our-story/` and `/contact/` use the shared `SitePage` shell and page-specific SEO metadata. The corporate page reuses the same enquiry form with corporate-specific fields and a WhatsApp handoff.
 
 ---
 
 ## 6. Central Configuration File (`src/lib/config.ts`)
 
-All URLs, contact details, and location data are centralized in `src/lib/config.ts`. **Never hardcode external links in individual components.**
+All ordering URLs, contact details, and location data are centralized in `src/lib/config.ts`. **Never hardcode external ordering or contact links in individual components.**
 
-The config contains the Tellapur address, directions, opening hours, distinct regular-order and catering contacts, and external channel URLs. `getWhatsAppUrl` selects the appropriate number for regular orders or catering. Ordering URLs may be overridden with the corresponding `NEXT_PUBLIC_*` environment variables at build time.
+The config contains the Tellapur address, directions, verified operating days and hours, service format, distinct regular-order and catering contacts, and verified external channel URLs. `getWhatsAppUrl` selects the regular-order or catering number. Ordering destinations can be overridden with their existing `NEXT_PUBLIC_*_URL` variables at build time; no form endpoint, API key or analytics ID is configured.
+
+### Enquiry and conversion behavior
+
+`src/components/sections/EnquiryForm.tsx` is shared by the catering and corporate enquiry sections. It validates required name, mobile, event type, non-past date, location, positive whole-number guest/meal count and food preference; optional fields include email, company, cuisine, format to discuss, corporate frequency/schedule and additional details. Catering formats are free text and explicitly subject to availability confirmation.
+
+The form runs entirely in the browser. It prepares a message to the verified catering WhatsApp number (`918886762323`); a separate link opens WhatsApp for the visitor to review and send. Preparing or opening the draft is **not** an enquiry submission. This site does not send, store, or claim receipt of enquiry details. No backend credentials or environment variables are required for this handoff. A monitored form backend would require a separately approved service and hosting/configuration change.
+
+The site has no configured analytics provider or identifier, so it currently emits no conversion analytics and collects no form or click events. If analytics is approved later, instrument separate events for `catering_cta_click`, `catering_form_start`, `catering_whatsapp_handoff`, `corporate_form_start`, `corporate_whatsapp_handoff`, `whatsapp_click`, `swiggy_click`, `zomato_click`, and `ownly_click`. Do not label a WhatsApp handoff as a successful form submission; the site cannot observe whether the visitor sends the message.
 
 ---
 
@@ -227,9 +190,10 @@ The config contains the Tellapur address, directions, opening hours, distinct re
 
 ### Known Technical Workarounds:
 1. **React 19 SSR Prerender:** Avoid calling `new Date().getFullYear()` directly during render in client components. A static range `2024–2026` is used to prevent hydration mismatches.
-2. **Swiper CSS Resolution on Windows:** Swiper core CSS has been integrated directly into `src/app/globals.css`. Do not import `swiper/css/pagination` or `swiper/css` directly inside components to prevent Windows loader pathing issues.
+2. **Static-export image delivery:** `FoodImage.tsx` serves responsive WebP variants at 480px, 640px, 960px and the source image width, with the original JPEG as a fallback. When adding or replacing a source photo, generate matching variants in `public/images/food/` and update the component's `responsiveSources` map.
 3. **Google Fonts in Offline/Sandbox Environments:** Fonts are preconnected and linked via HTML `<head>` tags in `layout.tsx` with CSS fallback variables, ensuring builds succeed even in restricted network environments.
-4. **Structured Data:** A single Tellapur `Restaurant` JSON-LD entity is embedded in `layout.tsx`. Opening hours are omitted until the days of operation are confirmed.
+4. **Structured Data:** A single Tellapur `Restaurant` JSON-LD entity is embedded in `layout.tsx`. Do not add business details to structured data unless verified.
+5. **Static SEO routes:** `src/app/sitemap.ts` and `src/app/robots.ts` generate `sitemap.xml` and `robots.txt` for the six public routes during export.
 
 ---
 
@@ -264,9 +228,9 @@ The config contains the Tellapur address, directions, opening hours, distinct re
 
 ## 9. Immediate Checklist for Future Developers / Agents
 
-- [ ] When adding dishes, add them to `FoodExperiences.tsx` or `CuisineDiscovery.tsx` with storytelling descriptions — **never add prices**.
+- [ ] Keep `CuisineDiscovery.tsx` as a visual food portfolio — **never add prices, cart controls or dish ordering actions**.
 - [ ] If changing phone numbers or ordering URLs, modify ONLY [`src/lib/config.ts`](file:///c:/Users/dayam/Documents/hunger-stories-website-new/src/lib/config.ts) or set the corresponding `NEXT_PUBLIC_*` environment variables.
-- [ ] If creating new sections, maintain the chapter numbering format (`Chapter XX / 07 • Title`) to preserve editorial continuity.
+- [ ] Do not state catering formats, capacities, delivery areas, operating hours or guarantees unless confirmed by the owner.
 - [ ] Always verify `npm run build` succeeds with exit code 0 before pushing changes to `main`.
 
 ---
@@ -280,10 +244,12 @@ The config contains the Tellapur address, directions, opening hours, distinct re
 | **Zomato** | Owner-supplied listing in config | Request timed out | Confirm listing availability. |
 | **Ownly** | Owner-supplied brand URL in config | Redirected to a generic Hyderabad landing page during testing | Confirm the direct brand storefront works. |
 
+### Supporting page owner inputs
+- Provide genuine corporate meal-box, tray, catering delivery and event photographs to replace the clearly marked gallery placeholders.
+- Provide the owner's explanation of the Hunger Stories name and any fuller food/hospitality philosophy to expand the Our Story page without inventing brand history.
+
 ---
 
 ## 11. Scroll-Driven Brand Storytelling
 
-The hero introduces seven chapters: Our Food Philosophy → A World of Flavours → Signature Dishes → The Art of Catering → Our Location → The Hunger Stories Experience → Your Next Food Story Starts Here.
-
-`StoryStack.tsx` wraps the seven chapters in sticky panels on desktop and mobile, with later panels layered above earlier ones. It measures each panel so that long chapters scroll fully before sticking; mobile panels have a short scroll cushion before the next panel overlaps. Avoid overflow-clipping or transformed ancestors around the stack. The desktop chapter navigation links to markers in normal document flow. Reduced-motion preferences use natural scrolling; keyboard focus within a chapter temporarily returns panels to normal flow so focused controls are not obscured.
+The homepage currently uses natural document flow on desktop and mobile. The header remains sticky, the progress line tracks page scroll, and supported browsers reveal selected content with CSS view-timeline animation. These effects are progressive enhancements; content remains visible without them and reduced-motion preferences disable decorative movement. `StoryStack.tsx` remains in the codebase as a legacy component but is not mounted on the homepage. Do not reintroduce sticky overlapping panels that obstruct reading, focus, or natural mobile scrolling.

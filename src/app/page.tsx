@@ -10,25 +10,23 @@ import FinalCTA from '@/components/sections/FinalCTA';
 import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import { StoryMotion } from '@/components/ui/StoryMotion';
-import StoryStack from '@/components/ui/StoryStack';
 
 export default function Home() {
   return (
     <StoryMotion>
-      <div className="min-h-screen bg-[#FFF8EF] text-[#35363A] flex flex-col selection:bg-[#F69522] selection:text-white">
+      <div className="site-shell">
+        <a className="hs-skip-link" href="#main-content">Skip to content</a>
         <ScrollProgress />
         <Navbar />
-        <main className="flex-grow">
+        <main id="main-content">
           <Hero />
-          <StoryStack>
-            <BrandStory />
-            <CuisineDiscovery />
-            <FoodExperiences />
-            <Catering />
-            <Locations />
-            <HungerStoriesExperience />
-            <FinalCTA />
-          </StoryStack>
+          <Catering />
+          <HungerStoriesExperience />
+          <CuisineDiscovery />
+          <FoodExperiences />
+          <BrandStory />
+          <Locations />
+          <FinalCTA />
         </main>
         <Footer />
       </div>

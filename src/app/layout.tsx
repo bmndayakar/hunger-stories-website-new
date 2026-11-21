@@ -4,44 +4,43 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.brand.domain),
-  title: "Hunger Stories — Every Flavour Has A Story | Tellapur Kitchen & Catering",
+  alternates: {
+    canonical: '/',
+  },
+  title: "Hunger Stories | Catering & Multi-Cuisine Food in Hyderabad",
   description:
-    "Hunger Stories is a multi-cuisine kitchen in Tellapur, Hyderabad, offering biryani, curries, tandoori grills, delivery and celebration catering.",
+    "Hunger Stories brings multi-cuisine food to gatherings and catering enquiries in Hyderabad. Explore catering occasions, food photography and ways to get in touch.",
   keywords: [
     "Hunger Stories",
     "Hunger Stories Hyderabad",
     "Hyderabadi biryani",
-    "multi-cuisine restaurant",
-    "Tellapur cloud kitchen",
+    "multi-cuisine food Hyderabad",
     "catering Hyderabad",
-    "wedding catering Hyderabad",
-    "corporate catering Hyderabad",
+    "corporate catering enquiries Hyderabad",
   ],
   icons: {
     icon: "/images/favicon.png",
     apple: "/images/favicon.png",
   },
   openGraph: {
-    title: "Hunger Stories — Every Flavour Has A Story",
+    title: "Hunger Stories | Catering & Multi-Cuisine Food",
     description:
-      "Discover freshly prepared multi-cuisine food and celebration catering from our Tellapur kitchen.",
+      "Food for gatherings, celebrations and catering enquiries in Hyderabad. Every Flavour Has A Story.",
     type: "website",
     locale: "en_IN",
     siteName: "Hunger Stories",
     images: [
       {
         url: "/images/food/hero-biryani.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Hunger Stories Royal Hyderabadi Dum Biryani",
+        alt: "Food photography from Hunger Stories",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hunger Stories — Every Flavour Has A Story",
+    title: "Hunger Stories | Catering & Multi-Cuisine Food",
     description:
-      "Multi-cuisine food, delivery and catering from Hunger Stories in Tellapur, Hyderabad.",
+      "Multi-cuisine food for gatherings and catering enquiries in Hyderabad.",
     images: ["/images/food/hero-biryani.jpg"],
   },
   robots: {
@@ -77,11 +76,11 @@ export default function RootLayout({
               name: siteConfig.locations.tellapur.name,
               image: `${siteConfig.brand.domain}/images/food/hero-biryani.jpg`,
               url: siteConfig.brand.domain,
-              telephone: siteConfig.contact.phoneDisplay,
+              telephone: siteConfig.contact.phoneHref.replace(/^tel:/, ''),
               email: siteConfig.contact.email,
               hasMap: siteConfig.locations.tellapur.mapHref,
               servesCuisine: [
-                "Hyderabadi Dum Biryani",
+                "Hyderabadi Biryani",
                 "North Indian",
                 "South Indian",
                 "Tandoori",
@@ -95,10 +94,6 @@ export default function RootLayout({
                 postalCode: siteConfig.locations.tellapur.postalCode,
                 addressCountry: "IN",
               },
-              sameAs: [
-                siteConfig.social.instagram,
-                siteConfig.social.facebook,
-              ],
             }),
           }}
         />

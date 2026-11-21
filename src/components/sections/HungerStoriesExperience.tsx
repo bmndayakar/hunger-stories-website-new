@@ -1,59 +1,99 @@
-import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
-import { StoryReveal } from '@/components/ui/StoryMotion';
+import { ArrowRight } from 'lucide-react';
 
-const experiences = [
-  { number: '01', title: 'Explore our cuisines', href: '#cuisines' },
-  { number: '02', title: 'Order from Tellapur', href: '#order' },
-  { number: '03', title: 'Gather over good food', href: '#catering' },
+const principles = [
+  {
+    number: '01',
+    title: 'A multi-cuisine perspective',
+    description:
+      'Explore a food portfolio spanning biryani, North and South Indian, Indo-Chinese, tandoor and vegetarian favourites.',
+  },
+  {
+    number: '02',
+    title: 'Food for different gatherings',
+    description:
+      'From corporate requirements to family occasions, start with the people and the moment you are planning for.',
+  },
+  {
+    number: '03',
+    title: 'A menu conversation',
+    description:
+      'Share your preferences and questions. The available menu and format can be discussed directly with the team.',
+  },
+];
+
+const processSteps = [
+  {
+    title: 'Tell us about the occasion',
+    description: 'Share the kind of gathering, date and location, if known.',
+  },
+  {
+    title: 'Share the food in mind',
+    description: 'Tell us about cuisine preferences and approximate headcount.',
+  },
+  {
+    title: 'Discuss availability and format',
+    description: 'The catering team can talk through what is currently available.',
+  },
+  {
+    title: 'Agree the next steps',
+    description: 'Review the details together before confirming your requirements.',
+  },
 ];
 
 export default function HungerStoriesExperience() {
   return (
-    <section className="relative overflow-hidden bg-[#30231F] text-[#FFF8EF]">
-      <div className="container-wide py-20 sm:py-28 lg:py-32">
-        <div className="flex flex-col gap-3 border-b border-white/15 pb-5 sm:flex-row sm:items-center sm:justify-between">
-          <span className="eyebrow-tag text-[#F69522]">Chapter 06 / 07 • The Hunger Stories Experience</span>
-          <span className="font-mono text-xs uppercase tracking-widest text-white/50">Hyderabad, India</span>
-        </div>
-
-        <div className="grid items-center gap-10 pt-12 sm:gap-16 sm:pt-16 lg:grid-cols-12 lg:pt-20">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-[#35363A] lg:col-span-6 lg:aspect-[4/5]">
-            <Image
-              src="/images/food/signature-biryani.jpg"
-              alt="Hunger Stories biryani prepared for sharing"
-              fill
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#30231F]/60 to-transparent" />
-          </div>
-
-          <StoryReveal className="lg:col-span-6 lg:pl-8">
-            <p className="eyebrow-tag mb-5 text-[#F69522]">The Hunger Stories Experience</p>
-            <h2 className="font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
-              A story best <br />
-              <span className="font-editorial-italic text-[#FFF8EF]/80">shared.</span>
-            </h2>
-            <p className="mt-6 max-w-lg text-sm leading-relaxed text-[#FFF8EF]/75 sm:text-lg">
-              Freshly prepared flavours, warm hospitality, convenient delivery and catering bring people together, from everyday meals to celebrations.
+    <>
+      <section
+        className="hs-section hs-why"
+        id="why-hunger-stories"
+        aria-labelledby="why-title"
+      >
+        <div className="hs-container">
+          <div className="hs-section-heading hs-section-heading--light">
+            <p className="hs-eyebrow">Why Hunger Stories</p>
+            <h2 id="why-title">Food is part of how a gathering feels.</h2>
+            <p className="hs-section-heading__copy">
+              A multi-cuisine food brand for the occasions, people and preferences
+              that come together around a table.
             </p>
-            <div className="mt-10 border-t border-white/15">
-              {experiences.map((experience) => (
-                <a
-                  key={experience.number}
-                  href={experience.href}
-                  className="group flex min-h-[64px] items-center gap-4 border-b border-white/15 py-4 text-sm transition-colors hover:text-[#F69522] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F69522] sm:text-base"
-                >
-                  <span className="font-mono text-xs text-[#F69522]">{experience.number}</span>
-                  <span className="flex-1">{experience.title}</span>
-                  <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-          </StoryReveal>
+          </div>
+          <div className="hs-principles">
+            {principles.map((principle) => (
+              <article className="hs-principle" key={principle.number}>
+                <span>{principle.number}</span>
+                <h3>{principle.title}</h3>
+                <p>{principle.description}</p>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="hs-section hs-process" id="process" aria-labelledby="process-title">
+        <div className="hs-container">
+          <div className="hs-section-heading hs-section-heading--split">
+            <div>
+              <p className="hs-eyebrow">The catering conversation</p>
+              <h2 id="process-title">A few clear steps to get started.</h2>
+            </div>
+            <a className="hs-text-link" href="/catering/#catering-enquiry">
+              Start an enquiry
+              <ArrowRight aria-hidden="true" size={16} />
+            </a>
+          </div>
+          <ol className="hs-process__steps">
+            {processSteps.map((step, index) => (
+              <li key={step.title}>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    </>
   );
 }

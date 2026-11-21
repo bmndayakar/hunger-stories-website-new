@@ -27,6 +27,7 @@ export const siteConfig = {
     whatsappPhone: '919959333931',
     cateringWhatsappPhone: '918886762323',
     hours: '12:00 PM – 3:30 PM & 6:30 PM – 1:00 AM',
+    operatingDays: 'Open every day',
   },
 
   // Configurable External Ordering & Delivery URLs
@@ -46,16 +47,6 @@ export const siteConfig = {
       'Hi Hunger Stories, I would like to enquire about your catering and event food services',
   },
 
-  // Social & Community Channels
-  social: {
-    instagram:
-      process.env.NEXT_PUBLIC_INSTAGRAM_URL ||
-      'https://instagram.com/hungerstories.hyd',
-    facebook:
-      process.env.NEXT_PUBLIC_FACEBOOK_URL ||
-      'https://facebook.com/hungerstories.hyd',
-  },
-
   // Our Location
   locations: {
     tellapur: {
@@ -65,6 +56,7 @@ export const siteConfig = {
       locality: 'Tellapur',
       postalCode: '500089',
       mapHref: 'https://maps.app.goo.gl/MdTnYai85ysyPVv37',
+      serviceFormat: 'Takeaway and delivery through external ordering channels; no dine-in',
     },
   },
 } as const;
